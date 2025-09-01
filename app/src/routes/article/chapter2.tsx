@@ -1691,7 +1691,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_2818">
+          <ExerciseStatement id="_6_3917">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2027,7 +2027,7 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_3857"
+                href="/article/chapter3?id=_15_1522"
                 class="handle-out-chapter-link">
                 Chapter 3
               </a>
@@ -2136,7 +2136,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_2818"
+                href="/article/chapter2?id=_6_3917"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
