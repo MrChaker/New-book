@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "install": "npm install -C app",
+    "dev": "npm run dev -C app -- --port=${npm_config_port:-3000}",
+    "compile": "gleam run"
+  }
+}

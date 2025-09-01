@@ -1,0 +1,19 @@
+name = "renderer"
+version = "1.0.0"
+
+[dependencies]
+blamedlines = { "path" = "../../parser/blamedlines" }
+vxml = { "path" = "../../parser/vxml" }
+writerly = { "path" = "../../parser/writerly" }
+vxml_desugaring = { "path" = "../../parser/vxml_desugaring" }
+
+argv = ">= 1.0.2 and < 2.0.0"
+gleam_stdlib = ">= 0.34.0 and < 2.0.0"
+shellout = ">= 1.6.0 and < 2.0.0"
+simplifile = ">= 2.3.0 and < 3.0.0"
+xmlm = ">= 1.0.0 and < 2.0.0"
+gleam_otp = ">= 1.0.0 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
+gleescript = "1.5.1"

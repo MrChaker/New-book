@@ -1,0 +1,1751 @@
+|> Section
+
+    *Cos and Sin. (“Cosine” and “sine”.)*
+    We've already encountered the ‘cos’
+    function in Exercise 7 of Chapter 3, e.g..
+    It is the one that has this graph:
+
+    |> Image
+        src=images/svg_ch5_ch_cosine.svg
+
+    It has a close cousin named ‘sin’.
+    While $\cos(x)$ “tops off” at $x = 0$,
+    $\sin(x)$ goes diagonally through the point
+    $(0, 0)$:
+
+    |> Image
+        src=images/svg_ch5_ch_cosine_and_sine.svg
+
+    As far as standard definitions go,
+    $\cos(x)$ is the
+
+    __$x$-coordinate__
+
+    and $\sin(x)$ is the
+
+    __$y$-coordinate__
+
+    of a point $x$ units counterclockwise from
+    $(1, 0)$ on the unit circle. (Nb: “a”
+
+    __unit circle__
+
+    is a circle of radius $1$, while “the” unit
+    circle is the circle of radius $1$ centered
+    at $(0, 0)$.) For example, if we look at $x = {1\over 2}$,
+    we see $\cos({1\over 2}) \approx 0.9$,
+    $\sin({1\over 2}) \approx 0.5$:
+
+    |> Image
+        src=images/svg_ch5_ch_cosine_and_sine_@0.5.svg
+
+    !! The reason for these values, per the definitions,
+    !! is that
+    Per the definitions,
+    the point half a unit
+    counterclockwise from $(1, 0)$ on the unit
+    circle has coordinates $\approx 0.9$ in $x$
+    and $\approx 0.5$ in $y$ (or actually $0.87758...$
+    and $0.47942...$, it turns out, as we can know by
+    a calculator equipped with ‘sin’ and ‘cos’):
+
+    |> Image
+        src=images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
+
+    As a second example, the graphs indicate that
+    $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
+    (or something very close to $-1$, in any case):
+
+    |> Image
+        src=images/svg_ch5_ch_cosine_and_sine_@-3.svg
+
+    Indeed, going $-3$ units counterclockwise—which
+    means, going $3$ units clockwise—on the unit
+    circle, starting from $(1, 0)$, brings us to a point
+    with $y$- and $x$-coordinates of $\approx -0.2$
+    and $\approx -0.99$ respectively (or $-0.1411...$
+    and $-0.989992...$, to be exact, it turns out):
+
+    |> Image
+        src=images/svg_ch5_ch_unit_circle_@-3_smaller.svg
+
+    For a last example,
+    note that there appears
+    to be a value of $x$ near $-1.6$, where $\cos(x) = 0$,
+    $\sin(x) = -1$:
+
+    |> Image
+        src=images/svg_ch5_ch_cosine_and_sine_@minus_eta.svg
+
+    Some thought reveals that this value of $x$
+    would be _minus one-quarter the circumference
+    of a unit circle_, because $(0, -1)$ is
+    one-quarter of the unit circle clockwise from $(1, 0)$.
+    Note that one-quarter the circumference of a unit
+    circle was estimated to be
+
+    $$
+    \approx {11\over 7} = 1.\overline{571428}
+    $$
+
+    in Exercise 24 of Chapter 3 (by direct inspection
+    of the graph $y = \cos(x)$, for that matter,
+    which may or may not be cheating), which agrees
+    with the visual estimate $x \approx -1.6$. (But
+    that value would be namely $x = -1.57...$, not
+    $x = -1.6$.)
+
+    !! (Etc.)
+
+    In another possible definition,
+
+    $$
+    \sin(x)
+    $$
+
+    is defined as the $x$-coordinate of a point that
+    is $x$ units counterclockwise from $(0, -1)$ on
+    the unit circle. In this case, $\sin(x)$ and
+    $\cos(x)$ are both defined by $x$-coordinates:
+
+    |> Image
+        src=images/svg_ch5_ch_unit_circle_with_new_definition.svg
+
+    In more detail, if you tilt your head  sideways,
+    you will see that the $x$ axis looks, from the
+    vantage point of $(0, -1)$, the same as the $y$
+    axis looks from the vantage point of $(1, 0)$.
+    So the old and new definitions of $\sin(x)$ are
+    equivalent! (👍👍)
+
+    In particular, $\sin(x)$ and $\cos(x)$ can also
+    be understood as the $x$-coordinates of two
+    particles on the unit circle such that the ‘sin’
+    particle is one-quarter-turn behind the ‘$\cos$’
+    particle:
+
+    |> Image
+        src=images/svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg
+
+    ...to be contrasted with our first definition,
+    employing a single point projected onto
+    two different axes:
+
+    |> Image
+        src=images/svg_ch5_ch_unit_circle_with_sincos_particle.svg
+
+    The second definition (former diagram) explains
+    why values of $\sin$ lag a fixed amount behind
+    values of $\cos$. (“Lagging” when you read the
+    graphs from left to right.) It's because the ‘sin’
+    particle follows in the trail blazed by the ‘cos’
+    particle!
+
+|> Section
+
+    *Derivatives.*
+    Continuing the last “chapter” in the
+    definitions of $\sin$ and $\cos$, we can
+    add two more particles to the diagram that
+    defines ‘sin’ and ‘cos’ via $x$-coordinates.
+    The two new particles are labeled “$-\!\sin$”
+    and “$-\!\cos$”:
+
+    |> Image
+        src=images/svg_ch5_ch_unit_circle_with_four_particles.svg
+
+    These labels are chosen
+    because
+    the $x$-coordinate of the
+    “$-\!\sin$”
+    particle is
+    $$
+    -\!\sin(x)
+    $$
+    by symmetry with the $\sin$ particle,
+    meaning that the
+    “$-\!\sin$”
+    particle
+    defines the function
+    $$
+    x \ra -\!\sin(x)
+    $$
+    also known simply as
+
+    _|“$-\!\sin$”|_
+
+    by the general definition that
+    $$
+    -f = (x \ra -f(x))
+    $$
+    for all $f : \rr \ra \rr$,
+    and similarly for “$-\!\cos$”.
+
+    Adding the curves for $-\!\sin$ and $-\!\cos$
+    to the graphs fills the “gap” between $y = \sin(x)$
+    and $y = \cos(x)$ with two new equally-spaced curves;
+    note that
+    $\cos$ lags behind $-\!\sin$
+    (reading the graphs from left to right)
+    by the same amount that $\sin$ lags behind
+    $\cos$, etc:
+
+    |> Image
+        src=images/svg_ch5_ch_four_curves.svg
+
+    These are the same four curves that
+    appear in Exercise 12 of Chapter 4.
+    In particular,
+    $$
+    \sin' = \cos
+    $$
+    $$
+    \cos' = -\!\sin
+    $$
+    $$
+    (-\!\sin)' = -\!\cos
+    $$
+    $$
+    (-\!\cos)' = \sin
+    $$
+    because the rate of change of each
+    particle's $x$-coordinate is the
+    $x$-coordinate of the next particle
+    in the order of rotation, as explained
+    in the solution to that problem.
+    (Clockwise vs. counterclockwise rotation
+    notwithstanding.)
+
+    One can also note that
+    $$
+    (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
+    $$
+    in general for any $f : \rr \ra \rr$
+    (cf. Exercise 20 and Exercise 10 of Chapter 4),
+    which implies that
+    $$
+    (-\!\sin)' = -\!\sin'
+    $$
+    (or
+    $$
+    (-\!\sin)' = -\!\sin' = -\!\cos
+    $$
+    to finish the computation),
+    and that
+    $$
+    (-\!\cos)' = -\!\cos'
+    $$
+    (or
+    $$
+    (-\!\cos)' = -\!\cos' = -(-\!\sin) = \sin
+    $$
+    to finish the computation),
+    which means that one only needs to
+    remember the first two equations. Though,
+    in fact, one really just needs to remember
+    the four-particle diagram!
+    !! (Or really,
+    !! just remember the four-particle diagram.)
+
+|> Section
+
+    *Even/odd identities, and identities with “$\eta$”.*
+    One has
+
+    $$
+    \displaylines{
+    \up{1.0}\cos(-x) = \cos(x) \\
+    \up{1.7}\sin(-x) = -\sin(x) \\
+    \up{1.7}\sin(x + \eta) = \cos(x) \\
+    \up{1.7}\cos(x - \eta) = \sin(x) \\
+    \up{1.7}\dn{0.5}\cos(\eta/2 + x) = \sin(\eta/2 - x)
+    }
+    $$
+
+    for all $x \in \rr$, where
+
+    $$
+    \Large \eta
+    $$
+
+    (“aye-tah”, Greek letter “eta”) is a
+    constant that denotes the quarter-circumference
+    of a unit circle, or about ${11\over 7}$.
+    (Cf. Exercise 24, Chapter 4.) You should
+    be able to verify each of these identities
+    just by looking at them and thinking of the
+    definitions of $\sin(x)$, $\cos(x)$—possibly
+    the “second” definition of $\sin(x)$, in some
+    cases—but in case something goes wrong, here
+    is a cheat sheet that does some of the thinking
+    for you (or, help you compare your way of seeing
+    things to the author's way of seeing things):
+
+    |> Image
+        src=images/svg_ch5_ch_identity_explanations.svg
+
+    Two more identities
+    $$
+    \sin(\eta - x) = \cos(x)
+    $$
+    and
+    $$
+    \cos(\eta - x) = \sin(x)
+    $$
+    are related to the last identity above, in that they
+    involve symmetry about the line $x = y$ in the Cartesian
+    plane:
+
+    |> Image
+        src=images/svg_ch5_ch_identity_explanations_more.svg
+
+    We also have these identities...
+
+    $$
+    \displaylines{
+    \up{1.2}\cos(x + 4\eta) = \cos(x)\\
+    \up{1.7}\sin(x + 4\eta) = \rt{0.15}\sin(x)\rt{0.15}\\
+    \up{1.7}\cos(x + 2\eta) = \rt{0.15}-\!\cos(x)\rt{0.15}\\
+    \up{1.7}\sin(x + 2\eta) = \rt{0.15}-\!\sin(x)\rt{0.15}
+    }
+    $$
+
+    ...that follow because one full turn
+    around the circle brings you back to the
+    same position, whereas a half-turn brings
+    you around  to your _antipode_ (where
+    both coordinates are negated), and these
+    two more...
+
+    $$
+    \displaylines{\up{1.0}\cos(x + \eta) = -\!\sin(x) \\
+    \up{1.7}\sin(x - \eta) = -\!\cos(x)}
+    $$
+
+    ...that follow from the four-particle
+    diagram, e.g..
+
+|> Section
+
+    *Relation to derivatives.*
+    Note that the derivatives of
+    sin and cos can also be expressed by
+    the [possibly more “logical”] formulas
+
+    $$
+    \sin'(x) = \sin(x + \eta)
+    $$
+    $$
+    \cos'(x) = \cos(x + \eta)
+    $$
+
+    given that
+
+    $$
+    \sin(x + \eta) = \cos(x)
+    $$
+    $$
+    \cos(x + \eta) = -\!\sin(x)
+    $$
+
+    as seen in the previous section.
+
+    In fact, one can make the further observation that
+
+    $$
+    \sin^{(\ell)}(x) = \sin(x + \ell\eta)
+    $$
+    $$
+    \cos^{(\ell)}(x) = \cos(x + \ell\eta)
+    $$
+
+    where “$^{(\ell)}$” denotes the $\ell$-th
+    derivative, for all $\ell \in \nn$.
+    !! Each
+    !! derivative is obtained by moving to the next
+    !! particle in the order of rotation, i.e.,
+    !! by adding $+\eta$ to the input!
+    Since each
+    derivative is obtained by moving to the next
+    particle in the order of rotation, each
+    derivative is obtained by adding $+\eta$ to the
+    input!
+
+|> Section
+
+    *The pythagorean identity.*
+    Because
+
+    $$
+    x^2 + y^2 = 1
+    $$
+
+    is the equation of the unit circle, and
+    points of the form
+
+    $$
+    (\cos(x), \sin(x))
+    $$
+
+    are points on the unit circle, we have
+
+    $$
+    \cos^2(x) + \sin^2(x) = 1 \tag{*}
+    $$
+
+    for all $x \in \rr$, surprise or not.
+    We refer to (*) as the _pythagorean identity_.
+
+    Various “tricks” are associated to the
+    pythagorean identity. For example, the
+    number
+
+    $$
+    1
+    $$
+
+    is forevermore suspect, because it might
+    just be
+
+    $$
+    \sin^2(x) + \cos^2(x)
+    $$
+
+    (or for some other variable) in disguise,
+    depending on the situation. Also
+
+    $$
+    \sin^2(y)
+    $$
+
+    (variable not important) might be
+
+    $$
+    1 - \cos^2(y)
+    $$
+
+    just as
+
+    $$
+    \cos^2(y)
+    $$
+
+    might be
+
+    $$
+    1 - \sin^2(y)
+    $$
+
+    (also
+
+    $$
+    1 - \cos^2(y)
+    $$
+
+    and
+
+    $$
+    1 - \sin^2(y)
+    $$
+
+    might end up respectively rewritten
+
+    $$
+    (1 - \cos(y))\cdot (1 + \cos(y))
+    $$
+
+    and
+
+    $$
+    (1 - \sin(y))\cdot (1 + \sin(y))
+    $$
+
+    by the difference-of-squares factorization),
+    and
+
+    $$
+    \sin^2(\theta) - \cos^2(\theta)
+    $$
+
+    might be
+
+    $$
+    1 - 2\cos^2(\theta)
+    $$
+
+    or otherwise
+
+    $$
+    2\sin^2(\theta) - 1
+    $$
+
+    and symmetrically for the opposite difference. (I.e.,
+
+    $$
+    \,\cos^2(\theta) - \sin^2(\theta),
+    $$
+
+    this one.) Etc.
+
+|> Section
+
+    *Inputs as radians.*
+    The
+
+    __radian measure__
+
+    of an angle was briefly touched upon in
+    Note >>DifferentiationFormulasClarification of Exercise 37, Chapter 4.
+    In short, it is a “scientific” measure
+    of angles in which the value of an angle
+    is the length of a circular arc subtended
+    by the angle, divided by the radius of
+    that arc:
+
+    |> Image
+        src=images/svg_ch5_ch_radian_definition.svg
+
+    The definition implies that the radian
+    measure of an angle is the length subtended
+    by the angle on a unit circle:
+
+    |> Image
+        src=images/svg_ch5_ch_radian_definition_radius_1.svg
+
+    In particular, $90^\circ$ is $\eta$ radians:
+
+    |> Image
+        src=images/svg_ch5_ch_radian_definition_90_degrees_is.svg
+
+    To imprint this fact in our memories:
+
+    |> Image
+        src=images/svg_ch5_ch_radian_definition_90_imprint.svg
+
+    (We will often leave out the “rad”—in fact,
+    if you don't see a degree symbol “$^\circ$”
+    next to an angle measure, that means the angle
+    measure is a radian.) From there, other radian
+    measures can be proportionally deduced; for
+    example, $45^\circ$ is $\eta/2$ radians:
+
+    |> Image
+        src=images/svg_ch5_ch_radian_definition_45_imprint.svg
+
+    aaaand... and so on.
+
+    As a consequence of the definition, a
+    displacement of $x$ units on the unit circle
+    subtends an angle—or technically: _rotation_,
+    because there is a “positive” direction—and
+    you can also say _signed angle_ instead of
+    _rotation_, by the way—whose (signed) radian
+    measure is $x$:
+
+    |> Image
+        src=images/svg_ch5_ch_x_displacement_and_x_radians.svg
+
+    In particular,
+    instead of positing the definitions of
+    sin and cos like this...
+
+    |> Image
+        src=images/svg_ch5_ch_x_displacement_and_x_radians_displacement_definition.svg
+
+    ...with the input appearing as a
+    displacement, we can posit the definitions
+    like this...
+
+    |> Image
+        src=images/svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg
+
+    ...with the input appearing as a radian.
+
+    |> Example
+
+        We can conceptualize $\cos(\eta/2)$...
+
+        |> Image
+            src=images/svg_ch_5_ch_etaOver2_example_displacement_version.svg
+
+        ...like this, with the input appearing as a displacement,
+        or else like this...
+
+        |> Image
+            src=images/svg_ch5_ch_etaOver2_example_angle_version.svg
+
+        ...with the input appearing as a radian.
+
+    |> Example
+
+        We can conceptualize $\sin(\eta/3)$...
+
+        |> Image
+            src=images/svg_ch5_ch_etaOver3_example_displacement_version.svg
+
+        ...like this, with the input appearing as a displacement,
+        or else like this...
+
+        |> Image
+            src=images/svg_ch5_ch_etaOver3_example_angle_version.svg
+
+        ...with the input appearing as a radian.
+
+|> Section
+
+    *Auto-converting degrees to radians.*
+    We will consider the degree notation
+    “$^\circ$” to be pig lipstick on top of
+    radians by defining
+
+    $$
+    x^\circ = x \cdot {\eta\over 90}
+    $$
+
+    for all $x \in \rr$, where the multiplication
+    by
+
+    $$
+    \eta\over 90
+    $$
+
+    converts from degrees to radians.
+
+    For example,
+
+    $$
+    90^\circ = 90 \cdot {\eta\over 90} = \eta
+    $$
+
+    and
+
+    $$
+    45^\circ = 45 \cdot {\eta\over 90} = \eta/2,
+    $$
+
+    per this definition.
+
+    In this way, in particular, we can write
+
+    $$
+    \cos(90^\circ\hlfbk)
+    $$
+
+    as a stand-in for
+
+    $$
+    \cos(\eta)
+    $$
+
+    ...without committing any informality.
+
+    (Note that
+
+    $$
+    \cos(\eta) = 0
+    $$
+
+    in case you had any doubt, by the way—an
+    angle of $\eta$ puts you at the tippy-top
+    of the circle!)
+
+|> Section
+
+    *Sines and cosines of $\mathbf{30^\circ}$,
+    $\mathbf{45^\circ}$ and $\mathbf{60^\circ}$.*
+    Note that every point of the form
+
+    $$
+    (\pm\sqrt{x}, \pm\sqrt{1 - x}),\,\,\,0 \leq x \leq 1 \tag{*}
+    $$
+
+    is on the unit circle, because the
+    sum-of-the-squares-of-the-two-coordinates is $1$.
+    (The equation of the unit circle is $x^2 + y^2 = 1$.)
+    E.g.,
+
+    $$
+    (\sqrt{0.2}, \sqrt{0.8})
+    $$
+
+    is on the unit circle, as is
+
+    $$
+    (\sqrt{0.1}, \sqrt{0.9})
+    $$
+
+    and so on. (If you're curious, points of this
+    family...
+
+    |> Image
+        src=images/svg_ch5_ch_that_family.svg
+
+    ...look like this.) Vice-versa, every point
+    on the unit circle has the form (*) for some
+    $0 \leq x \leq 1$ and some choice of the ‘$\pm$’
+    signs.
+
+    In particular, the unit circle contains the
+    following points:
+
+    |> Image
+        src=images/svg_ch5_ch_main_angles_first.svg
+
+    Here
+
+    $$
+    (\sqrt{0.5},\, \sqrt{0.5}\rt{0.2})
+    $$
+
+    is obviously at $45^\circ\hlfbk$ from the $x$
+    axis, which implies
+
+    $$
+    \cos(45^\circ\hlfbk) = \sqrt{0.5}
+    $$
+    $$
+    \sin(45^\circ\hlfbk) = \sqrt{0.5}
+    $$
+
+    or
+
+    $$
+    \cos(\eta/2) = \sqrt{0.5}
+    $$
+    $$
+    \sin(\eta/2) = \sqrt{0.5}
+    $$
+
+    in radians. Symmetrically,
+
+    $$
+    \cos(135^\circ\hlfbk) = -\sqrt{0.5}
+    $$
+    $$
+    \sin(135^\circ\hlfbk) = \sqrt{0.5}
+    $$
+
+    (or
+
+    $$
+    \cos(1.5\eta) = -\sqrt{0.5}
+    $$
+    $$
+    \sin(1.5\eta) = \sqrt{0.5}
+    $$
+
+    in radians) in the second quadrant, and so on.
+
+    For the remaining values we rely on the
+    existence of the following two equilateral
+    triangles:
+
+    |> Image
+        src=images/svg_ch5_ch_main_angles_two_equilateral_triangles.svg
+
+    !! These triangles imply that the the unique
+    !! point on the unit circle with $x$-coordinate
+    !! $0.5$ in the first quadrant is at $60^\circ\hlfbk$
+    !! from the $x$ axis, and that the unique point
+    !! on the unit circle with $y$-coordinate $0.5$
+    !! in the first quadrant is at $30^\circ\hlfbk$
+    !! from the $x$ axis; but since
+    The first triangle implies that the the unique
+    point on the unit circle with $x$-coordinate
+    $0.5$ in the first quadrant is at $60^\circ\hlfbk$
+    from the $x$ axis, while the second triangle implies that the unique point
+    on the unit circle with $y$-coordinate $0.5$
+    in the first quadrant is at $30^\circ\hlfbk$
+    from the $x$ axis; but since
+
+    $$
+    \sqrt{0.25} = 0.5
+    $$
+
+    (surprise!), the two points in question must be
+    the afore-shown
+
+    $$
+    (\sqrt{0.25}, \,\sqrt{0.75}) = (0.5, \,\sqrt{0.75})
+    $$
+
+    at the upper tip of the first triangle, and
+
+    $$
+    (\sqrt{0.75}, \,\sqrt{0.25}) = (\sqrt{0.75}, \,0.5)
+    $$
+
+    at the rightward tip of the second triangle,
+    and we find
+
+    $$
+    \cos(60^\circ\hlfbk) = 0.5 \,\,(= \sqrt{0.25}),
+    $$
+    $$
+    \sin(60^\circ\hlfbk) = \sqrt{0.75}
+    $$
+
+    and
+
+    $$
+    \cos(30^\circ\hlfbk) = \sqrt{0.75},
+    $$
+    $$
+    \sin(30^\circ\hlfbk) = 0.5 \,\,(= \sqrt{0.25}),
+    $$
+
+    by conclusion; or
+
+    $$
+    \cos(2\eta/3) = 0.5 \,\,(= \sqrt{0.25}),
+    $$
+    $$
+    \sin(2\eta/3) = \sqrt{0.75}
+    $$
+
+    and
+
+    $$
+    \cos(\eta/3) = \sqrt{0.75},
+    $$
+    $$
+    \sin(\eta/3) = 0.5 \,\,(= \sqrt{0.25})
+    $$
+
+    in radians!
+
+    (And symmetrically in other quadrants, e.g.,
+
+    $$
+    \cos(120^\circ\hlfbk) = -0.5 \,\,(= -\sqrt{0.25}),
+    $$
+    $$
+    \sin(120^\circ\hlfbk) = \sqrt{0.75}
+    $$
+
+    a.k.a.,
+
+    $$
+    \cos(4\eta/3) = -0.5 \,\,(= -\sqrt{0.25}),
+    $$
+    $$
+    \sin(4\eta/3) = \sqrt{0.75}
+    $$
+
+    in radians, etc.)
+
+    |> Pause
+
+    _Postscript 1._ We have
+
+    $$
+    \sqrt{0.5} = {1\over \sqrt{2}}
+    $$
+
+    and
+
+    $$
+    \sqrt{0.75} = {\sqrt{3}\over 2}
+    $$
+
+    so the above “wheel of special values” can also be
+    drawn as follows (adding the angles in, as well):
+
+    |> Image
+        src=images/svg_ch5_ch_main_angles_second.svg
+
+    |> Pause
+
+    _Postscript 2._
+    Some teachers also like to so-call
+    “rationalize the denominator”; they will write
+
+    $$
+    {\sqrt{2}\over 2}
+    $$
+
+    for $\sqrt{0.5} = {1\over \sqrt{2}}$. In this case:
+
+    |> Image
+        src=images/svg_ch5_ch_main_angles_third.svg
+
+|> Section
+
+    *Scaling the circle.*
+    In the following diagram, the coordinates
+    of the point $P$ are obviously $(\cos(\theta), \sin(\theta))$,
+    because that is the definition of sin and cos:
+
+    |> Image
+        src=images/svg_ch5_ch_scaling_circle_1.svg
+
+    But say now that
+    we re-scale the circle to have some arbitrary
+    radius $r$, while maintaining the angle $\theta$:
+
+    |> Image
+        src=images/svg_ch5_ch_scaling_circle_r.svg
+
+    ...what are the coordinates of $Q$?
+    The coordinates are obviously the old coordinates
+    scaled up/down by $r$, i.e.,
+    $$
+    Q = (r\cos(\theta), r\sin(\theta))
+    $$
+    or, in individual formulas,
+    $$
+    Q_x = r\cdot\cos(\theta)
+    $$
+    $$
+    Q_y = r\cdot\sin(\theta)
+    $$
+    ...where $Q_x$, $Q_y$ are the $x$- and $y$- coordinates of $Q$.
+
+|> Section
+
+    *Polar coordinates.*
+    The so-called
+
+    __polar coordinates__
+
+    of a point $P$ in the plane are a pair of
+    numbers
+
+    $$
+    (r, \theta)
+    $$
+
+    with $r \geq 0$ such that
+
+    $$
+    P = (r\cos(\theta), r\sin(\theta))
+    $$
+
+    or namely with the property that:
+
+    |> TextParent
+        |> ul
+            style=list-style-type:disc;margin-top:1em;margin-bottom:1em;
+            |> li
+                style=margin:0 60px;
+
+                $r$ is the distance from $P$ to the origin;
+            |> li
+                style=margin:0 60px;
+
+                $\theta$ is “the” counterclockwise angle
+                from the positive $x$ axis to the segment
+                $OP$, where $O$ is the origin;
+
+    ...even though $\theta$ is not unique,
+    because any multiple of $4\eta$ may be
+    added to $\theta$ without altering the
+    values of $\sin(\theta)$ or $\cos(\theta)$;
+    slightly worse even: if $r = 0$, then
+    $\theta$ may be anything. (Because in that
+    case
+
+    $$
+    P = (0, 0)
+    $$
+
+    and any value of $\theta$ will satisfy
+    the equation
+
+    $$
+    P = (0\cdot \cos(\theta), 0\cdot \sin(\theta))
+    $$
+
+    namely.)
+
+    NONETHELESS—even though the polar coordinates
+    of a point are not (not ever!) uniquely
+    determined, we say “the” polar coordinates of
+    a point, out of expediency!
+
+    |> Example
+
+        The pairs
+
+        $$
+        (\sqrt{2},\, -3.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 0.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 4.5\eta)
+        $$
+
+        count among the polar coordinates of the point
+        $(1, 1) \in \rr^2$.
+
+    |> Example
+
+        The pairs
+
+        $$
+        (\sqrt{2},\, -2.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 1.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 101.5\eta)
+        $$
+
+        count among the polar coordinates of the point
+        $(-1, 1) \in \rr^2$.
+
+|> Section
+
+    *Change-of-coordinate formulas.*
+    Definitionally, the equations
+
+    $$
+    \displaylines{x = r \cos(\theta)\\
+    \up{1.3}y = r \sin(\theta)}
+    $$
+
+    give the change-of-coordinate formulas
+    from a polar coordinate $(r, \theta)$
+    to a cartesian coordinate $(x, y)$.
+    (It's right there in the promise of what
+    it means to be a valid polar coordinate
+    $(r, \theta)$.)
+
+    Conversely, to recover the polar
+    coordinates $(r, \theta)$ from the cartesian
+    coordinates $(x, y)$, one has at least
+
+    $$
+    r = \sqrt{x^2 + y^2}
+    $$
+
+    by the Pythagorean theorem, but the
+    formula for $\theta$ is not so cheerful—out
+    of completeness, we can jot it down
+    anyway, for your entertainment:
+
+    $$
+    \theta = \begin{cases}
+    \arctan(y/x)&amp;\te{if }\, x \ne 0, \,\te{else} \\
+    \up{1.2}\te{arccot}(x/y) &amp;\te{if }\, y \ne 0, \,\te{else} \\
+    \up{1.2}\rm{?} &amp;\te{if }\, x = 0, y = 0
+    \end{cases}
+    $$
+
+    ...where “arctan”, “arccot” are
+    some-functions-or-other-to-be-discussed-later.
+
+    |> Pause
+
+    _Note._
+    Popular programming languages such as
+    python offer a function named
+    |> span
+        style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+
+        atan2
+    that will compute the _argument_ (see
+    Vocabulary below) $\theta$ of a given pair
+    $(x, y)$ out of the box, without you having to
+    worry about which of $x$ or $y$ is $0$, etc.
+
+    But the call goes 
+    |> span
+        style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+
+        atan2(y, x)
+    \ not 
+    |> span
+        style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+
+        atan2(x, y)
+    \ by some bizareness. (Well, actually a
+    throwback to the fact that in this expression...
+
+    _|“$\arctan(y/x)$”|_
+
+    ...you hit “$y$” before “$x$”.)
+
+    |> Pause
+
+    _Vocabulary._
+    The first coordinate of a polar
+    coordinate—colloquially, “$r$”—is called the
+    _radius_ or the _norm_. The second coordinate
+    of a polar coordinate—colloquially, “$\theta$”—is
+    called the _angle_ or the _argument_.
+
+|> Section
+
+    *Right triangles.*
+    Hopefully, the following figure should seem
+    believable-and/or-familiar, at this point
+    (it's a scaled-up/down unit circle):
+
+    |> Image
+        src=images/svg_ch5_ch_triangle_sequence_1.svg
+
+    If we assume $0 \leq \theta \leq \eta$ then both
+    $r\cos(\theta)$ and $r\sin(\theta)$ are nonnegative,
+    and we can redraw the figure as a relationship between
+    the sidelengths of a right triangle:
+
+    |> Image
+        src=images/svg_ch5_ch_triangle_sequence_2.svg
+
+    If we rebrand the three legs of the triangle
+    as “hypotenuse”, “opposite”, and “adjacent” according
+    to their relationship to the angle $\theta$...
+
+    |> Image
+        src=images/svg_ch5_ch_triangle_sequence_rebranded.svg
+
+    ...the relationship can be written:
+
+    |> Image
+        src=images/svg_ch5_ch_relationships_of_note.svg
+
+    To be paired with this figure:
+
+    |> Image
+        src=images/svg_ch5_ch_relationships_of_note_triangle_version.svg
+
+    The arrows are meant to indicate that $\cos(\theta)$ is the
+
+    __multiplicative factor__
+
+    that takes one from “hypotenuse” to “adjacent”,
+    while $\sin(\theta)$ is (again) the
+
+    __multiplicative factor__
+
+    that takes one from “hypotenuse” to “opposite”.
+
+    |> Example
+
+        In the following diagram...
+
+        |> Image
+            src=images/svg_ch5_ch_example_multiplications_1.svg
+
+        ...the length of the side marked ‘?’ is
+
+        $$
+        10\cdot \cos(43^\circ\hlfbk)\cdot \cos(20^\circ\hlfbk)
+        $$
+
+        by following two ‘cos’ arrows (i.e.,
+        two hypotenuse-to-adjacent arrows) starting
+        from the sidelength of $10$.
+
+    |> Example
+
+        In the following diagram...
+
+        |> Image
+            src=images/svg_ch5_ch_example_multiplications_2.svg
+
+        ...the length of the side marked ‘?’ is
+
+        $$
+        10\cdot \cos(43^\circ\hlfbk)\cdot \sin(60^\circ\hlfbk)\cdot \sin(50^\circ\hlfbk)
+        $$
+
+        by following one ‘cos’ and then two ‘sin’
+        arrows, starting from the sidelength of
+        $10$.
+
+|> Section
+
+    *A famous diagram.*
+    There is a somewhat infamous diagram similar
+    to the diagrams of examples 5 and 6; to draw the
+    diagram, start with a “snail shell” stack of
+    two right triangles:
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_1.svg
+
+    Rotate a copy of the smaller
+    triangle by $90^\circ$ towards the bigger one;
+    we end up with two pairs of parallel sides:
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_2.svg
+
+    Therefore, if we snap a scaled copy of the
+    smaller triangle onto the remaining non-hypotenuse
+    side of the bigger triangle, we end up with a
+    flush side consisting of a single straight
+    segment (you can also think in terms of
+    angles that add up to $180^\circ$):
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_3.svg
+
+    We finish off the diagram by setting the
+    hypotenuse of the original big triangle to
+    have length $1$:
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_4.svg
+
+    This completes the diagram. Note that it is
+    possible for the sum of $\theta_1$ and $\theta_2$
+    to be greater than $\eta$...
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_greater_eta.svg
+
+    ...but, by construction, $\theta_1$ and
+    $\theta_2$ are individually in the range from
+    $0$ to $\eta$. (Being “proper angles” of right
+    triangles.) (You can now contemplate what the
+    “utility” of the diagram might be!)
+
+|> Section
+
+    *The Abercrombie inequality.*
+    Take an ordinary angle of aperture less than
+    $180^\circ\hlfbk$ with a circular arc drawn
+    inside and a line segment spanning the two
+    sides of the angle that clears the arc:
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_statement.svg
+
+    The eponymous
+
+    __Abercrombie inequality__
+
+    states that
+    !! the length of the segment is at
+    !! least as much as the length of the arc, i.e.,
+    !! that
+
+    $$
+    A\leq S
+    $$
+
+    in the language of the above figure, i.e.,
+    that the length of the segment is
+    at least
+    !! greater-than-or-equal-to
+    the length of the arc.
+    !! if $A$ is the length of the arc and $S$ is
+    !! the length of the segment, regardless of the
+    !! exact configuration of the angle, arc, and
+    !! segment. (The segment just has to remain outside
+    !! the arc.)
+
+    !! Otherwise—if this were not the case—the
+    The proof is that, if this were not the case,
+    the
+    length
+    $S$ of the segment would lie to left of the
+    length $A$ of the arc on the number line, as
+    pictured in this stylized view of the number line:
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_to_the_left.svg
+
+    In the space between $S$ and $A$, we could then
+    find the length $P$ of a polygonal line
+    approximating the arc...
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_with_P.svg
+
+    ...because such polygonal lines can
+    approximate the arc arbitrarily closely, i.e.,
+    have lengths that come arbitrarily close to
+    “$A$” on the number line from the left.
+    (This constitutes our “axiomatic” belief
+    about the  nature of curved length.) But this
+    will be a contradiction, because we claim
+    that each segment of the polygonal line has
+    length less than its corresponding “shadow”
+    on the segment of length $S$:
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_shadows.svg
+
+    ...this last claim follows from the following
+    diagram:
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_s1s2p1p2.svg
+
+    The point is that
+
+    $$
+    \overline{s_1s_2}\, > \,\overline{p_1p_2}
+    $$
+
+    because $s_1$ and $s_2$ are separated by a
+    pair of parallel lines that are at distance
+    $\overline{p_1p_2}$ from one another, and
+    because at least one of $s_1$, $s_2$ is
+    not on either of the parallel lines (or else
+    we would have $s_1 = p_1$, $s_2 = p_2$, and
+    the segment $s_1s_2$ would not clear the arc).
+
+    Therefore, each segment of $P$ has length
+    less than its corresponding “shadow segment”
+    on the crossover segment of length $S$, from
+    which $S > P$, from which this arrangement
+    of values...
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_to_the_left_second.svg
+
+    ...on the number line is an impossibility,
+    i.e., $S \geq A$.
+    This constitutes the proof of the Abercrombie
+    inequality.
+
+    One can polish a few more details by noting that:
+
+    |> TextParent
+        |> p
+            style=text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;
+
+            *(i)* the segment can be tangent to the
+            arc at one point, the proof will still go
+            through (so the segment does not need to
+            _strictly_ clear the arc);
+
+        |> p
+            style=text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;
+
+            *(ii)* as long as the angle is nonzero,
+            and the arc has nonzero radius, the
+            length of the segment will be STRICTLY
+            GREATER than the length of the arc,
+            not just greater-or-equal-to
+
+    (Point *(ii)* can be seen by
+    comparing the segment to a two-segment
+    assemblage that is shorter than the segment
+    itself, but still-as-long-as-the-arc, by virtue
+    of the original inequality.)
+
+|> Section
+    
+    *The Gregorinovich sandwich.*
+    The “Gregorinovich sandwich”—sometimes
+    Gr_i_gorinovich—states that
+    !! |> span
+    !!     style=text-decoration:underline
+    !!     i
+    !! _gorinovich—states that
+
+    $$
+    \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}
+    $$
+
+    for all $0 < \theta < \eta$.
+    The Gregorinovich sandwich is so-called because
+    !! $\theta$ is “sandwiched”
+    it “sandwiches” $\theta$
+    between
+    $$
+    \sin(\theta)
+    $$
+    below, and
+    $$
+    {\sin(\theta)\over\cos(\theta)}
+    $$
+    !! (futurely known as “$\tan(\theta)$”)
+    above. (Indeed,
+    $$
+    {\sin(\theta)\over\cos(\theta)} > \sin(\theta)
+    $$
+    in the range $0 < \theta < \eta$
+    because dividing by
+    $$
+    \cos(\theta)
+    $$
+    makes you
+    _|BIGGER|_
+    when $0 < \cos(\theta) < 1$, which is the case
+    for $0 < \theta < \eta$—in fact, dividing by
+    $\cos(\theta)$ will make you
+    _|DRAMATICALLY BIGGER|_
+    when $\cos(\theta)$ is close to $0$, which is the
+    case when $\theta$ is close to $\eta$, $0 < \theta < \eta$.)
+
+    !! The Gregorinovich sandwich
+    !! consists of two separate
+    !! inequalities that require two separate proofs.
+    !! The Gregorinovich
+    !! sandwich is so-called because it consists of
+
+    !! _|TWO|_
+
+    !! inequalities, the first being
+
+    !! $$
+    !! \sin(\theta) \rt{0.1}<\, \theta
+    !! $$
+
+    !! and the second being
+
+    !! $$
+    !! \,\theta \,<\rt{0.1} {\sin(\theta)\over\cos(\theta)}
+    !! $$
+
+    !! ...with each inequality requiring a separate proof.
+
+    The first inequality
+
+    $$
+    \sin(\theta) \rt{0.1}<\rt{0.1} \theta
+    $$
+
+    follows by this illustration (using $0 < \theta < \eta$):
+
+    |> Image
+        src=images/svg_ch5_ch_fisher_first_ineq.svg
+
+    Namely, per the one slightly pedantic logic,
+
+    $$
+    \theta > L
+    $$
+
+    on the one hand, where $L$ is the length of
+    the dotted chord, and
+
+    $$
+    L > \sin(\theta)
+    $$
+
+    on the other hand. Together, this implies
+    $\theta \rt{0.1}>\rt{0.1} \sin(\theta)$.
+
+    For the second inequality, we have to start
+    by noting that
+
+    $$
+    {\sin(\theta)\over \cos(\theta)} = {1\over \cos(\theta)}\cdot \sin(\theta)
+    $$
+
+    is the length that $\theta$ projects onto
+    the line $x = 1$:
+
+    |> Image
+        src=images/svg_ch5_ch_fisher_second_ineq.svg
+
+    Specifically,
+
+    $$
+    {1\over \cos(\theta)}
+    $$
+
+    turns the bottom segment of length $1$
+    into the pink hypotenuse, because just as ‘cos’
+    is the hypotenuse-to-adjacent multiplicative
+    factor, so is ‘$1/\!\cos$’ the adjacent-to-hypotenuse
+    multiplicative factor (don't be confused by the
+    presence of two possible triangles to which
+    this can be applied); then,
+
+    $$
+    \sin(\theta)
+    $$
+
+    brings one over to the right-hand segment
+    from the pink hypotenuse, being the
+    hypotenuse-to-opposite multiplicative
+    factor.
+
+    The fact that
+
+    $$
+    {\theta} \rt{0.1}<\rt{0.1} {\sin(\theta)\over \cos(\theta)}
+    $$
+
+    then follows from the “polished” version
+    of the Abercrombie inequality. (The version
+    that allows the segment to be tangent to the
+    arc, and that claims a strict inequality.)
+
+|> Section
+
+    *The angle-sum formulas.*
+    In the “famous diagram” from above there
+    are a total of four different ways to
+    reach an outer edge by means of ‘cos’
+    and ‘sin’ arrows while starting from the
+    edge of length $1$, reaching each of the
+    four other outer edges precisely once:
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_1.svg
+
+    (Note by the way that $0 \leq \theta_1 \leq \eta$,
+    $0 \leq \theta_2 \leq \eta$ because of
+    the way the figure is constructed, which
+    implies that $\sin(\theta_1\!\rt{0.1})$,
+    $\cos(\theta_1\!\rt{0.1})$,
+    $\sin(\theta_2\!\rt{0.1})$ and $\cos(\theta_2\!\rt{0.1})$
+    are all nonnegative, and that all their
+    products are nonnegative, as well.)
+
+    On the other hand, if we inscribe the
+    figure in the unit circle with the joint angle
+    $\theta_1 + \theta_2$ at the center, we find that
+
+    $$
+    \,\sin(\theta_1 + \theta_2)\,
+    $$
+
+    and
+
+    $$
+    \,\cos(\theta_1 + \theta_2)\,
+    $$
+
+    make an appearance as coordinates, and
+    that these coordinates can be expressed as
+    sums or differences of the four outer edges:
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_2.svg
+
+    (Or with $\theta_1 + \theta_2 > \eta$...
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_3.svg
+
+    ...works as well!)
+
+    In other words, we find...
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_formulas_flowers.svg
+
+    ...for $\theta_1$ and $\theta_2$ as may
+    appear in such a figure, i.e., for
+    $0 \leq \theta_1, \theta_2 \leq \eta$. In
+    fact, these two formulas hold for _all_
+    $\theta_1$, $\theta_2 \in \rr$. They are
+    known as the _angle-sum formulas_. Also
+    note the “pattern” of the angle-sum formulas:
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_formulas_by_heart.svg
+
+    The point of remembering these patterns
+    is that, on their own, these patterns are
+
+    __enough__
+
+    to reconstruct the full formulas from scratch!
+    (Well, a lot of students remember the formulas
+    that way, at least.)
+
+|> Section
+
+    *The missing arrows.*
+    ‘sin’ and ‘cos’ only constitute two out
+    of six ratios that exist among the sides
+    of a right triangle. The four “missing ratios”
+    are hereby drawn:
+
+    |> Image
+        src=images/svg_ch5_ch_missing_arrows_veiled.svg
+
+    In fact, there is a dedicated, named function
+    that computes each of the six ratios. We shall
+    now reveal the names of the four missing
+    functions (!!):
+
+    |> Image
+        src=images/svg_ch5_ch_missing_arrows_unveiled.svg
+
+    Here
+    “sec” is short for _secant_,
+    “tan” is short for _tangent_,
+    “cot” is short for _cotangent_, and
+    “csc” is short for _cosecant_.
+
+    To be clear, multiplying by
+
+    $$
+    \sec(\theta)
+    $$
+
+    takes you from ‘adjacent’ to ‘hypotenuse’, multiplying by
+
+    $$
+    \csc(\theta)
+    $$
+
+    takes you from ‘opposite’ to ‘hypotenuse’, multiplying by
+
+    $$
+    \tan(\theta)
+    $$
+
+    takes you from ‘adjacent’ to ‘opposite’,
+    and multiplying by
+
+    $$
+    \cot(\theta)
+    $$
+
+    takes you from ‘opposite’ to ‘adjacent’. (!)
+
+    You may observe that
+
+    $$
+    \sec = {1\over \cos}
+    $$
+    and that
+    $$
+    \csc = {1\over \sin}
+    $$
+
+    as multiplying by ‘cos’ undoes the work
+    of multiplying by ‘sec’, and likewise for
+    ‘sin’ and ‘csc’; also,
+
+    $$
+    \,\tan = {1\over \cot},
+    $$
+    $$
+    \cot = {1\over \tan}
+    $$
+
+    modulo a very small technicality (to do
+    with the fact that ${1\over \infty} \ne 0$,
+    or to do with the fact that
+    what people think of as “$\pm\infty$”
+    is, in fact, an _undefined_ value of the function),
+    and
+
+    $$
+    \tan \,=\, \sec \cdot \sin \,\,=\,\, {\sin\!\!\!\!\phantom{1}\over \cos}
+    $$
+    $$
+    \cot \,=\, \csc \cdot \cos \,\,=\,\, {\cos\!\!\!\!\phantom{1}\over \sin}
+    $$
+
+    since one way to reach ‘opposite’ from
+    ‘adjacent’ is to go via ‘hypotenuse’, and
+    vice-versa for reaching ‘adjacent’ from
+    ‘opposite’. (In fact, the next-to-last
+    identity played a role in our proof of the
+    Gregorinovich sandwich.) (Indeed,
+
+    $$
+    %\sin(\theta) < \theta < \tan(\theta)\rt{0.1}
+    \sin(\theta) < \theta < \tan(\theta)\rt{0.1}
+    $$
+
+    !! ...in this form, as well!)
+    is another way of writing the Grigorinovich
+    sandwich.)
+
+|> Section
+
+    *Secant: a second view.*
+    We will point out that
+
+    $$
+    \sec(\theta)
+    $$
+
+    is also the multiplicative factor that takes 
+    you from the 
+    |> span
+        style=background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
+        PURPLE
+    \ to the 
+    |> span
+        style=white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
+        LIME GREEN
+    \ triangle (hard to draw, because it is
+    behind the purple triangle!) in the following
+    figure:
+
+    |> Image
+        src=images/svg_ch5_ch_secant_reinterpretation_1.svg
+
+    Indeed, the scaling factor that is needed
+    to turn the purple into the lime green
+    triangle is the solution $A$ to
+
+    $$
+    A\cdot \cos(\theta) = 1
+    $$
+
+    which gives
+
+    $$
+    A = {1\over \cos(\theta)} = \sec(\theta)
+    $$
+
+    using $\sec = 1/\cos$.
+
+    (After all, this multiplicative factor...
+
+    |> Image
+        src=images/svg_ch5_ch_secant_reinterpretation_2.svg
+
+    ...was always going to equal
+    this multiplicative factor...
+
+    |> Image
+        src=images/svg_ch5_ch_secant_reinterpretation_3.svg
+
+    ...given that the target segment has length $1$ each time!)
+
+    |> Pause
+
+    _Postscript._
+    Similarly,
+
+    $$
+    \csc(\theta)
+    $$
+
+    is the multiplicative factor that takes you 
+    from the 
+    |> span
+        style=white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
+        BURNT ORANGE
+    \ to the 
+    |> span
+        style=white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
+
+        FAUX BORDEAUX
+    \ triangle below:
+
+    |> Image
+        src=images/svg_ch5_ch_secant_reinterpretation_4.svg
+
+    (But this fact is not used as often.)
+
+|> Section
+
+    *Note on calculators.*
+    Your calculator has “degree mode” and
+    “radian mode”. If your calculator tells
+    you that
+
+    $$
+    \cos(1.57)
+    $$
+
+    is a number close to $1$, instead of being
+    a number close to $0$, it means that your
+    calculator is in “degree mode”—it has treated
+    as $1.57$ as a number of degrees, instead of
+    as a number of radians! (Be sure, in any
+    case, that you're in the mode that you want.)

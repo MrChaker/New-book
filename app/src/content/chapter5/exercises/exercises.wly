@@ -1,0 +1,4925 @@
+|> Exercise
+    Is
+
+    $$
+    y =  \cos(x + 0.1)
+    $$
+
+    the shift of $y = \cos(x)$ to the left by $0.1$,
+    or to the right by $0.1$?
+
+    |> Solution
+        The function $x \ra \cos(x + 0.1)$ fetches its values
+
+        __in the future__
+
+        by $0.1$, compared to $\cos(x)$. It is therefore
+
+        __ahead__
+
+        or its graph
+
+        __to the left__
+
+        of $y = \cos(x)$, by $0.1$.
+
+|> Exercise
+
+    Guesstimate a function with this graph:
+
+    |> Image
+        src=images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg
+
+    |> Solution
+
+        It appears that the function is “a line plus
+        something”, in the sense of the following
+        diagram:
+
+        |> Image
+            src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg
+
+        (Or in the technical sense of taking the sum
+        of two functions, to be more exact—that is what
+        the sum of two functions looks like, pictorialized!)
+
+        The line appears to be
+        $$
+        y = {1\over 4}x
+        $$
+        making it a true _linear_ function (as opposed
+        to _affine_, cf. Chapter 3).
+
+        As for the “something”—the bumpy one—it appears
+        to just be a “sped up cosine”, and note that
+        the graph goes through approximately $10$
+        cycles between $x = 0$ and $x = 6.28 \approx 4\eta$,
+        as we can count on the graph of the original
+        function:
+
+        |> ImageLeft
+            line=-2
+            src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg
+
+        |> Image
+            src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg
+
+        As cos goes through _one_ cycle from $x = 0$ to
+        $x = 4\eta$, the “bumpy function” is therefore
+        (roughly, from what we can see) a “$10$&#x200b;$\times$”
+        sped-up version of cosine, i.e.,
+        $$
+        y = \cos(10x)
+        $$
+        from which the guesstimate for the initial function
+        would be
+        $$
+        y = \cos(10x) + {1\over 4} x
+        $$
+        adding our two separate guesstimates together.
+
+|> Exercise
+
+    Guesstimate a function with this graph (we can
+    tell you that the large-scale curve is a
+    parabola):
+
+    |> Image
+        style=margin-top:0.8em;margin-bottom:1em;
+        src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg
+
+    |> Solution
+
+        Having intimated that the answer is the sum of
+        a parabola and of some cosine deviant, let us
+        focus on the parabolic portion first, that would
+        namely be roughly this purple curve:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg
+
+        [Nb:
+
+        __parabolic__
+
+        is a synonym of
+
+        __quadratic__
+
+        or
+
+        __degree $\mathit{2}$ polynomial__
+
+        i.e., a function of the form
+        $$
+        x \ra a_2x^2 + a_1x + a_0
+        $$
+        for constants $a_2$, $a_1$, $a_0 \in \rr$, cf. Chapter 3.]
+
+        As the parabola is symmetric about the $y$ axis it will
+        be of the form
+        $$
+        y = Ax^2 + C
+        $$
+        for some constants $A$, $C \in \rr$.
+        (And specifically
+        without a
+        “$Bx$”
+        term, that would break symmetry.)
+
+        The value
+        $$
+        C
+        $$
+        is easy because it is the value of the parabola at
+        $x = 0$, which in this case appears to be $y = -3$:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg
+
+        ...so...
+        $$
+        C = -3
+        $$
+
+        (we say). For $A$,
+        note that the parabola appears to have value $y \approx 3$
+        at $x = \pm 12$, resulting in an increase of $\approx 6$
+        between $x = 0$ and $x = \pm 12$:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg
+
+        That increase being entirely due to the term
+        $Ax^2$, we get
+        $$
+        A \cdot 12^2 \approx 6
+        $$
+        (in more detail,
+        $$
+        %(A\cdot 12^2) - (A\cdot 0^2) \approx 6
+        A\cdot 12^2 - A\cdot 0^2 \approx 6
+        $$
+        but $A\cdot 0^2$ goes away), meaning
+        $$
+        A \approx {6\over 12^2} = {1\over 24}
+        $$
+        meaning that the quadratic portion of the function is
+        $$
+        {x^2\over 24} - 3
+        $$
+        per this estimate.
+
+        The other portion of the answer—what is left
+        after the parabola is subtracted—is a cosine-like
+        function (or _sinusoid_) whose amplitude (the
+        height of a bump) is roughly $0.5$, which is half the
+        amplitude of
+        sine/cosine:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg
+
+        Moreover at $x = 0$ we find
+        more or less exactly
+        the _bottom_ of a
+        bump,
+        so altogether
+        we can use a function of the form
+        $$
+        -0.5\cos(Bx)
+        $$
+        to model this sinusoid,
+        where the multiplication by $0.5$ gives us
+        the desired amplitude and where the ‘$-$’ gives
+        us an anti-bump (“trough”?) instead of a bump at $x = 0$;
+        on the other hand the value $B$ will control the amount of
+        horizontal compression inside the curve; specifically,
+        $$
+        B = 1
+        $$
+        will give a curve that goes through one full cycle
+        per interval of length $4\eta$,
+        while, in general, an arbitrary value of $B$ will give a
+        curve that goes $B$ full cycles
+        per interval of length $4\eta$ (the larger $B$ is,
+        the more “frenzied” the curve);
+        in our case, it seems that $B \approx 20$:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg
+
+        So an estimate for the
+        second function
+        would be...
+        $$
+        -0.5\cos(20x)
+        $$
+        ...giving us...
+        $$
+        -0.5\cos(20x) + {x^2\over 24} - 3
+        $$
+        ...for our final answer, after adding the parabola back.
+
+|> Exercise
+
+    Guesstimate a function with this graph:
+
+    |> Image
+        src=images/svg_ch5_ex_big_wave.svg
+
+    |> Solution
+
+        First we estimate a function for the large-scale
+        curve in purple:
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple.svg
+
+        It appears to be a linear function (line through
+        $(0, 0)$ sloping down) plus a sinusoid. To
+        estimate the slope of the linear function we can
+        take two points in like relation to the sinusoid,
+        draw a line between them and estimate the slope:
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg
+
+        This makes the linear function portion of the purple
+        curve
+
+        $$
+        y = -{1\over 4}x
+        $$
+
+        or thereabouts.
+
+        To model the sinusoid portion of the large-scale
+        purple curve we need more measurements, such as
+        the total height of the sinusoid from top of
+        bump to bottom of trough; we can add a third “bottom
+        of trough” dot, in same relation to the top of
+        bumps (but we won't actually draw this dot or else
+        we won't be able to see where we're measuring):
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_with_height.svg
+
+        So it appears that the sinusoid has a total height
+        of $\approx 4$ from top of bump to bottom of trough.
+
+        (And in case you're confused by what we're trying
+        to do,
+        let us re-explain that we are trying
+        to measure the vertical width of this blue band...
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_with_band.svg
+
+        ...that, indeed, seems near $4$.)
+
+        What this means is that if we remove the linear
+        portion
+
+        $$
+        y = -{1\over 4}x
+        $$
+
+        from the purple curve, what we will find is a
+        sinusoid whose individual bumps have height $\approx 2$;
+        something like this (we switch the color to aquamarine, so
+        that “purple curve” retains its unique meaning):
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg
+
+        This graph has the form
+        $$
+        y = -2\sin(Bx)
+        $$
+        for some value of $B \in \rr$ that, chosen correctly,
+        will give us the desired “wavelength”. (Note that
+        $$
+        y = -\sin(x)
+        $$
+        has graph...
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_big_wave_minus_sin_x.svg
+
+        ...and that
+        $$
+        y = -2\sin(x)
+        $$
+        has graph...
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_minus_2sin_x.svg
+
+        ...and, from there, all that remains is to
+        “slow down” the oscillation to match the
+        aquamarine graph—the “slowing down” is what
+        $B$ is for.)
+
+        To know how much $B$ must be, we must measure
+        the cycle length (it is, admittedly, hard to
+        accurately determine the position of the top
+        of each large-scale bump, but we do our best by
+        basing ourselves off of what appear to be identical
+        patterns in the small-scale oscillations at
+        the top of each large-scale bump):
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg
+
+        As
+
+        $$
+        12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta
+        $$
+
+        the period of the large-scale sinusoid is near
+        twice the period of sin or cos; i.e., we need to
+        “slow down”
+
+        $$
+        -2\sin(x)
+        $$
+
+        by a factor $2$, i.e., put
+
+        $$
+        B = 0.5
+        $$
+
+        i.e., use
+
+        $$
+        y = -2\sin(0.5x)
+        $$
+
+        for the large-scale sinusoid. (Aquamarine graph.)
+
+        (So far we have
+
+        $$
+        -{1\over 4}x - 2\sin(0.5x)
+        $$
+
+        for our approximation to the purple curve, putting
+        the linear and sinusoidal parts together. Now we
+        move on from the purple curve.)
+
+        It remains to add in the small-scale oscillation
+        from the original curve; we can do the tedious
+        part first, and count the number cycles in an
+        interval of length $4\eta \approx 6.28$:
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg
+
+        So the small-scale oscillation is running
+        at $\approx 19$ times the frequency of an ordinary
+        sine or cosine, and we can model the small-scale
+        oscillation by
+
+        $$
+        x \ra -0.5\sin(19x)
+        $$
+
+        since, like the large-scale oscillation from the
+        purple curve, it shares the same phase as $-\sin(x)$,
+        and since, like the small-scale oscillation from
+        Exercise 3, it has an amplitude of $\approx 0.5$.
+
+        Altogether, we get
+
+        $$
+        y = -{1\over 4}x - 2\sin(0.5x) - 0.5\sin(19x)
+        $$
+
+        as our “guesstimate”, while adding the linear
+        function, the large-scale sinusoid, and the small-scale
+        sinusoid together.
+
+|> Exercise
+
+    Which function is most plausibly associated to
+    which graph?
+
+    |> table
+        class=slice
+        style=border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;
+        |> colgroup
+            |> col
+                width=200
+            |> col
+                width=200
+        |> tbody
+            |> tr
+                style=border-bottom:1px solid black;
+                |> td
+                    style=padding:0.5em 0;border-right:1px solid black
+
+                    $x \ra \sin x \cdot \cos x$
+                |> td
+                    style=padding:0.5em 0;
+
+                    $x \ra \cos^2(x)$
+            |> tr
+                |> td
+                    style=padding:0.5em 0;border-right:1px solid black
+
+                    $x \ra \sin^2(x)$
+                |> td
+                    style=padding:0.5em 0;
+
+                    $x \ra \sin x + \cos x$
+
+    |> Image
+        src=images/svg_ch5_ex_four_graphs.svg
+
+    |> Solution
+        The culprits are:
+
+        |> Image
+            src=images/svg_ch5_ex_four_graphs_labeled.svg
+
+        For reference (if you need help checking), the
+        graphs of $\sin$ and $\cos$ are as follows:
+
+        |> Image
+            src=images/svg_ch5_ex_four_graphs_cos.svg
+        |> Image
+            src=images/svg_ch5_ex_four_graphs_sin.svg
+
+        (Then imagine summing together, squaring, etc.)
+
+        |> SolutionNote
+            It is, indeed, intriguing that all of these
+            functions appear to be_sinusoids_. (Formally defined
+            as a function of the form $x \ra A\cdot \sin(Bx + C) + D$
+            for some constants $A$, $B$, $C$, $D \in \rr$.)
+
+|> Exercise
+    Is the pythagorean identity apparent in the
+    graphs of the previous exercise?
+
+    |> Solution
+
+        Yes.
+        Imagine two wooden cutouts made
+        from the graphs of $y = \sin^2(x)$, $y = \cos^2(x)$:
+
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_sin2.svg
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_cos2.svg
+
+        After vertically flipping the cutout
+        of $y = \cos^2(x)$, the cutouts
+        fit together to make
+        the constant function $y = 1$ (like a parquet):
+
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_compounded.svg
+
+        And this occurs because
+        $$
+        \cos^2(x) + \sin^2(x) = 1
+        $$
+        for all $x \in \rr$, which is the pythagorean identity.
+
+|> Exercise
+
+    Compute the ratio $A/B$ assuming all same-colored
+    triangles are similar, with the help of a calculator:
+
+    |> Image
+        style=width:500px;margin-top:1em;margin-bottom:1em;
+        src=images/svg_ch5_ex_big_snail.svg
+
+    |> Solution
+
+        What we want is the multiplicative ratio that
+        would take us from the bottom to the top side of
+        this quadrilateral, so that we can multiply by that
+        ratio over and over again:
+
+        |> Image
+            src=images/svg_ch5_ex_big_snail_quad.svg
+
+        But the two triangles involved are
+
+        _|NOT RIGHT TRIANGLES|_
+
+        and we must break them into smaller parts that
+        _are_ right triangles in order to use trigonometric
+        functions. Specifically, as per this drawing:
+
+        |> Image
+            src=images/svg_ch5_ex_big_snail_quad_four_parts.svg
+
+        The multiplicative ratios that correspond to the
+        first and third arrows (in arrow-order from bottom
+        to top) are
+
+        $$
+        \sin(68^\circ\hlfbk)
+        $$
+        $$
+        \sin(59^\circ\hlfbk)
+        $$
+
+        because these are “hypotenuse-to-opposite” arrows,
+        while the multiplicative ratios that correspond to the
+        second and fourth arrows are
+
+        $$
+        \csc(71^\circ\hlfbk)
+        $$
+        $$
+        \csc(60^\circ\hlfbk)
+        $$
+
+        because these are the opposite (no pun intended),
+        i.e.,“opposite-to-hypotenuse” arrows. The “big grey
+        arrow” ratio from two diagrams ago is obtained by multiplying
+        these four small-arrow ratios together, or
+
+        $$
+        \sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
+        $$
+
+        (that can also be written
+
+        $$
+        {\sin(68^\circ\hlfbk)\times\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\times\sin(60^\circ\hlfbk)}
+        $$
+
+        because $\csc = {1\over \sin}$) which, numerically, comes out to
+
+        $$
+        0.97057870529467...
+        $$
+
+        meaning that the top side of the quadrilateral tile is
+
+        $$
+        97\%
+        $$
+
+        and some the length of the bottom side; taking
+        the $36$-th power of $0.9705\dots$, because $36$ is the
+        number of times that the quadrilateral
+        repeats within the spiral, we find
+
+        $$
+        0.34127722635785...
+        $$
+
+        which is the desired ratio $A/B$, and which agrees with the
+        drawing, as $A$ seems plausibly to be about one-third of
+        $B$, from the drawing!
+
+        |> SolutionNote
+
+            While the final answer can be written
+
+            $$
+            (\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^{36}
+            $$
+
+            or
+
+            $$
+            \left({\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)}\right)^{\!36}
+            $$
+
+            teachers typically want to see such expressions
+            evualuated out, to make sure that you and your
+            calculator form a good team. (And, to be fair,
+            catching one's own calculator mistakes by virtue
+            of spotting a nonsensical number is a skill in
+            itself.)
+
+        |> SolutionNote
+
+            Instead of counting the number of times that the
+            quadrilateral appears in the double spiral by hand
+            one can
+            calculate the amount of rotation between one
+            quadrilateral and the next, which is this purple angle:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1em;
+                src=images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg
+
+            The key to measuring this
+            angle is the concept of an “alternating angle”,
+            whereby $68^\circ$ reappears to the left of $71^\circ$,
+            here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1em;
+                src=images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg
+
+            Then we can calculate the purple angle as
+
+            $$
+            68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ
+            $$
+
+            meaning that each quadrilateral is rotated by $20^\circ$ from the
+            previous, and in one turn of the spiral there are
+
+            $$
+            {360^\circ\over 20^\circ} = 18
+            $$
+
+            quadrilaterals, or
+
+            $$
+            2 \times 18 = 36
+            $$
+
+            quadrilaterals for two turns!
+
+|> Exercise
+
+    In the drawing below the oval is a circle of
+    radius $r$ and the angle $\phi$ is in “standard
+    position”, meaning that it opens counterclockwise
+    for a positive angle from the direction of the
+    positive $x$ axis. What are the coordinates
+    of $P$ in terms of $r$, $x_0$, $y_0$ and $\phi$?
+
+    |> Image
+        style=margin-top:1em;margin-bottom:0.5em;
+        src=images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg
+
+    |> Solution
+
+        The $x$- and $y$-coordinates are
+        respectively
+
+        $$
+        x_0 + r\cdot \cos(\phi)
+        $$
+        and
+        $$
+        y_0 + r\cdot \sin(\phi)
+        $$
+        because
+
+        $$
+        r\cdot\cos(\phi)
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg
+            offset_x=5.5em
+
+        is the difference from the center of the
+        circle to $P$ in $x$ and
+
+        $$
+        r\cdot\sin(\phi)
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg
+            offset_x= 7.5em
+
+        is the difference from the center of the circle to $P$ in $y$,
+        as per scaling a unit circle to radius $r$.
+
+|> Exercise
+
+    If a
+
+    __vector__
+
+    is _a pair of numbers_ (in 2D), suggest a
+    definition for the
+
+    __sum__
+
+    of two vectors. (The most logical definition wins.)
+
+    |> Solution
+
+        The standard definition is that the sum
+
+        $$
+        \vec{u} + \vec{v}
+        $$
+
+        of a vector
+
+        $$
+        \vec{u} = (u_x, u_y)
+        $$
+
+        and of a vector
+
+        $$
+        \vec{v} = (v_x, v_y)
+        $$
+
+        is the vector
+
+        $$
+        (u_x + v_x, u_y + v_y)
+        $$
+
+        whose first coordinate is the sum of the first
+        coordinates of $\vec{u}$ and $\vec{v}$ and whose
+        second coordinate is the sum of the second coordinates
+        of $\vec{u}$ and $\vec{v}$.
+
+        |> Pause
+
+        _Example 1._
+        $$
+        \vec{u} = (100, 100)
+        $$
+        and
+        $$
+        \vec{v} = (1, -1)
+        $$
+        then
+
+        $$
+        \,\vec{u} + \vec{v} = (101, 99)
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_vector_sum_101_cloud.svg
+            offset_x=1em
+
+        because
+
+        $$
+        100 + 1 = 101
+        $$
+
+        on the one hand, and
+
+        $$
+        100 - 1 = 99
+        $$
+
+        on the other hand.
+
+        |> SolutionNote
+
+            The little arrow “$\vec{\phantom{x}}$”
+            is a notation used to denote vectors. (Feel free
+            to choose your own notation.)
+
+        |> SolutionNote
+
+            Represent the vectors $\vec{u}$, $\vec{v}$
+            by arrows whose components are displacements $u_x$,
+            $u_y$, $v_x$, $v_y$ in $x$, $y$, $x$ and $y$ again
+            respectively:
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_vectors.svg
+
+            Then
+
+            $$
+            u_x + v_x
+            $$
+
+            may be geometrically realized as the concatenation
+            of the $u_x$ and $v_x$...
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_ux_plus_vx.svg
+
+            ...component displacements, while
+
+            $$
+            u_y + v_y
+            $$
+
+            may be geometrically realized as the concatenation
+            of the $u_y$ and $v_y$...
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_uy_plus_vy.svg
+
+            ...component displacements; moreover, both
+            concatenations may be simultaneously obtained by
+            concatenating the original $\vec{u}$ and $\vec{v}$
+            arrows...
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_u_concat_v.svg
+
+            ...which actually implies that $\vec{u} + \vec{v}$
+            is the vector going from the head of $\vec{u}$ to
+            the tail of $\vec{v}$ in the afore-mentioned
+            concatenation, because of how we defined
+            $\vec{u} + \vec{v}$:
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_u_plus_v.svg
+
+            This makes a mess, but the point is that this
+            gives us a
+
+            __geometric interpretation__
+
+            or
+
+            __geometric representation__
+
+            or
+
+            __geometric method of evaluation__
+
+            for the sum of two vectors: concatenate the arrows
+            of the vectors you're summing, and take the final
+            displacement from the head of the first arrow to the
+            tail of the last arrow.
+
+        |> SolutionNote
+
+            The solution to Exercise 7 can be cast in terms of
+            vector addition, with, specifically, the position
+            vector of the point being equal to the sum of the
+            position vector of the circle's center with the “radial
+            vector” from the center to the point:
+
+            |> Image
+                style=margin-top:1em;margin-bottom:0.8em;
+                src=images/svg_ch5_ex_vector_sum_previous_example.svg
+
+|> Exercise
+
+    If a particle in $\rr^2$ (= “in the plane”)
+    has $x$-coordinate
+    $$
+    A\cdot\cos(Bt + C) + D
+    $$
+    at time $t$ what is the most likely motion
+    that the particle is undergoing? In that
+    case, what is the geometric meaning of the
+    constants $A$, $B$, $C$, $D$?
+
+    |> Solution
+
+        The simplest motion that would produce such
+        an $x$-coordinate (according to subjective human
+        standards of simplicity, admittedly) is circular
+        motion at uniform speed. In this case:
+
+        |> TextParent
+            |> ul
+                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+                |> li
+
+                    $A$ is the radius of the circle
+                |> li
+
+                    $D$ is the $x$-coordinate of the circle's center
+
+        And either:
+
+        |> TextParent
+            |> ul
+                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+                |> li
+
+                    $B$ is the counterclockwise
+                    _angular speed_/_angular frequency_ (radians per
+                    unit time) and $C$ is the counterclockwise
+                    starting angle ($t = 0$) of the particle, as
+                    measured from a translate of the positive $x$
+                    axis going through the center of the circle
+
+        Or:
+
+        |> TextParent
+            |> ul
+                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+                |> li
+
+                    $-B$ is the counterclockwise
+                    angular speed/angular frequency of the particle
+                    and $-C$ is the counterclockwise starting angle
+                    of the particle, as measured from a translate of
+                    the positive $x$ axis going through the center
+                    of the circle
+
+        In more detail, every time
+
+        $$
+        t
+        $$
+
+        increases by $1$,
+
+        $$
+        Bt + C
+        $$
+
+        increases by $B$, but
+
+        $$
+        Bt + C
+        $$
+
+        is an amount of radians, because anything
+        fed to ‘cos’ is an amount of radians; and so
+        $B$ ends up being the
+
+        __radian increase per unit time,__
+
+        or angular speed, of the particle.
+
+        However, said “increase” in radians can be
+        associated to either clockwise or a
+        counterclockwise motion, there is no telling.
+        (Quite aside from the fact that $B$ might be
+        negative.) Indeed, while we have a tendency to
+        think of $\cos(x)$ as
+
+        __the $x$-coordinate of a point $x$ units
+        |> br
+        counterclockwise from $(1, 0)$ on the unit circle__
+
+        $\cos(x)$ is also
+
+        __the $x$-coordinate of a point $x$ units
+        |> br
+        clockwise from $(1, 0)$ on the unit circle__
+
+        [“counterclockwise” $\ra$ “clockwise”].
+        Per the one interpretation of ‘cos’,
+
+        $$
+        Bt + C
+        $$
+
+        is an amount of counterclockwise radians; per
+        the other,
+
+        $$
+        Bt + C
+        $$
+
+        is an amount of _clockwise_ radians. The following
+        diagram illustrates the two possibilities:
+
+        |> Image
+            src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg
+
+        (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+        |> Image
+            src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg
+
+        ...to put everything in terms of
+        counterclockwise-ness.) This accounts for
+        the two solutions listed above. (But it can
+        only be one of those two solutions, having made
+        the “Occam's razor” assumption that the
+        particle is traveling at uniform speed around
+        a circle.) (Nb: In particular, “uniform speed”
+        precludes sudden reversals of direction at either
+        end of the circle, if you were at all thinking
+        of that, for speed would be undefined at
+        those points where direction is reversed.)
+
+        |> SolutionNote
+
+            If you harbor any doubts about there being no more
+            than two solutions, picture this diagram...
+
+            |> Image
+                src=images/svg_ch5_ex_Bt_plus_C_black_on_white.svg
+
+            ...and imagine the vertical line scanning
+            to the left and to the right again as it
+            tracks the $x$-coordinate of a particle going
+            around the circle, unseen. Then there is one
+            clockwise particle that tracks with the line,
+            and one counterclockwise particle that tracks
+            with the line, but no more, insofar as
+            non-direction-reversing particles are
+            concerned!
+
+|> Exercise
+
+    Take a particle traveling around a
+    circle at constant speed. What is the
+    number of cycles [full revolutions] per
+    $4\eta$ units of time equal to, by
+    another name?
+
+    |> Solution
+
+        Let
+
+        $$
+        x
+        $$
+
+        be the number of cycles per $4\eta$ units
+        of time.
+
+        Since one cycle is $4\eta$ radians, we can,
+        instead of saying that the particle travels
+
+        __$x$ cycles per $4\eta$ units of time__
+
+        say that the particle travels
+
+        __$x\cdot 4\eta{}$ radians per $4\eta$ units of time__
+
+        or that the particle travels
+
+        __$x$ radians per $1$ unit of time__
+
+        dividing by $4\eta$. In other words, $x$ is the so-called
+
+        __angular speed__
+
+        or
+
+        __angular frequency__
+
+        of the particle. (That's the answer: “angular
+        speed”, or, equivalently, “angular frequency”.)
+
+|> Exercise
+
+    Which of these angles is $0.2$ radians?
+
+    |> Image
+        src=images/svg_ch5_ex_0_2_radians_guess.svg
+
+    |> Solution
+
+        An angle is
+        $$
+        0.2
+        $$
+        radians if the length of the subtended arc is
+        $$
+        20\%
+        $$
+        the length of the radius;
+        proceeding by elimination—many things are obviously
+        not $20\%$ of the radius—that's this one:
+
+        |> Image
+            style=margin-top:1em;margin-bottom:1em;
+            src=images/svg_ch5_ex_0_2_radians_guess_answer.svg
+
+        If you zoom in
+        a little bit
+        you can actually see
+        “$100\%$”,
+        “$20\%$”
+        written in fine print:
+
+        |> Image
+            style=margin-top:1em;margin-bottom:1em;
+            src=images/svg_ch5_ex_0_2_radians_guess_joke.svg
+
+        (Joking.)
+
+|> Exercise
+
+    What geometric ratios do
+
+    $$
+    \eta
+    $$
+
+    and
+
+    $$
+    4\eta
+    $$
+
+    represent?
+
+    |> Solution
+
+        While $\eta$ was defined
+        as the quarter-circumference of a unit circle,
+        more generally,
+
+        $$
+        \eta
+        $$
+
+        is the quarter-circumference of a circle (any
+        circle) divided by its radius, and, correspondingly,
+
+        $$
+        4\eta
+        $$
+
+        is the circumference of a circle (any circle)
+        divided by its radius.
+
+        |> SolutionNote
+
+            As one consequence, it follows that the circumference
+            of a circle is
+
+            $$
+            4\eta\cdot r
+            $$
+
+            where $r$ is the radius.
+
+        |> SolutionNote
+
+            These “ratio descriptions” of $\eta$ and
+            $4\eta$ also follow by viewing $\eta$ and $4\eta$
+            as the radian values of a right angle and a full angle,
+            respectively.
+
+|> Exercise
+
+    Compute
+
+    $$
+    {11\over 7}
+    $$
+
+    by hand using long division.
+
+    |> Solution
+
+        Here is the division in American notation
+        overlayed on top of a “Plaza” wallpaper to
+        help demarcate the different columns of
+        digits (in American notation each column
+        of digits is associated to a power of $10$,
+        with both the numerator and the quotient
+        [the result] living inside the same set of
+        columns, and only the denominator living
+        outside, in a time-space porthole of its own):
+
+        |> Image
+            src=images/svg_ch5_ex_11_over_7_longhand_eloise.svg
+
+        The division stops when we see the same
+        remainder twice—here ‘$40$’ reappears, which
+        means that the next digit of the quotient
+        will be $5$ (like the second digit of the
+        quotient, that we obtained back when we had
+        a remainder of $40$), the next one $7$ (the
+        third digit of the quotient), etc—digits will
+        repeat and the “final” quotient when we let
+        the division unravel infinitely far to the right
+        will be
+
+        |> div
+            style=font-size:1.65em;margin:1em 0;
+
+            $$
+            1.\overline{571428}
+            $$
+
+        ...where the decimal point is after the
+        first ‘$1$’ because the first ‘$1$’ is in the
+        ‘$10^0$’ column.
+
+        |> StarDivider
+
+        |> SolutionNote
+
+            If you've never done this kind of thing before, the
+            division starts in this blank state:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.4em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg
+
+            We take the first digit of the numerator,
+            which is ‘$1$’, ask “how many times does
+            $7$ go into $1$?”, we will write the answer
+            here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg
+
+            The answer is ‘$0$’ ($7$ goes $0$ times into $1$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg
+
+            We next add a digit from the numerator, giving
+            us $11$, we ask “how many times does $7$ go into
+            $11$?”, we will write the answer here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg
+
+            The answer is ‘$1$’ ($7$ goes $1$ times into $11$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg
+
+            We subtract
+
+            |> div
+                style=font-size:1.65em;margin:1em 0;
+
+                $$
+                1 \times 7
+                $$
+
+            from $11$, giving us a new remainder
+            of $4$ (the very first “remainder” is actually $11$,
+            before anything starts) (before anything started we
+            had $11 = 7 \times 0 + 11$, and now we have
+            $11 = 7 \times 1 + 4$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg
+
+            Because $7$ does not fit into $4$ (and if it did,
+            we would have done something wrong)
+            we “bring down a $0$” that is actually part of
+            a hidden sequence of $0$'s sitting to the right
+            of $11$:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg
+
+            We ask “how many times does $7$ go into $40$?”,
+            we will write the answer here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg
+
+            The answer is ‘$5$’ ($7$ goes $5$ times into $40$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg
+
+            We subtract
+
+            |> div
+                style=font-size:1.65em;margin:1em 0;
+
+                $$
+                5\times 7
+                $$
+
+            from $40$, giving us a new remainder
+            of $5$
+            (well, to be technical, the remainder is actually
+            $5 \times 10^{-1}$, not $5$, but
+            the teacher at the board will often say “$5$”):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg
+
+            Because $7$ does not fit into $5$, we bring
+            another $0$ down from our infinite reserve of
+            $0$'s:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg
+
+            (Etc.)
+
+|> Exercise
+
+    Compute
+    $$
+    {22\over 7}, \,\,\,\,\, {33\over 7}, \,\,\,\,\,\rm{and}\,\,\,\,\,{44\over 7}
+    $$
+    by hand using long division.
+
+    |> Solution
+
+        The divisions, pursued up to the point where
+        remainders repeat, look as follows:
+
+        |> Image
+            src=images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg
+
+        From which...
+
+        $$
+        \displaylines{
+        \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
+        \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
+        \Large \up{1.7}{44\over 7} = 6.\overline{285714}
+        }
+        $$
+
+        ...because the digits of the quotient are,
+        in each case, about to
+        restart from the first digit
+        after the decimal point.
+
+        |> SolutionNote
+
+            Because...
+
+            $$
+            \displaylines{
+            \Large         \eta  \approx{11\over 7}\\
+            \Large \up{1.7}2\eta \approx{22\over 7}\\
+            \Large \up{1.7}3\eta \approx{33\over 7}\\
+            \Large \up{1.7}4\eta \approx{44\over 7}
+            }
+            $$
+
+            ...we thus have...
+
+            $$
+            \displaylines{
+            \Large         \eta \approx  1.\overline{571428}\\
+            \Large \up{1.7}2\eta \approx 3.\overline{142857}\\
+            \Large \up{1.7}3\eta \approx 4.\overline{714285}\\
+            \Large \up{1.7}4\eta \approx 6.\overline{285714}}
+            $$
+
+            ...though none of these estimates are actually
+            accurate to more than two decimal places. (While all
+            are accurate up to _at least_ two decimal places.)
+
+        |> SolutionNote
+
+            As mentioned in Note 1 of Exercise 24,
+            Chapter 3, these approximations are about
+            half-a-part-in-a-thousand too large, or to
+            be more exact,
+
+            $$
+            \approx 0.0004
+            $$
+
+            too large in relative terms. I.e., you can subtract
+
+            $$
+            \approx 1.\overline{571428} \cdot 0.0004 \approx 0.0006
+            $$
+
+            from
+
+            $$
+            \approx 1.\overline{571428}
+            $$
+
+            to get a better approximation for $\eta$, subtract
+
+            $$
+            \approx 3.\overline{142857} \cdot 0.0004 \approx 0.0012
+            $$
+
+            from
+
+            $$
+            \approx 3.\overline{142857}
+            $$
+
+            to get a better approximation for $2\eta$, subtract
+
+            $$
+            \approx 4.\overline{714285} \cdot 0.0004 \approx 0.0019
+            $$
+
+            from
+
+            $$
+            \approx 4.\overline{714285}
+            $$
+
+            to get a better approximation for $3\eta$, subtract
+
+            $$
+            \approx 6.\overline{285714} \cdot 0.0004 \approx 0.0025
+            $$
+
+            from
+
+            $$
+            \approx 6.\overline{285714}
+            $$
+
+            to get a better approximation for $4\eta$. The resulting
+            approximations end up being...
+
+            $$
+            \displaylines{
+            \Large         \eta \approx  1.5708\\
+            \Large \up{1.7}2\eta \approx 3.1416\\
+            \Large \up{1.7}3\eta \approx 4.7123\\
+            \Large \up{1.7}4\eta \approx 6.2832}
+            $$
+
+            ...that are correct approximations up to
+            the fourth digit, it turns out, modulo
+            rounding off of the fifth digit. (But these
+            are not worth learning by heart, by any means.)
+
+|> Exercise
+
+    To close our division skills: use the
+    table below to compute the integer part and
+    the first three digits past the decimal point
+    (no rounding based on the fourth digit) of
+
+    $$
+    15542486476949/777
+    $$
+
+    by hand, using long division. What is the
+    new (last) remainder when the quotient reaches
+    the 3rd digit after the decimal point, and what
+    equation is implied from the quotient and the
+    new (last) remainder at that point?
+
+    $$
+    \begin{array}{c|cc}
+    \up{1}\dn{0.5} n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+    \up{1}\dn{0.5} n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+    \\
+    \end{array}
+    $$
+
+    |> Solution
+
+        Here is the long division, pursued up to
+        the “$10^{-3}$” column of the quotient,
+        including one last remainder computation
+        that occurs pursuant to adding the digit in
+        the “$10^{-3}$” column of the quotient (this
+        is what the problem statement refers to as
+        the “last remainder”):
+
+        |> Image
+            src=images/svg_ch5_ex_big_division.svg
+
+        Said quotient is
+
+        $$
+        20003200099.033
+        $$
+
+        while the new (last) remainder is
+
+        $$
+        0.359
+        $$
+
+        and the equation linking the two is
+
+        $$
+        15542486476949 = 777 \times 20003200099.033 + 0.359
+        $$
+
+        per properties of the long division algorithm.
+
+        |> SolutionNote
+
+            Lest anyone get left behind, we can go
+            over the division “on the board”
+            for a bit.
+
+            We start by asking “how many times does $777$
+            go into $1$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_1.svg
+
+            The answer is $0$ (that we need not write
+            down, but we can), we move to asking
+            “how many times does $777$
+            go into $15$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_2.svg
+
+            The answer is $0$, we move to asking
+            “how many times does $777$
+            go into $155$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_3.svg
+
+            The answer is $0$, we move to asking
+            “how many times does $777$
+            go into $1554$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_4.svg
+
+            The answer is $2$, we subtract $2 \times 777$
+            from $1554$, giving us a new “prefix” for
+            the remainder:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_4b.svg
+
+            (FYI, the remainder now consists of these yellow
+            digits:)
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_4remainder.svg
+
+            Continuing, we bring down a $2$, ask “how many times does $777$
+            go into $2$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_5b_v2.svg
+
+            The answer is $0$; we bring down a $4$, ask “how many
+            times does $777$ go into $24$?”, the answer will go
+            here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_6b_v2.svg
+
+            The answer is $0$; we bring down an $8$, ask “how many
+            times does $777$ go into $248$?”, the answer will go
+            here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_7b_v2.svg
+
+            The answer is $0$; we bring down a $6$, ask “how many
+            times does $777$ go into $2486$?”, the answer will go
+            here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_8b_v2.svg
+
+            The answer is $3$, we subtract $3 \times 777$
+            from $2648$, giving us a new remainder:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_8c.svg
+
+            (And to be specific, the remainder is now formed
+            by...
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_8remainder.svg
+
+            ...these yellow digits.) Etc.
+
+        |> SolutionNote
+
+            If you need help brushing up on your
+            long-form subtraction, say your subtraction is this:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_a.svg
+
+            You can either treat the top or bottom number as an
+            odometer, and count how much a car with this
+            odometer must be driven back/forth to reach the other
+            number.
+
+            Viewing the top number as an odometer, the odometer
+            would be as follows:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_odometer_1.svg
+
+            Starting from the right end of the subtraction, we ask
+            “by how much (or how little) does a car need to be
+            driven backwards, to turn the ‘$2$’ into an ‘$8$’?”, we
+            will write the answer below:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_c.svg
+
+            The answer is: $4$ [miles*] (*say):
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_d.svg
+
+            But the odometer will pass
+            from ‘$0$’ to ‘$9$’ on its way down to $8$, so we also
+            turn the ‘$6$’ into a ‘$5$’ (or “borrow a $10$” to do
+            $12 - 8 = 4$, as some teachers put it):
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_e.svg
+
+            Next we ask “by how many [$10$s of miles] does the car need
+            to be driven back, to turn the ‘$5$’ into a ‘$9$’?”, we
+            will write the answer below:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_f.svg
+
+            The answer is: $6$ [$10$s of miles]:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_g.svg
+
+            But here too the odometer will pass
+            from ‘$0$’ to ‘$9$’ as we reduce it, so the wheel to its
+            left must be turned back a notch as well; and because that
+            wheel is a ‘$0$’ already, the wheel to _its_left
+            must be turned back a notch; and so on, resulting in a small cascade
+            effect:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_h.svg
+
+            Next we ask “by how many [$100$s of miles] does the car need
+            to be driven back, to turn the ‘$9$’ into a ‘$0$’?”, we
+            will write the answer below:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_i.svg
+
+            The answer is: $9$ [$100$s of miles]:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_j.svg
+
+            Next we ask “by how many [$1000$s of miles] does the car need
+            to be driven back, to turn the ‘$9$’ into a ‘$5$’?”:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_k.svg
+
+            The answer is: $4$ [$1000$s of miles]:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_l.svg
+
+            Etc—we finally obtain:
+
+            |> Image
+                style=margin-top:1em;margin-bottom:1em;
+                src=images/svg_ch5_ex_big_division_big_subtraction_final.svg
+
+            (And like we alluded to above, one can also
+            consider the bottom number to be the odometer,
+            and “count up” towards the top number, leading
+            to a symmetric algorithm, but one method is not
+            better than the other.)
+
+        |> SolutionNote
+
+            Generally,
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_remainder_equation.svg
+
+            at any point in a long division after the
+            remainder is updated to account for a new term
+            added to the quotient. That's what the remainder
+            is for: to satisfy this equation!
+
+|> Exercise
+
+    What is the angle marked ‘?’, as a function
+    of $\theta$?
+
+    |> Image
+        src=images/svg_ch5_ex_angle_sum_180.svg
+
+    |> Solution
+
+        It is $\eta - \theta$. (Since...
+
+        $$
+        \theta + (\eta - \theta) + \eta = 2\eta
+        $$
+
+        ...you know that's the right answer!) (Nb: $2\eta = 180^\circ$.)
+
+        |> SolutionNote
+
+            Two angles that sum to $\eta$ are
+            called _complementary_, with each angle being
+            the _complement_ of the other.
+            The two
+            non-right angles of a right triangle are,
+            therefore, complementary!
+            (Not
+
+            __complimentary__
+
+            which would indicate that the angles are
+            given to you for free—everything in math is
+            free, not just those angles!)
+
+|> Exercise
+
+    The graph $y = \cos(x) + \sin(x)$ from
+    Exercise 5 has a maximum value greater than
+    $1$:
+
+    |> Image
+        src=images/svg_ch5_ex_maximum_of_sin_plus_cos.svg
+
+    What is this maximum value, and for which
+    value(s) of $x$ is it achieved?
+
+    |> Solution
+
+        The sum
+
+        $$
+        x + y
+        $$
+
+        where
+
+        $$
+        (x, y)
+        $$
+
+        is a point in $\rr^2$ can be understood as a
+        certain vertical displacement added to a
+        certain horizontal displacement, but where
+        the sum is numerical. (Not vectorial.)
+        To realize the sum geometrically we must
+        either align the vertical displacement to be
+        horizontal, or else align the horizontal
+        displacement to be vertical:
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_options.svg
+            style=background-color:#fdfdfd
+
+        Either way, the upshot is that the sum
+
+        $$
+        x + y
+        $$
+
+        can be found as the intersection of a line of
+        angle $-45^\circ$ through the point $(x, y)$
+        with either the $x$- or $y$-axis:
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_intersections.svg
+
+        (By the way: when we say “line of angle
+        $-45^\circ$” we refer to the standard position
+        of $-45^\circ$ on the unit circle, and, more
+        specifically, to a line that is parallel
+        to a line going through $(0, 0)$ and that standard
+        position.)
+
+        To add a little imagery, if we make a heatmap
+        of $\rr^2$ according to the value of the coordinate
+        sum...
+
+        $$
+        x + y
+        $$
+
+        ...over all points $(x, y)$ we will obtain diagonal
+        bands of slope $-1$:
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_rainbow.svg
+
+        If we are confined to some region of the plane
+        and we need to find a point that maximizes the
+        coordinate sum we must go as far up and to the
+        right as possible, towards brown—whereas
+        to minimize the sum we must go as far down and
+        to the left as possible, towards purple!
+
+        Having said this,
+
+        $$
+        \cos(x) + \sin(x)
+        $$
+
+        can be interpreted as the sum of the $x$- and
+        $y$-coordinates of the point
+
+        $$
+        (\cos(x), \sin(x))
+        $$
+
+        that is a point on the unit circle. In other words,
+        the unit circle is “the region of the plane” (cf.
+        previous paragraph) to which we are confined—we
+        must choose a value of $x$ that puts us as far
+        “up and to the right” as possible on the circle.
+        That value is... $x = \eta/2$ (!!!!):
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_eta_over_2.svg
+
+        ...or with any multiple of $4\eta$ added,
+        making the set of solutions $x$ actually equal to
+
+        $$
+        \Large \{\eta/2 + 4\eta{}k : k \in \zz\}
+        $$
+
+        (to be read “$\eta/2$ plus any multiple of $4\eta$”)
+        (*or: “the _set of_ values of the form $\eta/2$,
+        plus any multiple of $4\eta$”).
+
+        The actual value of $\cos(x) + \sin(x)$ achieved
+        at this point is
+
+        $$
+        \Large
+        \begin{align}
+        &amp;\,\, \cos(\eta/2) + \sin(\eta/2)\\ =&\,\,\up{1.5}  \sqrt{0.5} + \sqrt{0.5}\\ =&\,\,\up{1.5} \sqrt{2}
+        \end{align}
+        $$
+
+        using the fact that
+
+        |> div
+
+            $$
+            \Large \cos(\eta/2) = \sin(\eta/2) = \sqrt{0.5}
+            $$
+
+        and that
+
+        $$
+        \Large \sqrt{0.5} = {\sqrt{2} \over 2}
+        $$
+
+        (cf. Exercise 1, Chapter 1).
+
+        |> SolutionNote
+
+            The fact that
+
+            $$
+            \Large \cos(\eta/2) + \sin(\eta/2) = \sqrt{2}
+            $$
+
+            can also be seen from this diagram...
+
+            |> Image
+                src=images/svg_ch5_ex_x_plus_y_pythagoras.svg
+
+            ...which is an application of the Pythagorean
+            theorem. (In the above, $x_0 = \cos(\eta/2)$,
+            $y_0 = \sin(\eta/2)$, and the sum is seen to be
+            $\sqrt{1^2 + 1^2} = \sqrt{2}$.)
+
+        |> SolutionNote
+
+            On the original graph from the statement, the
+            $y$-value of the maximum is therefore
+            $y = \sqrt{2}$, attained at $x = \eta/2$,
+            $x = 9\eta/2$, $x = -7\eta/2$, etc:
+
+            |> Image
+                src=images/svg_ch5_ex_maximum_of_sin_plus_cos_with_answer.svg
+
+            (Note that
+
+            $$
+            \Large {\eta\over 2} + 4\eta = {\eta\over 2} + {8\eta\over 2} = {9\eta\over 2}
+            $$
+            $$
+            \Large
+            {\eta\over 2} - 4\eta = {\eta\over 2} - {8\eta\over 2} = -{7\eta\over 2}
+            $$
+
+            and, in general, the numerators of these fractions
+            will be some multiple of $8\eta$ apart.)
+
+|> Exercise
+
+    What is the angle marked ‘?’, as a function of
+    $\theta$?
+
+    |> Image
+        src=images/svg_ch5_ex_angle_sum_180_followup.svg
+
+    |> Solution
+
+        It is $\theta$, as well. One method of
+        deduction uses the fact that “the complement
+        of my complement is myself”:
+
+        |> Image
+            src=images/svg_ch5_ex_angle_sum_180_followup_explanation.svg
+
+        Another method of deduction uses the fact that,
+        together with the angle immediately to its left
+        (which happens to be $\eta - \theta$, because
+        it is the complement of $\theta$ via the smallest
+        right triangle present), the sought-for angle
+        makes up $90^\circ$:
+
+        |> Image
+            src=images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg
+
+        (In one case we use the fact that the
+        medium-sized triangle is a right triangle,
+        in another case that the smallest-size
+        triangle is a right triangle—and in both cases
+        that the original, largest triangle is a
+        right triangle.)
+
+|> Exercise
+
+    Argue that, in the following figure, the
+    angle marked ‘?’ equals $\theta$, the angle at
+    the center of the circle:
+
+    |> Image
+        src=images/svg_ch5_ex_tangent_angle_v2.svg
+
+    |> Solution
+
+        The ending and starting half-lines of the
+        angle marked ‘?’ are both $90^\circ$ counterclockwise
+        from the ending and starting half-lines,
+        respectively, of the central angle:
+
+        |> Image
+            src=images/svg_ch5_ex_tangent_angle_explanation_v2.svg
+
+        The angle marked ‘?’ is therefore obtained
+        by a $90^\circ$ rotation (and then translation)
+        of the central angle, and is, therefore, equal
+        to the central angle $\theta$.
+
+        |> SolutionNote
+
+            This holds no matter which quadrant we
+            push $\theta$ to:
+
+            |> Image
+                src=images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg
+
+            Verbalized: _the counterclockwise angle from the positive
+            $x$ axis to
+            the radial vector
+            equals the counterclockwise angle from the positive
+            $y$ axis to the counterclockwise tangent._
+
+            (Nb: When we say the “radial vector” and
+            “counterclockwise tangent” we mean those objects that
+            are illustrated here:)
+
+            |> Image
+                src=images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg
+
+        |> StarDivider
+
+
+|> Exercise
+
+    If each of these dotted lines...
+
+    |> Image
+        src=images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg
+
+    ...is a so-called
+
+    __isoset__
+
+    (also: _isoline_, _contour line_, _isoquant_,
+    _isosurface_, _isovalue line_, or _isovalue set_
+    $\rt{0.1}$) of the two-variable function
+
+    $$
+    f : \rr^2\ra \rr
+    $$
+
+    given by
+
+    $$
+    f(x, y) = x + y
+    $$
+
+    then what are similar
+
+    __isosets__
+
+    (man, we like this word! of the two-variable
+    function
+
+    $$
+    g : \rr^2\ra \rr
+    $$
+
+    given by
+
+    $$
+    g(x, y) = xy
+    $$
+
+    ...?
+
+    [In human terms: draw solutions of the equation
+
+    $$
+    xy = C
+    $$
+
+    in $\rr^2$ for some different values of
+    $C \in \rr$.]
+
+    Next: Use any geometric insights gleaned from
+    these
+
+    __isosets__
+
+    (😍😍😍) to find the maximum value of
+
+    $$
+    \sin\theta{}\cos\theta
+    $$
+
+    for $\theta \in \rr$, and specify the set of
+    values of $\theta$ for which the maximum is
+    attained.
+
+    |> Solution
+
+        The isosets of
+
+        $$
+        (x, y) \ra xy
+        $$
+
+        (lambda-notation for a two-variable function)
+        have this general appearance (it depends on
+        the window and on the exact isosets that
+        you choose to  draw—we chose a few
+        different random ones):
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_xy_isosets.svg
+
+        Note that each isoset consists of the union of TWO
+        disjoint curves, except for the isoset
+
+        $$
+        xy = 0
+        $$
+
+        (or: “the isoset
+
+        $$
+        \{(x, y) \in \rr^2 : xy = 0 \}
+        $$
+
+        ...” to pedantically indicate that we are
+        talking about _a set of points in the plane_),
+        that, for its part, cannot be said to consist
+        of two _~_~_disjoint_~_~_ curves, because it
+        is the union of the $x$- and $y$- axes, that
+        intersect.
+
+        (For a throwback, the solution of Exercise
+        16 of Chapter 3 mentions that the product of
+        two numbers is $0$ if and only if one of the
+        numbers is $0$. In our case,
+
+        $$
+        xy = 0
+        $$
+
+        if and only
+
+        $$
+        \,x = 0\,
+        $$
+
+        _or_
+
+        $$
+        \,y = 0
+        $$
+
+        where
+
+        $$
+        x = 0
+        $$
+
+        happens to be the equation of the $y$ axis, and
+
+        $$
+        y = 0
+        $$
+
+        happens to be the equation of the $x$ axis, which
+        explains the shape of the isoset.)
+
+        If we draw a “heatmap” of
+
+        $$
+        xy
+        $$
+
+        in some region of the plane, similarly to
+        Exercise 18, the larger (more positive)
+        values show up in the first and third
+        quadrants, while the smaller (more negative)
+        values show up in the second and fourth
+        quadrants:
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_rainbow.svg
+
+        Of particular interest to us: at a given
+        distance from the origin, the line
+
+        $$
+        x = y
+        $$
+
+        can be seen seen to hold the largest of values of $xy$:
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_fixed_distance.svg
+
+        In particular,
+
+        $$
+        \cos\theta\,\sin\theta
+        $$
+
+        will reach its maximum at those values of
+        $\theta$ that put the point $(\cos \theta, \sin \theta)$
+        at either $(\sqrt{0.5}, \sqrt{0.5})$ or
+        $(-\sqrt{0.5}, -\sqrt{0.5})$ on the unit circle;
+        these values of $\theta$ are
+
+        $$
+        \Large \{0.5\eta + 4\eta{}k : k \in \zz\} \\
+        \Large \cup \{2.5\eta + 4\eta{}k : k \in \zz\}\up{1.5}
+        $$
+
+        as per this illustration...
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_angles.svg
+
+        ...and the maximum value of
+
+        $$
+        \Large \cos\theta\,\sin\theta
+        $$
+
+        itself will be
+
+        $$
+        \Large \sqrt{0.5} \cdot \sqrt{0.5} = {1\over 2}
+        $$
+
+        or
+
+        $$
+        \Large (-\sqrt{0.5}) \cdot (-\sqrt{0.5}) = {1\over 2}
+        $$
+
+        equivalently; though one should also note
+        that
+
+        $$
+        \Large \{0.5\eta + 4\eta{}k : k \in \zz\} \cup \{2.5\eta + 4\eta{}k : k \in \zz\} \\ \Large \up{1.5}= \{0.5\eta + 2\eta{}k : k \in \zz\}
+        $$
+
+        which is the “clever” way of writing the set
+        of $\theta$'s for which the maximum is achieved.
+
+        |> SolutionNote
+
+            As a consequence, the function
+
+            $$
+            x \ra \sin x{}\cos x
+            $$
+
+            discussed in Exercise 4 has maximum value
+
+            $$
+            {1\over 2}
+            $$
+
+            achieved for inputs in the set
+
+            $$
+            \Large \{0.5\eta + 2\eta{}k : k \in \zz\}
+            $$
+
+            comprising the sequence of values...
+            $$
+            \large \dots,\,\, -{7\eta\over 2},\,\, -{3\eta\over 2},\,\, {\dn{0.25}\eta \over 2},\,\, {5\eta \over 2},\,\, {9\eta \over 2},\,\, \dots
+            $$
+
+            ...or...
+
+            $$
+            \large \dots,\,\, {-3.5\eta},\,\, {-1.5\eta},\,\, {0.5\eta},\,\, {2.5\eta},\,\, {4.5\eta},\,\, \dots
+            $$
+
+            ...(maybe more legibly); annotating the graph
+            given in Exercise 4:
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_graph.svg
+
+            |> StarDivider
+
+        |> SolutionNote
+
+            For completeness, here is a closer look at
+            the isoset $xy = 1$, including some labeled points:
+
+            |> Image
+                style=margin-top:1em;margin-bottom:1em;
+                src=images/svg_ch5_ex_max_xy_example_isoset.svg
+
+        |> SolutionNote
+
+            Because a point $(x, y)$ satisfies
+
+            $$
+            xy = 1
+            $$
+
+            if and only if the point $(2x, y)$ satisfies
+
+            $$
+            xy = 2
+            $$
+
+            (one has
+
+            $$
+            x_0y_0 = 1
+            $$
+
+            if and only if
+
+            $$
+            (2x_0)y_0 = 2
+            $$
+
+            surprise or not) the curve
+
+            $$
+            xy = 2
+            $$
+
+            is the horizontal dilation of the curve
+
+            $$
+            xy = 1
+            $$
+
+            by a factor $2$; likewise, it is also the
+
+            __vertical dilation__
+
+            of the curve
+
+            $$
+            xy = 1
+            $$
+
+            by a factor $2$; the two dilations are
+            illustrated here:
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_2x_scaling_v2.svg
+
+            More generally, the curve
+            $$
+            xy = C
+            $$
+            for $C \ne 0$ is the
+
+            __$(a, b)$-dilation__
+
+            [meaning: a horizontal dilation by a factor
+            $a$ followed by a vertical dilation by a
+            factor $b$, or vice-versa, the order doesn't
+            matter] of the curve
+
+            $$
+            xy = 1
+            $$
+
+            for all pairs $(a, b)$ such that $ab = C$; for
+            example,
+
+            $$
+            xy = 3
+            $$
+
+            is the
+
+            __$(3, 1)$-dilation__
+
+            [horizontal dilation by factor $3$] of
+            $xy = 1$, as it is the
+
+            __$(1, 3)$-dilation__
+
+            [vertical dilation by factor $3$] of $xy = 1$,
+            but is also the
+
+            __$(\sqrt{3}, \sqrt{3})$-dilation__
+
+            of $xy = 1$, since $\sqrt{3}\cdot\sqrt{3} = 3$, and the
+
+            __$(12, {1\over 4})$-dilation__
+
+            of $xy = 1$, since $12 \cdot {1\over 4} = 3$,
+            etc.
+
+            For another specifically noteworthy instance
+            of this phenomenon,
+
+            $$
+            xy = 1
+            $$
+
+            is the
+
+            __$(-1, -1)$-dilation__
+
+            of itself, since $(-1)\cdot(-1) = 1$,
+            a fact that is also known as the “central
+            symmetry” of $xy = 1$. (You can take this
+            last statement as the definition of “centrally
+            symmetric”. I.e., a set $S \subseteq \rr^2$
+            is centrally symmetric if and only if $S$
+            is equal to the $(-1, -1)$-dilation of
+            itself.)
+
+            (Indeed, since
+            $$
+            xy = C
+            $$
+            if and only if
+            $$
+            (-x)(-y) = C
+            $$
+            each of the isosets is centrally symmetric, not only
+            $xy = 1$.)
+
+        |> SolutionNote
+
+            Among other additional symmetries, the line
+            $$
+            x = y
+            $$
+            is an axis of symmetry of each isoset, meaning
+            that each isoset equals its mirror reflection
+            about that line:
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_mirror_image.svg
+
+            Note that, technically, a set $S \subseteq \rr^2$
+            [meaning: $S$ is a set of points in the plane] is
+            symmetric about $x = y$ if and only if
+
+            $$
+            \Large (x_0, y_0) \in S \iff (y_0, x_0) \in S
+            $$
+
+            [read “$(x_0, y_0)$ is in $S$ if and only if
+            $(y_0, x_0)$ is in $S$”] for all $(x_0, y_0)$.
+            Illustrated:
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_mirror_image_with_x0_y0.svg
+
+            In our case, a point $(x_0, y_0)$ is on the curve
+
+            $$
+            xy = C
+            $$
+
+            if and only if the point $(y_0, x_0)$ is on
+            the curve, because $x_0y_0 = y_0x_0$, by
+            commutativity of multiplication. This observation
+            constitutes the “proof” that each isoset is
+            mirror symmetric through $x = y$.
+
+            (Or...
+            $$
+            \large
+            \begin{align}
+            \large     &amp; (x_0, y_0) \in \{(x,y)\in \rr^2: xy = C\} \\
+            \large\up{1.4} \iff&amp; \,x_0y_0 = C \\
+            \large\up{1.4} \iff&amp; \,y_0x_0 = C \\
+            \large\up{1.4} \iff&amp; (y_0, x_0) \in \{(x,y)\in \rr^2: xy = C\}
+            \end{align}
+            $$
+
+            ...to put it over-the-top formally.)
+
+        |> SolutionNote
+
+            Lastly, each isoset is symmetric
+            through the line $x = -y$:
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_mirror_image_other_way.svg
+
+            Indeed, this symmetry can be obtained as the
+
+            __composition__
+
+            of a symmetry through $x = y$ and a central
+            symmetry:
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_mirror_image_other_way_explanation.svg
+
+            In other words, any set that is symmetric through
+            $x = y$ and that is centrally symmetric is also
+            symmetric through $x = -y$, so there is nothing “new”
+            to prove here, except to make this observation
+            about composition!
+
+|> Exercise
+
+    Express $A/B$ as a function of $\theta$:
+
+    |> Image
+        src=images/svg_ch5_ex_tan_sq_AB_ratio.svg
+
+    |> Solution
+
+        We shall use the height $C$ of the triangle
+        as a stopover between $A$ and $B$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_height_C.svg
+
+        On the one hand, $C/B = \tan(\theta)$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_left_part.svg
+
+        On the other hand, $A/C = \tan(\theta)$
+        also, by the result of Exercise 19 (whereby
+        $\theta$ reappears as the top left angle of
+        the middle-sized right triangle):
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_right_part.svg
+
+        The answer is therefore:
+
+        $$
+        \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
+        $$
+
+        (As per the fact that $(A/B) = (C/B)\cdot(A/C)$.)
+
+|> Exercise
+
+    Express $A/B$ as a function of $\theta$:
+
+    |> Image
+        src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg
+
+    |> Solution
+
+        Here are two solutions:
+
+        |> Pause
+
+        _Solution 1._ We use the small leg $D$
+        of the triangle as a stopover between $A$ and
+        $B$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_D.svg
+
+        On the one hand, $D/B = \sec(\theta)\,\, (= 1/\cos(\theta))$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_left_part.svg
+
+        On the other hand, $A/D = \sec(\theta)$, also (!?):
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_right_part_shrunk.svg
+
+        Thus:
+
+        $$
+        {A\over B} = {D\over B}\times {A\over D} = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).
+        $$
+
+        |> StarDivider
+            style=margin-top:0.5em;
+
+        _Solution 2._
+        We decompose $A$ as $B + A'$
+        where $A' = B - A$ is the “old $A$” from
+        Exercise 22:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg
+
+        We find:
+
+        $$
+        {A\over B} = {{B + A'}\over B} = {B\over B} + {A'\over B} = 1 + \tan^2(\theta)
+        $$
+
+        ...since
+
+        $$
+        {A'\over B} = \tan^2(\theta)
+        $$
+
+        by Exercise 22. (The End.)
+
+        |> SolutionNote
+
+            Since the two solutions compute
+            answers to the same question,
+            one can in particular deduce that
+
+            |> center
+                style=margin-top:1.5em;margin-bottom:1.5em;
+                |> div
+                    style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                    $$
+                    \sec^2(\theta) = 1 + \tan^2(\theta)
+                    $$
+
+            for all $0 < \theta < \eta$, which is
+            the range of $\theta$ covered by these
+            diagrams. (The same identity holds more
+            generally than just those $\theta$'s,
+            however.)
+
+|> Exercise
+
+    In general, $\sec(\theta)$ and $\tan(\theta)$
+    are defined for all $\theta$ such that
+
+    $$
+    \cos(\theta) \ne 0
+    $$
+
+    with the definitions being...
+
+    |> center
+        style=margin-top:1em;margin-bottom:1em;
+        |> div
+            style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+            $$
+            \,\tan(\theta) = {\sin(\theta)\over \cos(\theta)}\,
+            $$
+            $$
+            \,\sec(\theta) = {1\over \cos(\theta)}\,
+            $$
+
+    ...for all $\theta \in \rr$. (I.e., if the fraction is undefined,
+    then the function is undefined.)
+    Use these definitions
+    to prove that
+    $$
+    1 + \tan^2(\theta) = \sec^2(\theta)
+    $$
+    for all
+    $\theta \in \dom \tan = \dom \sec$.
+
+    |> Solution
+
+        Let $\theta \in \dom \tan = \dom \sec$. Then
+        $$
+        \cos(\theta) \ne 0
+        $$
+        and
+        $$
+        1 = {\cos(\theta)\over \cos(\theta)} = {\cos^2(\theta)\over \cos^2(\theta)}
+        $$
+        and, by the definitions,
+        $$
+        \begin{align}
+        1 + \tan^2(\theta)
+        \,\,&=\,\, 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
+        &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
+        &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
+        &amp;=\,\, \up{2} {1\over \cos^2(\theta)} \\
+        &amp;=\,\, \up{2} \left({1\over \cos(\theta)}\right)^{\!2} \\
+        &amp;=\,\, \up{2} \sec^2(\theta)
+        \end{align}
+        $$
+        using the pythagorean identity in the fourth step.
+
+|> Exercise
+
+    Run the computation of the
+    previous exercise backwards, starting with
+    $$
+    \sec^2(\theta)
+    $$
+    at the near end, and ending with $$1 + \tan^2(\theta)$$
+    at the far end. (No peeking back at the solution of
+    that exercise.)
+
+    |> Solution
+
+        Viz:
+
+        |> center
+            style=margin:1em 0em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1.2em 1.4em;
+
+                $$
+                \begin{align}
+                \sec^2(\theta)
+                \,\,&=\,\, {1\over \cos^2(\theta)} \\
+                &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
+                &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
+                &amp;=\,\, \up{2} 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
+                &amp;=\,\, \up{2}1 + \tan^2(\theta).
+                \end{align}
+                $$
+
+        (Ta-daa!) (It's slightly harder in this
+        direction, when you have to think of
+        turning the “$1$” into “$\cos^2(\theta) + \sin^2(\theta)$”,
+        instead of the other way around.)
+
+|> Exercise
+
+    Here are four function compositions
+    depicted as “function box” diagrams, with
+    inputs coming in the right and outputs
+    going out the left (with $f$ being some generic
+    function):
+
+    |> Image
+        src=images/svg_ch5_ex_four_compositions.svg
+
+    Rewrite each case:
+
+    |> TextParent
+        |> ol
+            class=l1
+            style=margin-top:0.5em;
+            |> li
+
+                using the composition “$\circ$” operator;
+            |> li
+
+                as an expression of the form $$x \ra \dots$$
+                for some value of “$\dots$”.
+
+    |> Solution
+
+        *(a)*
+        The expressions are respectively...
+        $$
+        f  \circ (u \ra u + A)
+        $$
+        $$
+        f  \circ (z \ra Bz)
+        $$
+        $$
+        (u \ra u + A)\circ f
+        $$
+        $$
+        (z \ra Bz)\circ f
+        $$
+        ...but where the dummy variables don't matter,
+        so we might as well write...
+        $$
+        f  \circ (t \ra t + A)
+        $$
+        $$
+        f  \circ (t \ra Bt)
+        $$
+        $$
+        (t \ra t + A)\circ f
+        $$
+        $$
+        (t \ra Bt)\circ f
+        $$
+        ...or...
+        $$
+        f  \circ (x \ra x + A)
+        $$
+        $$
+        f  \circ (x \ra Bx)
+        $$
+        $$
+        (x \ra x + A)\circ f
+        $$
+        $$
+        (x \ra Bx)\circ f
+        $$
+        ...etc. (All are correct.)
+
+        |> Pause
+
+        *(b)*
+        The expressions are respectively:
+        $$
+        x \ra f(x + A)
+        $$
+        $$
+        x \ra f(Bx)
+        $$
+        $$
+        x \ra f(x) + A
+        $$
+        $$
+        x \ra Bf(x)
+        $$
+        ...where we use “$x$” as the dummy variable
+        because we were _told_ to use $x$. (By the statement.)
+
+|> Exercise
+
+    How would the graph of each of the compositions
+    from Exercise 26 compare to the graph of the
+    generic function $f$?
+
+    |> Solution
+
+        !! The graphs of the four functions, that are
+        !! namely...
+        For reference, the four functions are:
+        $$
+        \te{1.}\,\, x \ra f(x + A)
+        $$
+        $$
+        \te{2.}\,\, x \ra f(Bx)
+        $$
+        $$
+        \te{3.}\,\, x \ra f(x) + A
+        $$
+        $$
+        \te{4.}\,\, x \ra Bf(x)
+        $$
+        For which the graphs are respectively obtained by:
+
+        |> TextParent
+            |> ul
+                style=list-style-type:decimal;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
+                |> li
+
+                    horizontally translating the graph of $f$ by $A$ units to the left;
+                |> li
+
+                    horizontally compressing the graph of $f$ by a factor $B$;
+                |> li
+
+                    vertically translating the graph of $f$ by $A$ units upward;
+                |> li
+
+                    vertically dilating (scaling) the graph of $f$ by a factor $B$.
+
+        (Cf. Exercise 7 of Chapter 3, Exercise 14 of
+        Chapter 3.)
+
+|> Exercise
+
+    Prove that $\cos\cdot\sin$, $\cos^2$, and $\sin^2$
+    are periodic mod $2\eta$, where a function $f$ is
+    “periodic mod $T$” if
+
+    $$
+    {f(x + T) = f(x)}
+    $$
+
+    for all $x \in \rr$.
+
+    |> Solution
+
+        We have
+        $$
+        \begin{align}
+        &amp;\,\,\, (\cos\cdot\sin)(x + 2\eta)\\
+        =&\,\,\, \up{1.2}\cos(x + 2\eta)\cdot\sin(x + 2\eta)\\
+        =&\,\,\, \up{1.2}(-\cos(x))\cdot(-\sin(x))\\
+        =&\,\,\, \up{1.2}\cos(x)\cdot\sin(x)\\
+        =&\,\,\, \up{1.2}(\cos\cdot\sin)(x)
+        \end{align}
+        $$
+        for all $x \in \rr$, using the fact that
+        $$
+        \cos(x + 2\eta) = -\cos(x)
+        $$
+        and
+        $$
+        \sin(x + 2\eta) = -\sin(x)
+        $$
+        for all $x \in \rr$, and, likewise,
+        $$
+        \begin{align}
+        &amp;\,\,\, \cos^2(x + 2\eta)\\
+        =&\,\,\, \up{1.2}\cos(x + 2\eta)\cdot\cos(x + 2\eta)\\
+        =&\,\,\, \up{1.2}(-\cos(x))\cdot(-\cos(x))\\
+        =&\,\,\, \up{1.2}\cos(x)\cdot\cos(x)\\
+        =&\,\,\, \up{1.2}\cos^2(x)
+        \end{align}
+        $$
+        for all $x \in \rr$, and
+        $$
+        \begin{align}
+        &amp;\,\,\, \sin^2(x + 2\eta)\\
+        =&\,\,\, \up{1.2}\sin(x + 2\eta)\cdot\sin(x + 2\eta)\\
+        =&\,\,\, \up{1.2}(-\sin(x))\cdot(-\sin(x))\\
+        =&\,\,\, \up{1.2}\sin(x)\cdot\sin(x)\\
+        =&\,\,\, \up{1.2}\sin^2(x)
+        \end{align}
+        $$
+        for all $x \in \rr$.
+
+        |> SolutionNote
+
+            Note that
+            $$
+            \te{“}\cos\cdot\sin\te{”}
+            $$
+            is a shorthand for
+            $$
+            \te{“}\rt{0.1}x \ra \cos(x)\sin(x)\rt{0.1}\te{”}
+            $$
+            (“the function that maps ...”), just as
+            $$
+            fg
+            $$
+            is a shorthand for [or really: “defined as”]
+            $$
+            x\ra f(x)g(x)
+            $$
+            more generally for all functions $f$, $g$. So when we plug
+            in an input to “$\cos\cdot\sin$”, as in...
+            $$
+            (\cos\cdot\sin)(x+2\eta)
+            $$
+            ...it unfolds to...
+            $$
+            \cos(x + 2\eta)\cdot\sin(x+2\eta)
+            $$
+            ...per the definition of function multiplication. (Etc.)
+            (We mean: likewise for “$\sin^2$” and “$\cos^2$”.)
+
+|> Exercise
+    t=tt
+
+    Given the graphs $y = \cos(x)\sin(x)$ and
+    $y = \cos^2(x)$...
+
+    |> Image
+        src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg
+
+    ...it _appears_ that one graph is a
+    translate of the other; if this were
+    really so, what would the exact amounts
+    of translation be? (Vertical _&_ horizontal.)
+    What algebraic identity would this imply? How to
+    prove this identity?
+
+    |> Solution
+
+        We know from Exercise 21 that the
+        bump immediately to the right of $(0, 0)$
+        on the graph $y = \cos(x)\sin(x)$ has
+        coordinates $(\eta/2, 0.5)$:
+
+        |> Image
+            src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg
+
+        It might therefore be that a translation
+        of $-\eta/2$ units horizontally and
+        ${1\over 2}$ units vertically maps the graph
+        $y = \sin(x)\cos(x)$ onto the graph
+        $y = \cos^2(x)$:
+
+        |> Image
+            src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg
+
+        If true, this would indicate that
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=border:1px solid red;padding:1em 1em;width:fit-content;
+
+                $$
+                \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
+                $$
+
+        since replacing “$x$” by “$x + \eta/2$”
+        in $\sin(x)\cos(x)$ effects horizontal
+        translation of the graph by $-\eta/2$,
+        while adding ${1\over 2}$ to the result
+        effects a vertical translation by ${1\over 2}$.
+
+        To prove formula we use the angle-sum formulas;
+        specifically...
+
+        $$
+        \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+        $$
+        $$
+        \sin(A + B) = \cos(A)\sin(B) + \sin(A)\cos(B)
+        $$
+
+        ...(in case you had forgotten those); since
+        $$
+        \,\cos(\eta/2) = \sin(\eta/2) = \sqrt{0.5},
+        $$
+        we find:
+        $$
+        \begin{align*}
+        \cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
+        &= \up{1.6}\sqrt{0.5}\cdot(\cos(x) - \sin(x))
+        \end{align*}
+        $$
+        and:
+        $$
+        \begin{align*}
+        \sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
+        &= \up{1.6}\sqrt{0.5}\cdot(\cos(x) + \sin(x))
+        \end{align*}
+        $$
+        ...from which the product...
+        $$
+        \cos(x + \eta/2)\sin(x + \eta/2)
+        $$
+        ...becomes...
+        $$
+        \begin{align*}
+        &\sqrt{0.5}\cdot\sqrt{0.5}\cdot(\cos^2(x) - \sin^2(x)) \\
+        \up{1.6} =\,\,&{1\over 2}\cdot(\cos^2(x) - \sin^2(x)) \\
+        \up{1.6} =\,\,&{1\over 2}\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
+        \up{1.6} =\,\,&{1\over 2}\cdot(2\cos^2(x) - 1) \\
+        \up{1.6} =\,\,&\cos^2(x) - {1\over 2} \\
+        \end{align*}
+        $$
+        ...by the difference-of-squares formula and
+        the pythagorean identity (often used together),
+        and adding ${1\over 2}$ gives $\cos^2(x)$, Q.E.D.!
+        (So $y = \cos^2(x)$ truly is the translate of
+        $y = \cos(x)\sin(x)$, _&_ vice-versa.)
+
+        |> SolutionNote
+
+            We can turn the identity around, mapping
+            $y = \cos^2(x)$ onto $y = \sin(x)\cos(x)$ via a
+            translation, instead of the other way around; this gives:
+
+            |> center
+                style=margin-top:1em;margin-bottom:1em;
+                |> div
+                    style=border:1px solid red;padding:1em 1em;width:fit-content;
+
+                    $$
+                    \,- {1\over 2} + \cos^2(x - \eta/2) = \cos(x)\sin(x).
+                    $$
+
+            In more detail: replacing
+            “$x$” by “$x - \eta/2$” in $\cos^2(x)$ effects
+            horizontal translation by $+\eta/2$, and adding
+            $-{1\over 2}$
+            to the result effects a vertical translation by $-{1\over 2}$.
+            (I.e., we are using the
+            inverse amounts of translation that we used to map
+            $y = \cos(x)\sin(x)$ onto $y = \cos^2(x)$.)
+
+        |> SolutionNote
+
+            The identity from the previous note can also
+            be proved via the angle-sum formulas; since
+            $$
+            \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+            $$
+            and
+            $$
+            \sin(-\eta/2) = -\sqrt{0.5}
+            $$
+            we have
+            $$
+            \begin{align*}
+            \cos(x - \eta/2) &= \cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2) \\
+            \up{1.6} &=\,\, \cos(x)\sqrt{0.5} - \sin(x)(-\sqrt{0.5}) \\
+            \up{1.6} &=\,\, \sqrt{0.5}\cdot(\cos(x) + \sin(x)) \\
+            \end{align*}
+            $$
+            from which
+            $$
+            \cos^2(x - \eta/2)
+            $$
+            becomes
+            $$
+            \begin{align*}
+            &\left(\sqrt{0.5}\cdot(\cos x + \sin x)\right)^2 \\
+            \up{1.6} =\,\,&{1\over 2}\cdot(\cos^2 x + 2\cos x\sin x +  \sin^2 x) \\
+            \up{1.6} =\,\,&{1\over 2}\cdot(1 + 2\cos x\sin x) \\
+            \up{1.6} =\,\,&{1\over 2} + \cos(x)\sin(x) \\
+            \end{align*}
+            $$
+            using the pythagorean identity in the third equality,
+            and
+            $$
+            \begin{align*}
+            & -{1\over 2} + \cos^2(x - \eta/2) \\
+            \up{1.7} =\,\,&-{1\over 2} + \left({1\over 2} + \cos(x)\sin(x)\right) \\
+            \up{1.7} =\,\,&\cos(x)\sin(x)
+            \end{align*}
+            $$
+            as claimed.
+
+        !! |> SolutionNote
+
+        !!     For an alternate perspective, the original
+        !!     identity would look like so, in a box diagram:
+
+        !!     |> Image
+        !!         src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison_three_boxes.svg
+
+        !!     ...here
+
+        !!     $$
+        !!     w \ra w + {\eta\over 2}
+        !!     $$
+
+        !!     and
+
+        !!     $$
+        !!     u \ra u + {1\over 2}
+        !!     $$
+
+        !!     respectively effect a horizontal translation
+        !!     of $-\eta/2$ and a vertical translation of $1/2$,
+        !!     as pre- and post-processing steps respectively.
+        !!     (Cf. Exercise 28.)
+
+        !! (Or we might write...
+
+        !! $$
+        !! \cos^2 = (u \ra {1\over 2} + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + {\eta\over 2})
+        !! $$
+
+        !! ...or...
+
+
+|> Exercise
+    t=tt
+
+    It also seems from the graphs that $y = \cos^2(x)$
+    is a _sinusoid_, i.e., some combination of a
+    scaling and translation of $y = \cos(x)$:
+
+    |> Image
+        src=images/svg_ch5_ex_cos_and_cos2_comparison.svg
+
+    If so, what scaling and translation operations,
+    more exactly, can be conjectured to relate the
+    two graphs? Can you prove this geometric relationship
+    by algebra?
+
+    |> Solution
+
+        Since $\cos^2$ is periodic mod $2\eta$ while
+        $\cos$ is periodic mod $4\eta$,
+        we need, at the very least, a horizontal compression by
+        a factor $2$ in order to map the bumps of $y = \cos(x)$
+        onto those of $y = \cos^2(x)$. From there we have to
+        readjust the range and amplitude of the curve, such as,
+        e.g., by translating up by $1$ and scaling vertically
+        by ${1\over 2}$ (or scaling vertically by ${1\over 2}$
+        and translating up by ${1\over 2}$, either way):
+
+        |> Image
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg
+
+        Algebraically, the three steps above turn
+        $\cos(x)$ into $\cos(2x)$, into $1 + \cos(2x)$,
+        into ${1 + \cos(2x)\over 2}$:
+
+        $$
+        \Large\cos(x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg
+            offset_x=4em
+
+        $$
+        \Large\cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg
+            offset_x=4em
+
+        $$
+        \Large 1 + \cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg
+            offset_x=4em
+
+        $$
+        \Large{1 + \cos(2x)\over 2}
+        $$
+        as substituting “$2x$” for “$x$” effects a horizontal
+        compression by $2$.
+        (See
+        the second case
+        of Exercise 27, in particular.)
+
+        (NB: If we do it the other way around,
+        putting the vertical scaling before the vertical
+        translation, we obtain “${1\over 2}\cos(2x)$”
+        as the third function and “${1\over 2} + {1\over 2}\cos(2x)$”
+        as the fourth function:
+
+        $$
+        \Large\cos(x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+        $$
+        \Large\cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+        $$
+        \Large{1\over 2}\cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+        $$
+        \Large{1\over 2} + {1\over 2}\cos(2x)
+        $$
+        ...which is same-same since
+        ${1\over 2} + {1\over 2}\cos(2x) = {1 + \cos(2x)\over 2}$.)
+
+        The issue for the second part of the problem is
+        therefore to prove that...
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                {1 + \cos(2x)\over 2} = \cos^2(x)
+                $$
+
+        ...by algebraic means.
+
+        For this we again use the angle-sum formula
+
+        $$
+        \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+        $$
+
+        for $\cos$, but with $A = B = x$, namely
+
+        $$
+        \begin{align*}
+        \cos(2x)
+        &= \cos(x + x) \\
+        &= \up{1.6} \cos(x)\cos(x) - \sin(x)\sin(x) \\
+        &= \up{1.6} \cos^2(x) - \sin^2(x)
+        \end{align*}
+        $$
+
+        which gives us
+
+        $$
+        \begin{align*}
+        {1 + \cos(2x)\over 2}
+        &= \up{2.0} {1 + \cos^2(x) - \sin^2(x) \over 2} \\
+        &= \up{2.0} {(1 - \sin^2(x)) + \cos^2(x)\over 2} \\
+        &= \up{2.0} {\cos^2(x) + \cos^2(x)\over 2} \\
+        &= \up{2.0} {2\cos^2(x)\over 2} \\
+        &= \up{2.0} \cos^2(x)
+        \end{align*}
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg
+            offset_x= 3.4em
+            offset_y=3%
+
+        ...as conjectured!
+        (In particular, $\cos^2(x)$ truly _is_ a
+        sinusoid, as a result of all this, surprisingly
+        enough.)
+
+
+|> Exercise
+    t=tt
+
+    Relate
+    $$
+    \sin(x)\cos(x)
+    $$
+    to
+    $$
+    \sin(2x)
+    $$
+    with the help of the angle-sum formulas.
+
+    |> Solution
+
+        The angle-sum formula for sin is
+        $$
+        \sin(A+B) = \cos A\sin B + \sin A\cos B
+        $$
+        from which
+        $$
+        \begin{align*}
+        \sin(2x) =&\,\, \sin(x + x) \\
+        \up{1.6} =&\,\, \cos x\sin x + \sin x\cos x \\
+        \up{1.6} =&\,\, 2\sin x\cos x
+        \end{align*}
+        $$
+        and
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                \sin x\cos x = {1\over 2}\sin(2x)
+                $$
+
+        ...solving for $\sin x\cos x$.
+
+
+|> Exercise
+    t=tt
+
+    What sequence of geometric transformations
+    can turn [the graph] $y = \sin(x)$
+    into [the graph] $y = \sin(x)\cos(x)$?
+
+    |> Solution
+
+        Since
+        $$
+        \sin x\cos x = {1\over 2}\sin(2x)
+        $$
+        by Exercise 30 and since the substitution
+        of “$x$” by “$2x$” effects a horizontal
+        compression by $2$, the answer is:
+        “a horizontal scaling by ${1\over 2}$ followed by a vertical scaling by ${1\over 2}$”,
+        though order doesn't matter, and we might also
+        say “uniform scaling by ${1\over 2}$”.
+
+
+|> Exercise
+    t=tt
+
+    !! What sequence of geometric transformations
+    !! can turn [the graph] $y = \cos(x)$
+    !! into [the graph] $y = \sin(x) + \cos(x)$?
+    !! Prove your answer using algebra.
+    !! Building on the discoveries of Exercise 18,
+    !! conjecture a sequence of geometric transformations
+    !! that maps $$y = \cos(x)$$
+    !! onto $$y = \sin(x) + \cos(x)$$
+    !! and prove your answer with algebra.
+    What sequence of geometric transformations
+    maps the graph
+    $$
+    y = \cos x
+    $$
+    onto the graph
+    $$
+    y = \sin x + \cos x
+    $$
+    ...?
+    (Study Exercise 18, if you have no inspiration.)
+    (PS: Prove your answer.)
+    !! ($\,$Justify your answer.)
+
+    |> Solution
+
+        Note that $\sin + \cos$
+        has period $4\eta$ just like $\sin$ or
+        $\cos$, but, unlike $\sin$ and $\cos$,
+        $\sin + \cos$ reaches a maximum of $\sqrt{2}$
+        at $x = \eta/2$, as uncovered in Exercise 18,
+        from which the following graphic is recovered:
+
+        |> Image
+            src=images/svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg
+
+        (We have added the minimum at $y = -\sqrt{2}$,
+        which is no harder to prove than the
+        maximum at $y = \sqrt{2}$.)
+
+        Note that while the above graph may
+        __seem__
+        like a sinusoid, we have
+        __not yet proved__
+        that it is a sinusoid, which is indeed the goal
+        of the current exercise! But we can conjecture
+        that the
+        following two steps would take us from $y = \cos(x)$
+        to $y = \sin(x) + \cos(x)$, given the structure above:
+        __1. horizontal translation to the right by $\eta/2$__
+        __2. vertical scaling by $\sqrt{2}$__
+        Now you might recall from previous discussions
+        (cf. Exercise 7 of Chapter 3, part 1 of Exercise 27
+        in this chapter) that
+        $$
+        x \ra f(x + a)
+        $$
+        has a graph that is the translate of $y = f(x)$ to
+        left by $a$ units, whence
+        $$
+        x \ra f(x - a)
+        $$
+        has a graph that is the translate of $y = f(x)$ to
+        the _right_ by $a$ units; whence, we can
+        conjecture that...
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                \sqrt{2}\cdot \cos(x - \eta/2)
+                $$
+        ...[$\cos(x)$, translated, scaled] actually coincides
+        with $\cos(x) + \sin(x)$!!! (!!!)
+
+        For the proof, we resort to the angle-sum formula...
+        $$
+        \cos(A + B) = \cos A\cos B - \sin A\sin B
+        $$
+        ...again, giving us...
+        $$
+        \begin{align*}
+        &\,\, \sqrt{2}\cdot \cos(x - \eta/2) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\sqrt{0.5} - \sin(x)(-\sqrt{0.5})) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot\sqrt{0.5}\cdot(\cos(x) + \sin(x)) \\
+        \up{1.6} =&\,\, \sqrt{2 \cdot 0.5}\cdot(\cos(x) + \sin(x)) \\
+        \up{1.6} =&\,\, \sqrt{1}\cdot(\cos(x) + \sin(x)) \\
+        \up{1.6} =&\,\, \cos(x) + \sin(x)
+        \end{align*}
+        $$
+        ...victory!!!!
+
+        |> SolutionNote
+
+            The fact that
+            $$
+            \sqrt{2}\cdot \sqrt{0.5} = 1
+            $$
+            can also be seen from the fact that
+            $$
+            \sqrt{0.5} = {1\over \sqrt{2}}
+            $$
+            that some might prefer.
+            !! that is indeed the preferred way of writing $\sqrt{0.5}$
+            !! for many people.
+
+
+|> Exercise
+
+    Prove that for every $A_1$, $A_2 \in \rr$,
+    $$
+    x \ra A_1\cos x + A_2\sin x
+    $$
+    equals
+    $$
+    x \ra W\cdot \cos(x + \psi)
+    $$
+    for some appropriate constants $W$ and $\psi$. (That shall
+    be functions of $A_1$, $A_2$.) Also: draw a deep analogy
+    to polar coordinates, regarding the transform that gives
+    $W$, $\psi$ as a function of $A_1$, $A_2$.
+
+    |> Solution
+
+        One approach is to expand
+        $$
+        \cos(x + \psi)
+        $$
+        using the angle-sum formula, which gives
+        $$
+        \cos(x)\cos(\psi) - \sin(x)\sin(\psi)
+        $$
+        after which multiplying by $W$ and collecting coefficients of
+        $\cos x$, $\sin x$ gives
+        $$
+        \up{1.4}(W \cdot \cos \psi)\cdot\cos(x) - (W \cdot \sin \psi) \cdot \sin(x)
+        $$
+        comparing to
+        $$
+        A_1\cos x + A_2\sin x
+        $$
+        we see that
+        $W \cos(x + \psi)$
+        would equal
+        $A_1\cos x + A_2\sin x$
+        if we could find $W$, $\psi$ such that
+        $$
+        \phantom{-}W\cdot\cos(\psi) = A_1
+        $$
+        $$
+        -W\cdot\sin(\psi) = A_2
+        $$
+        ...that we can actually rewrite
+        $$
+        W\cdot\cos(-\psi) = A_1
+        $$
+        $$
+        W\cdot\sin(-\psi) = A_2
+        $$
+        because $\cos(-x) = \cos(x)$, $-\sin(x) = \sin(-x)$
+        for all $x \in \rr$. But the above
+        two
+        equations are very similar to
+        $$
+        r\cdot\cos(\theta) = x
+        $$
+        $$
+        r\cdot\sin(\theta) = y
+        $$
+        that give the transformation
+        from polar coordinates $(r, \theta)$
+        to Cartesian coordinates $(x, y)$; in fact these are the
+        exact same equations, except that we have
+        ‘$W$’ in place of ‘$r$’,
+        ‘$-\psi$’
+        in place of ‘$\theta$’,
+        ‘$A_1$’ in place of ‘$x$’, and
+        ‘$A_2$’ in place of ‘$y$’;
+        so in other words,
+        $$
+        (W, -\psi)
+        $$
+        are the
+        __polar coordinates__
+        of the Cartesian point
+        $$
+        (A_1, A_2)
+        $$
+        with $W$ being the “radius”, or distance to the origin,
+        and $-\psi$ being the angle from the $x$ axis (or _argument_):
+
+        |> Image
+            src=images/svg_ch5_ex_polar_discovery.svg
+
+        In particular,
+        since every pair of Cartesian coordinates
+        has a corresponding pair of polar coordinates
+        (in fact, many corresponding pairs!),
+        we will
+        always be able to find $W$, $\psi$ such as to
+        match the equations above,
+        which concludes the problem.
+
+        |> SolutionNote
+
+            To explicitly give formulas,
+            one can set
+            $$
+            W = \sqrt{A_1^2 + A_2^2}
+            $$
+            and
+            $$
+            -\psi = \begin{cases}
+            \arctan(A_2/A_1) & \te{if }\, A_1 \ne 0, \,\te{else} \\
+            \up{1.2}\te{arccot}(A_1/A_2) & \te{if }\, A_2 \ne 0, \,\te{else} \\
+            \up{1.2}\rm{?}       & \te{if }\, A_1 = 0, A_2 = 0
+            \end{cases}
+            $$
+            where we are copy-pasting the formula that appears
+            in the chapter for going from cartesian to polar
+            coordinates (no need to remember this formula, though,
+            really); though, IN TRUTH, setting
+            $$
+            W = -\sqrt{A_1^2 + A_2^2}
+            $$
+            would work as well,
+            if we add
+            $2\eta$ to the argument!
+
+        _Example 1._
+        The previously-studied
+        $$
+        \cos x + \sin x
+        $$
+        (cf. Exercise 4) corresponds to the case
+        $$A_1 = A_2 = 1$$ of this exercise, and
+        in which case we can set
+        $$W = \sqrt{2}$$ and
+        $$\psi = -\eta/2$$
+        because the pair
+        $$
+        (W, \,-\psi) \,=\, (\sqrt{2}, \,\,\eta/2)
+        $$
+        is a polar coordinate of $(A_1, A_2) = (1, 1)$:
+
+        |> Image
+            src=images/svg_ch5_ex_polar_discovery_1_1.svg
+
+        (In fact, the fact that...
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                \cos x + \sin x = \sqrt{2}\cdot\cos(x - \eta/2)
+                $$
+
+                |> ImageRight
+                    src=images/svg_ch5_ex_polar_discovery_cloud.svg
+
+        ...was painstakingly uncovered
+        in Exercise 33, if you recall.)
+
+|> Exercise
+
+    If we attempt to express
+    $$
+    A_1\sin x + A_2\cos x
+    $$
+    in the form
+    $$
+    W\cdot\sin(x + \psi)
+    $$
+    then what does the relationship
+    between $A_1$, $A_2$, $W$ and $\psi$ become?
+
+    (NB: We have flipped ‘$\cos$’ and
+    ‘$\sin$’ in the first expression, compared
+    to Exercise 34, and reducing to that exercise is
+    likely to produce confusion.
+    Solving from scratch is recommended.)
+
+    |> Solution
+
+        Expanding
+
+        $$
+        \sin(x + \psi)
+        $$
+
+        by the angle-sum formula gives
+
+        $$
+        \sin x\cos \psi + \cos x\sin \psi
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_polar_discovery2_cloud.svg
+            offset_x=8em
+
+        whereby multiplying by $W$ and collecting coefficients
+        of $\sin x$, $\cos x$ gives
+        $$
+        (W\cdot\cos \psi)\cdot\sin x + (W\cdot\sin \psi)\cdot\cos x
+        $$
+        and equating to
+        $$
+        A_1\cdot\sin x + A_2\cdot\cos x
+        $$
+        gives the system of equations
+        $$
+        W\cdot\cos \psi = A_1
+        $$
+        $$
+        W\cdot\sin \psi = A_2
+        $$
+        which is to say that, for this specific arrangement of
+        the variables,
+        $$
+        (W, \,\psi)
+        $$
+        are the __exact__ polar coordinates of $(A_1, A_2)$!!!
+
+        |> Pause
+
+        _Example 1._
+        By this result,
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                \sin(x) + \cos(x) = \sqrt{2}\cdot\sin(x + \eta/2)
+                $$
+
+        since
+        $$
+        (\sqrt{2}, \,\eta/2)
+        $$
+        are the (hum: “the”) polar coordinates of $(1, 1)$.
+
+
+|> Exercise
+
+    If aliens descended on Earth, captured everyone,
+    took you aside and told you that the fate of
+    humanity rested on your ability to “illustrate
+    powers of secant”, without further instructions,
+    what would you do?
+
+    |> Solution
+
+        Presumably the aliens are asking
+        for an illustration of the sequence
+
+        $$
+        \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+        $$
+
+        for some fixed $\theta$, based on a geometric
+        interpretation of $\sec$. (Actually...
+
+        $$
+        1, \,\sec \theta, \,\sec^2(\theta), \,\sec^3(\theta),  \,\sec^4(\theta), \dots,
+        $$
+
+        ...we should start the sequence at $1$, since
+        $1 = \sec^0(\theta)$.) Here is a possibility that
+        echoes back to the first solution to Exercise 27:
+
+        |> Image
+            src=images/svg_ch5_ex_sec_powers_bounce.svg
+
+        Starting with a length of $1$, bottom left,
+        successive multiplications by $\sec(\theta)$
+        are performed by “dropping a height up” onto
+        the opposite side of the angle $\theta$,
+        bouncing back and forth between the two sides.
+
+        If we are willing to reproduce the angle
+        $\theta$ several times over,
+        another possibility is to draw a “snail stack”
+        of right triangles sharing a common vertex:
+
+        |> Image
+            src=images/svg_ch5_ex_sec_powers_snail.svg
+
+        Or if we move the angle $\theta$ around from
+        one end of the previously obtained segment to
+        another, another somewhat exotic possibility is
+        this one:
+
+        |> Image
+            src=images/svg_ch5_ex_sec_powers_inverted_towers.svg
+
+        We can also take a page from the geometric
+        interpretation of sec that is mentioned towards
+        the end of the chapter, and draw this figure:
+
+        |> Image
+            src=images/svg_ch5_ex_sec_powers_circles.svg
+
+        (In which we are effectively using a circular arc
+        to each time realign the last obtained segment with
+        horizontal.) In any case, with so many nice drawings,
+        you are bound to save humanity!
+
+        |> SolutionNote
+
+            One can note that the third diagram makes a cameo
+            appearance within the second diagram (modulo scale):
+
+            |> Image
+                src=images/svg_ch5_ex_sec_powers_bounce_cameo.svg
+
+
+|> Exercise
+
+    What do similar illustrations look like for
+    powers of cosine, and for powers of tangent?
+
+    |> Solution
+
+        For cosines we can copy the same figures as
+        for secant, but go “in the other direction”:
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_cos_bounce.svg
+        |> Image
+            style=margin-top:1.5em;
+            src=images/svg_ch5_ex_costan_powers_cos_snail.svg
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_cos_inverted_towers.svg
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_circles.svg
+
+        For ‘tan’ it is possible to produce spirals:
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_big.svg
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_big_other_spiral.svg
+
+        There is also a staircase possibility (nb:
+        the spirals will go inward, and the staircase
+        collapses to a point, if $\theta < \eta/2$):
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_wedge.svg
+
+        We can also do as in the second spiral,
+        and put the powers of $\tan(\theta)$ on the
+        hypotenuses of the triangles...
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_other_wedge.svg
+
+        ...since the size ratio of successive triangles
+        is $\tan(\theta)$, by the first staircase drawing!
+        (In fact, we could have done this trick with
+        powers of sec/cos as well, relabeling some other
+        side of the triangle to be the power of $\cos$.)
+
+        |> SolutionNote
+
+            Here are some examples of what we suggest at the
+
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_cos_snail_other_way.svg
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_cos_towers_other_way.svg
+
+            (To reiterate, this works because the triangles are all similar,
+            and the size ratio of one triangle to the previous—specifically,
+            the ratio of the hypotenuses—is
+            $\cos(\theta)$.)
+
+        |> SolutionNote
+
+            To illustrate powers of
+            $$
+            \cot(\theta)
+            $$
+            one can start from the illustrations for
+            $$
+            \tan(\theta)
+            $$
+            and replace the complementary angle by ‘$\theta$’.
+            E.g.:
+
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_cot_48_big.svg
+
+            Likewise, to illustrate powers of
+            $$
+            \sin(\theta)
+            $$
+            one can start with an illustration for powers of
+            $\cos(\theta)$ and reverse the role of $\theta$ and
+            its complement. E.g., with our two variations of the
+            snail:
+
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_sin_snail.svg
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_sin_snail_other_way.svg
+
+            (Likewise to switch from an illustration of $\sec$
+            to illustration of $\csc$ it suffices to move $\theta$
+            around, not that aliens will ever descend on Earth and
+            ask us these things.)
+
+
+|> Exercise
+
+    What sequence of geometric transformations
+    of the plane will map the graph
+    $$
+    y = \cos(x)
+    $$
+    onto the graph...
+    $$
+    y = \cos(0.1x + 0.1)
+    $$
+    ...?
+
+    |> Solution
+
+        Place $\cos(x + 0.1)$ as an intermediate function
+        between $\cos(x)$ and $\cos(0.1x + 0.1)$,
+        breaking the transformation into two steps:
+
+        $$
+        \cos(x)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(x + 0.1)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \,\cos(0.1x + 0.1).
+        $$
+
+        The first step, going to $\cos(x + 0.1)$, shifts
+        the graph of cos left by $0.1$ (cf. Exercise 1,
+        Exercise 22); the second step dilates the
+        resulting graph by a factor $10$ horizontally,
+        because the multiplication by $0.1$ slows
+        everything down by a factor $10$. Thus
+
+        $$
+        y = \cos(0.1x + 0.1)
+        $$
+
+        is obtained from $y = \cos(x)$ by:
+
+        __1. left translation by $0.1$__
+        __2. horizontal scaling by $10$__
+
+        (Or “horizontal compression by $0.1$”, for 2.)
+
+        |> SolutionNote
+
+            One can also place $\cos(0.1x)$ as an
+            intermediate function between $\cos(x)$ and
+            $\cos(0.1x + 0.1)$:
+            $$
+            \cos(x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(0.1x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \,\cos(0.1(x + 1)) = \cos(0.1x + 0.1).
+            $$
+            In this case the first step, going to $\cos(0.1x)$,
+            dilates the graph horizontally by a factor $10$,
+            while the second step, in which $x$ is replaced
+            by $x + 1$, shifts the resulting graph to the
+            left by $1$, and the obtained sequence is:
+
+            __1. horizontal scaling by $10$__
+            __2. left translation by $1$__
+
+            (Indeed, this ends up performing the same overall
+            transformation of the plane as the first solution,
+            albeit decomposed differently in terms of its sub-steps.
+            Neither sequence is more correct than the other.)
+
+        |> SolutionNote
+
+            Take the following three-box assemblage, that
+            computes $x \ra \cos(0.1x + 0.1)$:
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x.svg
+
+            (The label of the middle box is pasted diagonally
+            above the box because of reasons of space.)
+
+            We can understand our first solution as gluing
+            the middle and right boxes onto the ‘$\cos$’ box
+            one at a time, and observing the effect of each
+            additional gluing on the graph:
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x_2.svg
+
+            On the other hand, if we perform the same
+            analysis on this alternate three-box sequence...
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x_3.svg
+
+            ...that also computes $x \ra \cos(0.1x + 0.1)$,
+            we recover our second solution:
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x_4.svg
+
+|> Exercise
+
+    More generally, how is the graph of
+    $$
+    x \ra \cos(Bx + C)
+    $$
+    related to the graph of $\cos$, for constants
+    $B$, $C \in \rr$?
+
+    |> Solution
+
+        As in the solution to Exercise 37 place
+        $\cos(x + C)$ as an intermediate function between
+        $\cos(x)$ and $\cos(Bx + C)$:
+
+        $$
+        \cos(x)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(x + C)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(Bx + C)
+        $$
+
+        The first step effects a tranlation to the left by $C$,
+        the second step (since it replaces $x$ by $Bx$) effects
+        a horizontal compression by a factor $B$ (speed-up by
+        factor $B$), so the following pair of steps, in order,
+        takes the graph $y = \cos(x)$ to the graph $y = \cos(Bx + C)$:
+
+        __1. horizontal translation by $-C$__
+        __2. horizontal scaling by $1/B$__
+
+        |> StarDivider
+
+        |> SolutionNote
+
+            Alternately, like Note 1 of Exercise 37, we can
+            stop at $\cos(Bx)$ as an intermediate point:
+
+            $$
+            \cos(x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(Bx)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(B(x + C/B)) = \cos(Bx + C)
+            $$
+
+            This gives us the following alternate sequence:
+            __1. horizontal scaling by $1/B$__
+            __2. horizontal translation by $-C/B$__
+            ...which is different-but-equivalent, but
+            generally considered inferior
+            by virtue of involving the more complicated translation
+            term, $-C/B$!
+
+        |> SolutionNote
+
+            One says that translation and scaling  are
+            __non-commutative__
+            because it matters which of the two operations is performed
+            first. If it didn't matter,
+            then both of our solutions would involve the
+            same amount of translation, but they don't!
+
+            (Also:
+            __translation and scaling don't commute__
+            or
+            __transation doesn't commute with scaling__
+            ...all good sentences to use in the wild!)
+
+
+|> Exercise
+
+    If
+    $$
+    A \ne 0
+    $$
+    is a point on the $x$ axis, how can we construct
+    the value
+    $$
+    1 / A
+    $$
+    by purely geometric means?
+    (We assume that ‘$0$’ and ‘$1$’ are also marked on the axis.)
+
+    |> Solution
+
+        The key is to view $A$, $1/A$ as values of the form
+        $$
+        A = \sec(\theta)
+        $$
+        $$
+        1/A = \cos(\theta)
+        $$
+        for some angle $\theta \in \rr$, if $|A| \geq 1$, or
+        as values of the form
+        $$
+        A = \cos(\theta)
+        $$
+        $$
+        1/A = \sec(\theta)
+        $$
+        for some angle $\theta \in \rr$, if $|A| \leq 1$.
+        In more detail, we make use of the fact that
+        $$
+        \sec(\theta)
+        $$
+        can be obtained as the intersection of the tangent
+        to the unit circle with the $x$ axis (we never discussed
+        this, you can't be faulted for missing it):
+
+        |> Image
+            src=images/svg_ch5_ex_one_over_A_secant_construction.svg
+
+        |> ImageRight
+            src=images/svg_ch5_ex_one_over_A_secant_construction_cloud.svg
+
+        So the idea is, for example if $|A| \geq 1$, to draw
+        a tangent to the circle from $A$, then to drop a height
+        onto the $x$ axis:
+
+        |> Image
+            src=images/svg_ch5_ex_one_over_A_secant_Agt1.svg
+
+        ...the position obtained is the corresponding
+        $\cos(\theta)$, and $\cos(\theta)\cdot\sec(\theta) = 1$ &#x2705;.
+        If $|A| \leq 1$ we can reverse the process,
+        “dropping a height onto the circle”, and then finding
+        the intersection of the tangent at that point with
+        the $x$ axis! (Which will not work, as should be,
+        if and only if $\cos(\theta) = 0$, a.k.a., if and only
+        if $A = 0$.)
+
+
+|> Exercise
+
+    In the following drawing at what
+    coordinates does the tangent to the circle
+    intersect the axes, as marked by the purple
+    triangles?
+
+    |> Image
+        src=images/svg_ch5_ex_60_tangent.svg
+
+    |> Solution
+
+        First we note that the $x$- and $y$-coordinates of
+        the point of tangency are  $1/2$ and
+        $\sqrt{0.75} = {\sqrt{3}\over 2}$, being $\cos(60^\circ)$
+        and $\sin(60^\circ)$ respectively:
+
+        |> Image
+            src=images/svg_ch5_ex_60_tangent_with_coordinates.svg
+
+        But by Exercise 43 this implies that the coordinate
+        of the intersectionj of the tangent is
+
+        |> ImageRight
+            src=images/svg_ch5_ex_60_tangent_sec_cloud.svg
+
+        $$
+        {1\over 1/2} = 2
+        $$
+
+        with the $x$ axis, and
+
+        |> ImageRight
+            src=images/svg_ch5_ex_60_tangent_csc_cloud.svg
+
+        $$
+        {1\over \sqrt{3}/2} = {2\over \sqrt{3}}
+        $$
+
+        with the $y$ axis, reasoning symmetrically.
+
+
+|> Exercise
+    handle=tom
+
+    Compute the vertical distance from $A$ to $A'$
+    from the following set of blueprints for a shed with
+    an angled inside wall (all distances in inches):
+
+    |> Image
+        src=images/svg_ch5_ex_floorplan.svg
+
+    |> Solution
+
+        We will compute the two green lengths, then the
+        red length, then the blue length, then add 130:
+
+        |> Image
+            src=images/svg_ch5_ex_floorplan_soln1.svg
+
+        Proceeding, the longer and smaller green lengths
+        are $112\rt{0.1} \cdot \sin(25.5^\circ\hlfbk)$
+        and $8\rt{0.1} \cdot \cos(25.5^\circ\hlfbk)$ inches,
+        respectively:
+
+        |> Image
+            src=images/svg_ch5_ex_floorplan_soln2.svg
+
+        The red length is therefore
+
+        $$
+        \begin{align*}
+        &\,\,268 - 8 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk) \\
+        \up{1.6} =&\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
+        \end{align*}
+        $$
+
+        (inches) while the blue length is
+
+        $$
+        \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+        $$
+
+        (inches) and the final answer is
+
+        $$
+        130 + \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+        $$
+
+        inches, which comes out to
+
+        |> ImageLeft
+            src=images/svg_ch5_ex_floorplan_computation_cloud.svg
+
+        $$
+        212.65
+        $$
+
+        minus some. (Approximating to $1/100$-th of an inch
+        should be good enough for a construction site.)
+
+        |> SolutionNote
+
+            Note that...
+            $$
+            \cos(25.5^\circ) = 0.90258\dots
+            $$
+            $$
+            \sin(25.5^\circ) = 0.43051\dots
+            $$
+            $$
+            \tan(22^\circ) = 0.40402\dots
+            $$
+            ...and if you are not finding these values, then make sure
+            that your calculator is in “degree mode”.
+            (Otherwise you have to manually
+            convert the arguments to radians.)
+
+
+
+|> Exercise
+
+    Given the following sketch, to what angle
+    can the door be opened before it hits against
+    the roof? (Hint: You will need to Google “how
+    to use arctan”, or “how to convert from polar
+    to Cartesian coordinates”.)
+    |> Image
+        src=images/svg_ch5_ex_opening_door.svg
+    And:
+    |> TextParent
+        |> ul
+            style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+            |> li
+
+                all distances are in inches
+            |> li
+
+                assume half an inch from the edge of the door
+                to the center of its hinge
+            |> li
+
+                assume the door has negligible thicknesss
+
+    |> Solution
+
+        We start by computing these lengths in the
+        original plane of the $2$-dimensional drawing:
+
+        |> Image
+            src=images/svg_ch5_ex_opening_door_soln1.svg
+
+        (Nb: One can also compute the length marked ‘2’ as
+        $$
+        {42\over \tan(23^\circ)}
+        $$
+        since $\cot = 1/\tan$, or
+        $$
+        42\cdot \tan(67^\circ)
+        $$
+        since $67^\circ = 90^\circ - 23^\circ$ is the complement
+        of $23^\circ$.)
+
+        Next, as
+
+        $$
+        0.5
+        $$
+
+        is the distance from the side of the door to its
+        hinge, the door swings at a radius of
+
+        $$
+        38.5
+        $$
+
+        and the distance between the hinge's center
+        and the ceiling, measured horizontally at the top
+        of the door, is
+
+        $$
+        30.945 - 0.5 = 30.445...
+        $$
+
+        by subtracting from the length marked ‘5’.
+        We can draw the following overhead sketch of the situation
+        (not to scale, and keeping to $3$ digits of accuracy):
+
+        |> Image
+            src=images/svg_ch5_ex_opening_door_overhead.svg
+
+        Here
+
+        $$
+        \arctan
+        $$
+
+        is a function that you can find notated as
+
+        $$
+        \te{“}\tan^{-1}\te{”}
+        $$
+
+        on your calculator (a questionable choice of notation,
+        because it is _not_ the same as $1/\tan = \cot$), and
+        sometimes known as
+
+        __tangent inverse__
+
+        by the gallery, converts a fraction of the form
+
+        $$
+        {\te{opposite}\over\te{adjacent}}
+        $$
+
+        into the corresponding angle whose tangent equals that
+        fraction.
+
+        The final answer to the problem is...
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                90^\circ + 52.26^\circ = 142.26^\circ
+                $$
+
+        ...because $\alpha$ only constitutes the amount of rotation
+        past $90^\circ$, per the drawing.
+
+
+|> Exercise
+
+    (Speaking of doors with negligible thickness.)
+    The sketch below shows the top view of a bomb
+    shelter door set in a corner near a wall,
+    with distances in centimeters.
+    How far can the door open when the big handle
+    is in the “open” position, shown in the figure?
+    How far can it open when the big handle is in
+    the “closed” position, shown by the dotted line?
+
+    |> Image
+        src=images/svg_ch5_ex_bomb_shelter_door_tru_sizes.svg
+
+    |> Solution
+
+        In the interest of mass-producing our results
+        we will write a general formula to compute
+        $\alpha$ in terms of $x_0$, $y_0$ and $z$ in
+        the following diagram (note that $r = \sqrt{x_0^2 + y_0^2}$):
+
+        |> Image
+            src=images/svg_ch5_ex_bomb_shelter_door_alpha_x0y0.svg
+
+        We can decompose
+        $$
+        \alpha
+        $$
+        as
+        $$
+        90^\circ + \beta - \gamma
+        $$
+        with $\beta$ and $\gamma$ as depicted here:
+
+        |> Image
+            src=images/svg_ch5_ex_bomb_shelter_door_alpha_decomposed.svg
+
+        By definition of ‘$\arctan$’ (cf. Exercise 43),
+        we have
+        $$
+        \gamma = \arctan(y_0/x_0)
+        $$
+        and
+
+        $$
+        \beta = \arctan(z/\sqrt{r^2 - z^2})
+        $$
+
+        or
+
+        $$
+        \beta = \arctan(z/\sqrt{x_0^2 + y_0^2 - z^2})
+        $$
+
+        directly in terms of $z$, $x_0$ and $y_0$, since
+        $r^2 = x_0^2 + y_0^2$, so
+
+        $$
+        \alpha = 90^\circ + \arctan(z/\sqrt{x_0^2 + y_0^2 - z^2}) - \arctan(y_0/x_0)
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg
+
+        which constitutes our “general formula”.
+
+        From this point, we apply the general formula with
+        $z = 66 - 18 = 44$,
+        $(x_0, y_0) = (60, 30)$,
+        $(x_0, y_0) = (93, 30)$, and
+        $(x_0, y_0) = (108, 22)$:
+
+        |> Image
+            src=images/svg_ch5_ex_bomb_shelter_annotated.svg
+
+        The three values of $\alpha$ obtained, respectively,
+        are...
+
+        $$
+        \alpha = 90^\circ + \arctan(48/\sqrt{60^2 + 30^2 - 48^2}) - \arctan(30/60) = 109.1225\ldots^\circ
+        $$
+
+        $$
+        \alpha = 90^\circ + \arctan(48/\sqrt{93^2 + 30^2 - 48^2}) - \arctan(30/93) = 101.5410\ldots^\circ
+        $$
+
+        $$
+        \alpha = 90^\circ + \arctan(48/\sqrt{108^2 + 22^2 - 48^2}) - \arctan(22/108) = 104.3033\ldots^\circ
+        $$
+
+        ...being, namely, upper bounds on the amount of
+        rotation of the door caused by a putative contact of
+        the big handle in open position with the wall, of the
+        big handle in closed position with the wall, and of
+        the small handle with the wall.
+
+        (By the way: don't be confused by the fact that
+        $\alpha$ is not an angle measured “from
+        horizontal”; $\alpha$ is still the amount of rotation (aperture)
+        undergone by the door, as it measures the amount of rotation
+        of a specific point attached to the door!)
+
+        In particular, since
+
+        $$
+        104.3033\ldots < 109.1225\ldots
+        $$
+
+        the big handle is not the limiting factor when
+        the big handle is in open position, at which point
+        the small handle is the limiting factor and prevents
+        the door from opening more than $104^\circ$-and-some,
+        whereas since
+
+        $$
+        101.5410\ldots < 104.3033\ldots
+        $$
+
+        the big handle becomes the limiting factor when it
+        is in closed position, at which point the door can
+        only open to $101^\circ$-and-some!
+
+
+|> Exercise
+
+    If a sphere is projected directly outward onto
+    a cylinder abutting the sphere at the equator, with each
+    point remaining at its height, as pictured in the
+    sketch and in the visualization below, by what factor are
+    areas stretched as a function of the latitude $\theta$?
+
+    |> Image
+        src=images/svg_ch5_ex_horizontal_projection_sphere_statement.svg
+
+    |> Solution
+
+        Areas are scaled by a factor of
+        $$
+        \sec(\theta) \cdot \cos(\theta) = 1
+        $$
+        because latitudes (circles that slice the sphere
+        horizontally) are stretched by a factor of
+
+        $$
+        \sec(\theta)
+        $$
+
+        |> ImageRight
+            offset_x=9em
+            src=images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg
+
+        by the projection, whereas longitudes (the other
+        ones, perpendicular to latitudes) are locally stretched
+        by a factor of...
+
+        $$
+        \cos(\theta)
+        $$
+
+        ...as depicted in this...
+
+        |> Image
+            src=images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg
+
+        ...sketch, and because the
+        overall scaling in area is the latitudinal
+        scaling factor times the longitudinal
+        scaling factor. (Area = width $\times$ height,
+        so you take the factor by which “width” scales,
+        times the factor by which “height” scales—presuming
+        your old “width” and “height” are still at right
+        angle to one another after the projection, which
+        is the case here: longitudes and latitudes, that
+        are perpendicular on the sphere, project to
+        lines and circles, respectively, that are
+        perpendicular on the cylinder.)
+
+
+|> Exercise
+
+    Rank the $7$ slices of this
+    sphere with unit radius from the greatest to
+    smallest area slice:
+
+    |> Image
+        src=images/svg_ch5_ex_pez_sphere_statement.svg
+
+    |> Solution
+
+        The three slices of height $1/3$ have the same
+        area, as do the four slices of height $1/4$. But
+        naturally, the slices of height $1/3$ have larger
+        area than the slices of height $1/4$.
+
+        |> SolutionNote
+
+            This holds because each slice has the same area
+            as the horizontal projection of that slice onto a cylinder
+            hugging the sphere, by Exercise 46, and because
+            the area of a cylinder slice only depends on its
+            height.
+
+            |> ImageRight
+                src=images/svg_ch5_ex_pez_sphere_cloud.svg
+
+        |> SolutionNote
+
+            The slices of height $1/3$ have area exactly
+            $$
+            {1/3 \over 1/4} = 4/3 = 1.333...
+            $$
+            times the area of the slices of height $1/4$,
+            given that the area of a slice is directly
+            proportional to its height.
+
+
+|> Exercise
+
+    Give a formula for the area of a sphere of
+    radius $r$.
+
+    |> Solution
+
+        The area of a sphere of radius $r$ is
+        $$
+        4\eta\rt{0.05}r\cdot 2r = 8\eta\rt{0.05}r^2
+        $$
+        because it is the same as the area of a cylinder
+        of radius $r$ and and height $2r$, by Exercise 46:
+
+        |> Image
+            src=images/svg_ch5_ex_sphere_area.svg
+
+        (Namely,
+        $$
+        4\eta\rt{0.05}r\cdot 2r
+        $$
+        is the product “circumference $\times$ height”
+        that gives the area of the cylinder.)
+
+
+|> Exercise
+
+    Give a formula for the volume of a sphere of
+    radius $r$ using the fact that the volume of
+    a cone is “one third base times height”.
+
+    |> Solution
+
+        The basic idea is that we can view the
+        sphere as being made up of many cones:
+
+        |> Image
+            src=images/svg_ch5_ex_sphere_volume_idea.svg
+
+        When we add up the volume
+
+        $$
+        {1\over 3}\times \rm{base} \times \rm{height}
+        $$
+
+        over all these cones, each height is nearly $r$,
+        so what we really need is the sum of
+
+        $$
+        {1\over 3}\times \rm{base}
+        $$
+
+        over all the cones, which comes out to
+
+        $$
+        {1\over 3}\times ({\rm sphere\,\,area})
+        $$
+
+        because the sum of all the areas of the bases
+        is the sphere area. (Everything speaking
+        approximately, for many fine cones, in the
+        limit of our imagination as they become
+        infinitely fine.) (*Where each ‘base’ stands
+        for the shaved-off, “flattened” version of the
+        base.) So multiplying the height $r$ back in,
+        we find
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                V = {1\over 3}\times ({\rm sphere\,\,area}) \times r = {8\over 3}\eta\rt{.1}r^3
+                $$
+
+        for the volume $V$ of the sphere, using the fact that
+        the sphere area $A$ is
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                A = 8\eta\rt{.05}r^2
+                $$
+
+        by Exercise 49.
+
+        |> SolutionNote
+
+            To formalize the argument, consider that
+            we can approximate the volume of the sphere
+            by finitely many cones with triangular bases,
+            by triangulating the surface of the sphere:
+
+        |> Image
+            src=images/svg_ch5_ex_sphere_tetrahedrons.svg
+
+            Note that a cone with a triangular base is
+            just a
+
+            __tetrahedron__
+
+            |> ImageLeft
+                src=images/svg_ch5_ex_sphere_volume_cones_cloud.svg
+
+            where “tetrahedron” means “four-sided shape”.
+            (There is only 1 way to pull off a four-sided
+            shape in 3D: to make all sides triangles.)
+            So the volume of the sphere is approximated
+            by the sum of the volumes of the tetrahedrons,
+            a.k.a. cones.
+
+            Define the
+
+            __mesh size__
+
+            of such a set of tetrahedrons to be the largest
+            sidelength of any tetrahedron base.
+
+            (The smaller the mesh size, the more pointed
+            the tetrahedrons.)
+
+            For the current
+            discussion we take it for granted that as the
+            mesh size shrinks, the sum of the volumes of
+            the cones (= tetrahedrons) converges to the
+            volume of sphere.
+
+            (Or take the limit, as the mesh size shrinks,
+            of the sum of the volume of the tetrahedrons
+            to be the _definition_ of the “volume of the
+            sphere”—that's just as well, since we don't have
+            any other competing notion of “volume of the sphere”,
+            at the moment.)
+
+            Here is a closer look at a single tetrahedron
+            ($h_i$ is the height of the tetrahedron):
+
+            |> Image
+                src=images/svg_ch5_ex_sphere_volume_closeup.svg
+
+            One observes that
+            $$
+            B_i \leq A_i
+            $$
+            where
+            $$
+            B_i
+            $$
+            is the base of the tetrahedron and
+            $$
+            A_i
+            $$
+            is the projection of the base onto the surface
+            of the sphere from the center of the sphere, and
+            that
+            $$
+            h_i \leq r
+            $$
+            where
+            $
+            h_i
+            $
+            is the height of the tetrahedron, and $r$ is the
+            radius of sphere. On the other hand, it is not hard
+            to convince oneself that
+            $$
+            B_i \geq 0.9A_i
+            $$
+            and
+            $$
+            h_i \geq 0.9r
+            $$
+            for all of the tetrahedrons, if the mesh size is
+            sufficiently small; even,
+            $$
+            B_i \geq 0.99A_i
+            $$
+            and
+            $$
+            h_i \geq 0.99r
+            $$
+            for all of the tetrahedrons simultaenously,
+            _if the mesh size is sufficiently small_; even,
+            $$
+            B_i \geq 0.99999A_i
+            $$
+            and
+            $$
+            h_i \geq 0.99999r
+            $$
+            for all... if etc.
+
+            (Or as mathematicians would put it: “for all $\e > 0$
+            there exists an $s > 0$ such that
+            $$
+            B_i \geq (1-\e)A_i
+            $$
+            and
+            $$
+            h_i \geq (1-\e)r
+            $$
+            for all of the tetrahedrons, if the mesh size less than $s$.”)
+            (“For all... there exists... such that... if... .”)
+
+            This implies that
+            $$
+            \sum_{i=1}^N {1\over 3}B_ih_i
+            $$
+            [nb: fast-foward to Exercise 38 if you have never
+            seen $\sum$-notation, but this basically reads
+            “sum from $i$ equals $1$ up to $N$”] which is the
+            total volume of the tetrahedrons, where $N$ denotes
+            the number of tetrahedrons and $B_i$, $h_i$ are the
+            base and height of the $i$-th tetrahedron, is
+            sandwiched between
+
+            $$
+            \sum_{i=1}^N {1\over 3}A_i r
+            $$
+
+            |> ImageRight
+                offset_x=5em
+                src=images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg
+
+            above, and
+
+            $$
+            \sum_{i=1}^N {1\over 3}\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
+            $$
+
+            |> ImageLeft
+                offset_x= 2.5em
+                src=images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg
+
+            below, for sufficiently small mesh size; but
+
+            $$
+            \sum_{i=1}^N A_i = A
+            $$
+
+            where $A = 8\eta\rt{.05}r^2$ is the total area
+            of the sphere, and so
+
+            $$
+            \sum_{i=1}^N {1\over 3}B_ih_i
+            $$
+
+            is sandwiched between
+
+            $$
+            \sum_{i=1}^N {1\over 3}A_ir = {1\over 3}\cdot r\cdot \sum_{i=1}^N A_i = {1\over 3}Ar
+            $$
+
+            above, and
+
+            $$
+            \sum_{i=1}^N {1\over 3}\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r = (0.99999)^2{1\over 3}Ar
+            $$
+
+            below; or, nicely put in a double inequality:
+
+            |> center
+                style=margin-top:1em;margin-bottom:1em;
+                |> div
+                    style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                    $$
+                    {1\over 3}Ar \geq \sum_{i=1}^N {1\over 3}B_ih_i \geq (0.99999)^2{1\over 3}Ar
+                    $$
+
+            ...but we could replace “$0.99999$” by any other
+            constant less that $1$ [yah no: because of the square,
+            we need to say “between $0$ and $1$”] by further
+            shrinking the size of the mesh, which implies that
+
+            $$
+            \sum_{i=1}^N {1\over 3}B_ih_i
+            $$
+
+            must converge to
+
+            $$
+            {1\over 3}Ar
+            $$
+
+            as the mesh size goes to zero—it cannot converge to
+            something greater than, nor less than, this number!
+
+            !! (And
+
+            !! $$
+            !! {1\over 3}Ar = {1\over 3}\cdot 8\eta\rt{.05}r^2\cdot r = {8\over 3}\eta\rt{.05}r^3
+            !! $$
+
+            !! not to forget.)
+
+
+|> Exercise
+
+    Similarly to Exercise 9, suggest a definition for
+    the product
+
+    $$
+    c\cdot\vec{v}
+    $$
+
+    of a vector $\vec{v}$ by a real number $c$.
+
+    |> Solution
+
+        We define
+
+        $$
+        c \cdot (v_x, v_y) = (c\rt{0.1}v_x, c\rt{0.1}v_y)
+        $$
+
+        for the product of a real number $c$ with a
+        vector $\vec{v} = (v_x, v_y) \in \rr^2$.
+        (Similarly for a vector of higher dimension—those
+        exist too.)
+
+        In other words, the product takes the constant
+        $c$ “inside”, multiplying each coordinate of
+        the vector by $c$.
+
+        |> Pause
+
+        _Example 1._ We have
+        $$
+        2 \cdot (10, 3.333) = (20, 6.666),
+        $$
+        applying the definition with $c = 2$,
+        $\vec{v} = (10, 3.333)$.
+
+        |> Pause
+
+        _Example 2._ We have
+        $$
+        2 \cdot (a, b) = (2a, 2b),
+        $$
+        for all $a, b \in \rr$, for an example
+        that is half-algebraic, half-numerical.
+
+        |> SolutionNote
+
+            In some sense, the vector “wins” over the
+            number, in that their conjoint baby is a vector,
+            not a number.
+
+            !! |> Image
+            !!     style=background-color:rgb(226 232 240)
+            !!     src=images/svg_ch5_ex_c_times_vector_box.svg

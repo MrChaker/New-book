@@ -1,0 +1,49 @@
+<> Section
+    bool vec[test]
+    <>
+        "one two"
+        "three __four__ five"
+    <>
+        "extra"
+        "extra"
+    <> BlankLine
+    <> BlankLine
+    <> BlankLine
+    <> BlankLine
+    <> Image
+        src images
+    <> BlankLine
+    <> BlankLine
+    <> BlankLine
+    <> BlankLine
+    <>
+        "math $Math$"
+    <>
+        "Follow up"
+    <> WriterlyBlurb
+        <>
+            "it's my life"
+            "it's now or never"
+
+    <> Exercises
+        <> Exercise
+            <>
+                "Exercise Content"
+            <> Grid
+                cols 3
+                <> Item
+                    <> 
+                        "$$ test shiit$$"
+                <> Item
+                <> Item
+            <>
+                "some math $$"
+                "a - 2 = 3$$"
+                "more text"
+            <>
+                "math that ends _|text|_ $$"
+                "a - 5 = 16"
+            <> BlankLine
+            <>
+                "$$"
+            

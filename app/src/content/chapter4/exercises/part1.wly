@@ -1,0 +1,3191 @@
+|> Exercise
+    handle=seeSaw
+
+    Sketch the derivative of a function with the
+    following graph (what _looks_ like a sharp
+    corner _is_ a sharp corner):
+
+    |> Image
+        src=images/svg_ch4_slope_one_half_see_saw.svg
+
+    |> Solution
+
+        That would be:
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_derivative.svg
+
+        (The derivative is $1/2$ when the slope is $1/2$,
+        is $-1/2$ when the slope is $-1/2$, and is
+        undefined at the corners.)
+
+|> Exercise
+
+    Would the derivative of
+
+    $$
+    y = {1\over x}
+    $$
+
+    be a very large negative number, or a very
+    large positive number, near $x = 0$? Or would
+    it depend on which side of 0 you are?
+
+    |> Solution
+
+        The graph of $y = {1 \over x}$ looks like so:
+
+        |> Image
+            src=images/svg_ch4_one_over_x.svg
+
+        As one can see, the slope is very negative
+        near $x = 0$, on either side. So the answer is:
+        “very large negative”.
+
+|> Exercise
+
+    Sketch the
+
+    __second__
+
+    derivative of the graph in Exercise >>seeSaw.
+
+    |> Solution
+
+        The second derivative is zero wherever the
+        first derivative is flat, and is undefined
+        wherever the first derivative is undefined;
+        this gives the second derivative the following
+        pockmarked appearance:
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_second_derivative.svg
+
+        |> Pause
+
+        _Note 1._
+        Taking even further derivatives produces
+        the same graph back, over and over again.
+
+        |> Pause
+
+        _Note 2._
+        “first derivative” is a synonym of “derivative”.
+
+|> Exercise
+
+    If we pretend that the graph of Exercise >>seeSaw
+    depicts the
+    |> del
+
+        distance that a car has traveled
+        as a function of time,
+    \ position of a car as a function of
+    time, with hours (hr) on the $x$-axis
+    and kilometers (km) on the $y$-axis, what
+    do the units become on the axes of the first
+    and second derivatives?
+
+    |> Solution
+
+        The units on the $y$ axis become kilometers,
+        kilometers per hour, and kilometers per
+        hours squared, including the first graph
+        (each time
+        another derivative is taken, divide the
+        units of the $y$ axis by the units of the
+        $x$ axis):
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_with_units.svg
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg
+
+        |> StarDivider
+
+        |> SolutionNote
+
+            The second and third functions are respectively
+            the velocity and the acceleration of the car as
+            a function of time.
+
+        |> SolutionNote
+
+            In a more physically realistic scenario the corners
+            are rounded off a bit while the velocity and
+            acceleration remain continuous, albeit with steep
+            slopes and sharp peaks. (This...
+
+            |> Image
+                src=images/svg_ch4_ex_car_position_rounded.svg
+
+            ...idea.)
+
+
+|> Exercise
+
+    Is the following equation correct, incorrect,
+    or nonsensical?
+
+    $$
+    (x \ra x + 1) \,+\, (u \ra 2u + 1) \,=\, (t \ra 3t + 2)
+    $$
+
+    |> Solution
+
+        The equation makes sense and is true.
+        Syntactically,
+
+        $$
+        (x \ra x + 1) \,+\, (u \ra 2u + 1)
+        $$
+
+        is a
+
+        __sum of functions__
+
+        because $x \ra x + 1$ and $u \ra 2u + 1$ are
+        both functions. Now by definition, the sum
+
+        $$
+        f + g
+        $$
+
+        of functions $f$ and $g$ is the function
+
+        $$
+        x \ra f(x) + g(x)
+        $$
+
+        that maps a number to the sum of the individual
+        values of the functions. So—for example—
+
+        $$
+        \begin{align}
+        & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(5) \\
+        =& \,\,\,(x \ra x + 1)(5) + (u \ra 2u + 1)(5) \up{1.5} \\
+        =& \,\,\,(5 + 1) + (2\cdot 5 + 1) \up{1.5} \\
+        =& \,\,\,3\cdot 5 + 2 = 17 \up{1.5}
+        \end{align}
+        $$
+
+        and—with a general input $t$—
+
+        $$
+        \begin{align}
+        & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(t) \\
+        =& \,\,\,(x \ra x + 1)(t) + (u \ra 2u + 1)(t) \up{1.5} \\
+        =& \,\,\,(t + 1) + (2t + 1) \up{1.5} \\
+        =& \,\,\,3t + 2 \up{1.5}
+        \end{align}
+        $$
+
+        which implies that, indeed,
+
+        $$
+        (x \ra x + 1) \,+\, (u \ra 2u + 1)
+        $$
+
+        is the function that maps each real number $t$ to $3t + 2$,
+        i.e., is equal to the function $t \ra 3t + 2$. (!!)
+
+        |> Pause
+
+        _Note 1._
+        One can also do the main computation with $x$
+        in place of $t$:
+
+        $$
+        \begin{align}
+        & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(x) \\
+        =& \,\,\,(x \ra x + 1)(x) + (u \ra 2u + 1)(x) \up{1.5} \\
+        =& \,\,\,(x + 1) + (2x + 1) \up{1.5} \\
+        =& \,\,\,3x + 2 \up{1.5}
+        \end{align}
+        $$
+
+        Here we have two different $x$'s: the $x$ that
+        denotes the input, and the $x$ that is used as
+        a placeholder to describe how the first function
+        acts.
+
+|> Exercise
+
+    Complete the missing units for each strip
+    below, based on those units that are given:
+
+    |> Image
+        src=images/svg_ch4_missing_units.svg
+
+    |> Solution
+
+        The pattern to respect is that, each time
+        you take a derivative, the units on the $x$
+        axis stay the same, while the units on the
+        $y$ axis become divided by those on the $x$
+        axis. This gives the unique solutions:
+
+        |> Image
+            src=images/svg_ch4_missing_units_solution.svg
+
+        |> Pause
+        _Note 1._
+        A unit of “$1$” is a
+
+        __dimensionless__
+
+        unit. Dimensionless units arise when
+        quantities are divided by like quantities.
+        Think of dimensionless quantities as “pure
+        fractions” or “pure ratios”. (Percentages
+        are dimensionless—in fact the term
+
+        __percentage__
+
+        is synonymous with
+
+        __dimensionless ratio__
+
+        though if you spoke to people about
+        “dimensionless ratios” they would look at
+        you funny. Also percentages are a system of
+        notation, whereby the symbol “%” means
+        “divide the preceding number by 100, in
+        order to discover the numerical value of
+        the ratio I'm talking about”.) (To drive
+        it home: In Chinese, the written expressions
+        “$23\%$” and “$23/100$” are
+        indistinguishable when read out loud; they
+        are both  read “$23$ over $100$”; that is
+        the simple _&_ correct way!)
+
+|> Exercise
+
+    Among the functions below, which is the
+    zeroth, first, and second derivative?
+    (I.e., which is $f$, $f'$, and $f''$,
+    assuming that relationship exists.)
+
+    |> Image
+        src=images/svg_ch4_ex_position_by_time_find_the_order.svg
+
+    |> Solution
+
+        The graphs are already in the right order:
+        if “$f$” is the original function
+        then $f$ is on the left, $f'$ is in the
+        middle, and $f''$ is on the right:
+
+        |> Image
+            src=images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
+
+        For example, the graph on the left
+        has a slope that starts at $\sim\!-1$ and
+        ends at $\sim\!1$, while those are the
+        values at which the graph in the middle
+        starts and ends (and not coincidentally,
+        since the graph in the middle is the
+        derivative of the graph on the left!):
+
+        |> Image
+            src=images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
+
+        Moreover the middle graph has slope
+        close to $0$ at either end, and some
+        slope near $1.5$ or $2$ towards the middle,
+        matching the _values_ of the graph
+        on the right:
+
+        |> Image
+            src=images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
+
+        (Taking one more derivative would produce a
+        zigzag, by the way.)
+
+        !! |> ImageRight
+        !!     src=images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg
+        !!     offset_y=-0.1em
+        !!     offset_x= -0.5em
+
+
+|> Exercise
+    handle=funnyExerciseG
+
+    Given these graphs...
+
+    |> Image
+        src=images/svg_ch4_sketch_the_middle_a.svg
+
+    ...what can you say about $g'(x)$?
+    (Produce the best sketch of $g'(x)$ that
+    you can, taking into account all the
+    information above.) (Don't get us wrong:
+    You don't _need_ the second derivative
+    to sketch the first derivative, but if
+    you're a human and not a machine, it can
+    help!)
+
+    |> Solution
+
+        To start with, the slope of $g$ seems to be
+        about $-1.5$, $0$ and (a bit greater than) $2$
+        at $x = -2$, $x = 0$ and $x = 2$ respectively:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol1.svg
+
+        This already gives us three points from which
+        to interpolate a basic approximation to the graph
+        $y = g'(x)$:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol2.svg
+
+        But the graph of $g''(x)$ indicates more,
+        namely that $g'(x)$ has a slope that rises
+        from $\approx 0.2$ near the left edge of
+        the graph up to $1.3$ at $x = 0.5$, before
+        falling again to $0.6$ past $x = 2$:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol3.svg
+
+        As a second step, we thus “bend into shape”
+        our previous sketch to produce these slopes...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol4.svg
+
+        ...achieving our final answer.
+
+        |> Pause
+
+        _Note 1._ For reference, the actual
+        derivative looks like so:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol5.svg
+
+
+|> Exercise
+
+    Given these graphs...
+
+    |> Image
+        src=images/svg_ch4_sketch_the_middle_b.svg
+
+    ...sketch $y = h'(x)$, analogously to
+    Exercise >>funnyExerciseG.
+
+    |> Solution
+
+        Firstly, the graph of $h(x)$ seems to have
+        slope $0$ around $x = 0.6$...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol1.svg
+
+        ...which gives us one data point on the
+        curve $y = h'(x)$ to start with...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol2.svg
+
+        ...moreover, by the graph of $h''(x)$,
+        the slope of $h'(x)$ is near $-1/3$ on an
+        interval that is approximately (say)
+        $[-0.85,0.7]$....
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol3.svg
+
+        ...so, as a second step, we can extend
+        the graph of $h'(x)$ by a segment of slope
+        $-1/3$ on this interval:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol4.svg
+
+        |> ImageLeft
+            src=images/svg_ch4_sketch_the_middle_b_cloud.svg
+
+        (To achieve a passable slope of $-1/3$ we
+        modeled ourselves on a nearby grid segment.)
+        Next, $h(x)$ has slope $\approx 1.2$ at
+        $x = -2$, and slope $\approx -0.9$ (?) at
+        $x = 2$:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol5.svg
+
+        This gives us two more points on the graph
+        $y = h'(x)$:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol6.svg
+
+        Then, because the second derivative has
+        value $\approx -1/3$ for $x \leq -1.6$
+        (about) and for $x \geq 1.5$ (about)...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol7.svg
+
+        ...we extend these two new data points by
+        segments of slope $-1/3$...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol8.svg
+
+        ...on the relevant intervals. (I.e., for
+        $x \leq -1.6$ and for $x \geq 1.5$.) The
+        last step is to join the existing segments
+        by some kind of “connector curves” of
+        yet-to-be-determined shape:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol9.svg
+
+        Since $h''(x)$ shows that the two
+        connectors have slopes of about $-1/3$
+        at their edges and slopes of about $-1.4$
+        and $-1.6$ (respectively) near their
+        middles...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol10.svg
+
+        ...our final answer, given by the
+        following sketch, is obtained by
+        “bending into shape” the connector curves...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol11.svg
+
+        ...to give them a slope of $-1/3$ at
+        their endpoints, and slopes of $-1.4$,
+        $-1.6$, respectively, in their middles.
+
+        |> Pause
+
+        _Note 1._
+        Here is the actual graph of $h'$:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_b_sol12.svg
+
+
+|> Exercise
+    handle=cf
+
+    If you scale the graph of a function $f$
+    vertically by a factor $2$—i.e., multiply
+    each output by $2$—is the derivative
+    also scaled by $2$?
+
+    |> Solution
+
+        Yes, this is the case. For a joke way
+        of seeing it, here is a graph of a
+        putative function $f$, before and after
+        scaling:
+
+        |> Image
+            src=images/svg_ch4_scaling_figure.svg
+
+        The second graph truly is the first
+        graph vertically scaled by a factor $2$,
+        because the scale on the $y$ axis has
+        been doubled. This means that the ratio
+
+        $$
+        {\te{rise}\over \te{run}}
+        $$
+
+        has doubled in the second graph, because
+        “rise” has doubled (each $y$-coordinate
+        is twice as large!), whereas “run” stays
+        the same. (So the slope of the tangent has
+        doubled, so the derivative is doubled.)
+
+|> Exercise
+
+    Where is the rate of change of the function
+    below, on the part shown, greatest? And
+    where is the
+
+    __rate of change of the rate of change__
+
+    greatest?
+
+    |> Image
+        src=images/svg_ch4_narrow_and_less_narrow_bends.svg
+
+    |> Solution
+
+        The rate of change is the slope, which
+        is greatest along the right-hand portion
+        of the curve:
+
+        |> Image
+            src=images/svg_ch4_narrow_and_less_narrow_bends_steepest.svg
+
+        On the other hand,
+
+        __the rate of change of the rate of change__
+
+        [a.k.a., second derivative] is the rate
+        of change  of the slope, and that will
+        be greatest at the first bend of the curve,
+        where the slope is changing at the fastest
+        rate:
+
+        |> Image
+            src=images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg
+
+        (Well, believe us or not, but we're right!)
+
+|> Exercise
+
+    In the following graph, which curve might
+    be a derivative of which other curve?
+
+    |> Image
+        src=images/svg_ch4_cosine_curves.svg
+
+    |> Solution
+
+        As it happens—and by the exact method
+        that we used to generate these curves—the
+        blue is the derivative of the red:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_blue_red_only.svg
+
+        Likewise, the derivative of the blue
+        is the yellow, the derivative of the yellow
+        is the green, and the derivative of the
+        green is the red, at which point it starts
+        all over again! (For example, the
+        _fifth_ derivative of the red curve
+        is the blue, because the _fourth_
+        derivative of the red curve is itself.)
+
+        |> Pause
+
+        _Note 1._
+        After all, the slope of these curves
+        keeps oscillating between two fixed
+        values—the “most slanted up” and the
+        “most slanted down”—so their derivatives
+        were always going to have an oscillatory
+        pattern, as well.
+
+        |> Pause
+
+        _Note 2._
+        Because “most slanted up” occurs when
+        the curve has not yet crested, but when
+        the derivative _is already_ in the
+        process of cresting (that's why it's
+        “most slanted up”), the derivative is
+        ahead of the original curve by half a
+        bump, not the other way around:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_cresting.svg
+
+        |> Pause
+
+        _Note 3._
+        When we examine the velocity of a
+        particle moving in the plane, we examine
+        the velocities of its shadow on the
+        $x$- and $y$-axes:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_two_dimensional_vel.svg
+
+        The velocities of the two shadows
+        encode the overall “two-dimensional”
+        velocity of the particle. (No need for
+        quotes, really: the velocity _is_
+        two-dimensional.)
+
+        Here's another point of view: just like
+
+        __position__
+        is encoded by a pair of numbers—sometimes
+        known as the _position vector_ by
+        the way, where “vector” is a term of art
+        for “pair of numbers”—so the
+
+        __velocity__
+
+        is encoded by a pair of numbers—equally
+        known as the _velocity vector_—which
+        is no coincidence, because the first
+        coordinate of the
+
+        __velocity vector__
+
+        is the derivative of the first coordinate
+        of the
+
+        __position vector__
+
+        and likewise for the second coordinate—two
+        coordinates, two rates of change!
+
+        Geometrically, if we use the $x$- and
+        $y$-components $v_x$ and $v_y$ of the
+        velocity to draw an arrow emanating
+        from a point on the curve, this arrow
+        is tangent to the curve, and the
+
+        |> ImageRight
+            src=images/svg_ch4_cosine_curves_tangent_velocity_cloud.svg
+
+        __length__
+
+        of the arrow is the
+
+        __speed__
+
+        of the particle at that moment in time.
+        More precisely, if you let the particle
+        drift at the exact same $x$- and
+        $y$-velocities $v_x$ and $v_y$ that you
+        measured at the root of the arrow for
+        one unit of time, the particle would
+        cover exactly the length of the arrow
+        in that one unit of time, no more no less,
+        because the particle would cover $v_x$
+        units in $x$ and $v_y$ units in $y$.
+        And speed being
+
+        __distance per unit time__
+
+        the length of the arrow is, therefore,
+        the speed!
+
+        Now consider not one but four particles,
+        going around a unit circle in clockwise
+        fashion, 90° apart in phase, at unit
+        speed (“unit speed” = speed 1, “unit
+        circle” = radius 1) (ps: We center the
+        circle at the origin):
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_unit_circle.svg
+
+        The
+
+        __position vectors__
+
+        of the particles are as follows:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_unit_circle_position_vectors.svg
+
+        (You can't really see it so well, but
+        each arrow originates at $(0, 0)$.) While
+        the
+
+        __velocity vectors__
+
+        are as follows:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_unit_circle_velocity_vectors.svg
+
+        (Like the position vectors, the
+        velocity vectors keep changing instant by
+        instant—this is the subtlety of calculus!)
+        The velocity vectors have length $1$ because
+        the speed is $1$, _&_ are brushed
+        in the direction of travel.
+
+        (Nb: When we draw a vector as an arrow
+        we mean that the first coordinate of the
+        vector is equal to the horizontal
+        displacement from the tail of the arrow
+        to the head of the arrow, and likewise
+        that the second coordinate is equal to the
+        vertical displacement from the tail of the
+        arrow to the head of the arrow.)
+
+        |> ImageRight
+            src=images/svg_ch4_cosine_curves_vector_illustration_cloud.svg
+
+        Due to the 90° rotations and uniform
+        lengths of $1$, one particle's velocity
+        vector is another particle's position
+        vector; as one example, the red particle's
+        velocity vector is the blue particle's
+        position vector:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_unit_circle_equality.svg
+
+        From the $x$-coordinates, for example,
+
+        __the velocity in $x$ of the red particle
+        is the position in $x$ of the blue particle__
+
+        at any given moment in time. This also
+        means:
+
+        __the rate of change of the $x$-coordinate
+        of the red particle is the $x$-coordinate
+        of the blue particle__
+
+        ...because “velocity in $x$” is the same
+        as “rate of change of the $x$-coordinate”.
+
+        Concretely, if you graph the
+        $x$-coordinates of the red and blue
+        particles on the same graph, the rate of
+        change of the red particle's $x$-coordinate
+        will equal the value of the blue particle's
+        $x$-coordinate. These are the reds and blue
+        curves from the problem statement, if we
+        start the red particle at position
+
+        $$
+        (1, 0)
+        $$
+
+        at time $t = 0$:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_verified.svg
+
+        If we add the $x$-coordinates of the green
+        and yellow particles, we find the graph
+        from the problem statement!
+
+        |> Pause
+
+        _Note 4._
+        If needed, here is an illustration of
+        one $360^\circ$ rotation of the particles
+        of Note 3,  with each curve being an
+        $x$-coordinate:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_rolling_wheel.svg
+
+        (If the above just looks like a
+        confusing mess then don't sweat it—it's
+        not that important.)
+
+        |> Pause
+
+        _Note 5._
+        To reiterate, take a look at this
+        figure again:
+
+        |> Image
+            src=images/svg_ch4_cosine_curves_cresting.svg
+
+        The derivative is
+
+        __ahead__
+
+        of the red particle, so that
+        $x$-coordinates you see _now_ on the
+        blue particle will be seen _a little later_
+        on the red particle! (In particular, if you
+        wanted to generate the same curves with a
+        counterclockwise rotation, you could do that,
+        but you would have to reverse the order of
+        the particles around the circle to keep the
+        blue particle ahead of the red particle,
+        the yellow particle ahead of the blue
+        particle, etc.)
+
+|> Exercise
+
+    Apply the definition
+
+    $$
+    fg = (u \ra f(u)g(u))
+    $$
+
+    of function multiplication
+    in order to show that
+
+    $$
+    (fg)h = f(gh)
+    $$
+
+    for all functions $f, g, h : \rr \ra \rr$,
+    or, namely, to show that
+
+    __($f$ times $g$) times $h$__
+
+    equals
+
+    __$f$ times ($g$ times $h$)__
+
+    for all functions $f, g, h : \rr \ra \rr$.
+
+    |> Solution
+
+        It is necessary and sufficient to show that
+
+        $$
+        ((fg)h)(u)
+        $$
+
+        is the same as
+
+        $$
+        (f(gh))(u)
+        $$
+
+        for an arbitrary input $u \in \rr$, in order to
+        show that
+
+        $$
+        (fg)h
+        $$
+
+        and
+
+        $$
+        f(gh)
+        $$
+
+        are the same function. (Function equality is
+        based on input-output behavior: two functions are
+        equal if and only if every input is mapped to the
+        same output under either function. See Note 6,
+        Exercise 9, Chapter 3.)
+
+        Starting up,
+
+        $$
+        ((fg)h)(u) = (fg)(u) \cdot h(u)
+        $$
+
+        by the definition of function multiplication,
+        and
+
+        $$
+        (f(gh))(u) = f(u) \cdot (gh)(u)
+        $$
+
+        likewise. Moreover,
+
+        $$
+        (fg)(u) = f(u) \cdot g(u)
+        $$
+
+        and
+
+        $$
+        (gh)(u) = g(u) \cdot h(u)
+        $$
+
+        by the same definition again. Therefore,
+
+        $$
+        ((fg)h)(u) = (f(u) \cdot g(u)) \cdot h(u)
+        $$
+
+        on the one hand, and
+
+        $$
+        (f(gh))(u) = f(u) \cdot (g(u) \cdot h(u))
+        $$
+
+        on the other hand. But
+
+        $$
+        (f(u) \cdot g(u)) \cdot h(u) = f(u) \cdot (g(u) \cdot h(u))
+        $$
+
+        by the associativity of ordinary real number
+        multiplication. (Not function multiplication:
+        _real number multiplication_.) So
+
+        $$
+        ((fg)h)(u)
+        $$
+
+        equals
+
+        $$
+        (f(gh))(u)
+        $$
+
+        for arbitrary $u$, which completes the proof.
+
+        |> Pause
+        _Note 1._
+        In words, we have just established the
+
+        __associativity of function multiplication__
+
+        while we had previously established the
+
+        __associativity of function composition__
+
+        (if you recall that one) in Exercise 9 of Chapter
+        3.
+
+        |> Pause
+        _Note 2._
+        By this result, we can write
+
+        $$
+        fgh
+        $$
+
+        without any parentheses at all:
+        it doesn't matter whether we think of this
+        product as $(fg)h$ or $f(gh)$, the result
+        is the same.
+
+|> Exercise
+
+    Prove that
+
+    $$
+    f + g = g + f
+    $$
+
+    and that
+
+    $$
+    fg = gf
+    $$
+
+    for all $f, g : \rr \ra \rr$, using the fact that
+
+    $$
+    a + b = b + a
+    $$
+
+    and that
+
+    $$
+    ab = ba
+    $$
+
+    for all $a, b \in \rr$.
+    (Prove something for functions by using the
+    corresponding fact for numbers, namely.)
+
+    |> Solution
+
+        Given an arbitrary $u \in \rr$ we have
+
+        $$
+        (f + g)(u) = f(u) + g(u)
+        $$
+
+        and
+
+        $$
+        (g + f)(u) = g(u) + f(u)
+        $$
+
+        by the definition of function addition. But
+
+        $$
+        f(u) + g(u) = g(u) + f(u)
+        $$
+
+        by the commutativity of real number addition
+        [$f(u)$ and $g(u)$ are both real numbers—the
+
+        __commutativity__
+
+        of real number addition is the fact that
+
+        $$
+        a + b = b + a
+        $$
+
+        for all real numbers $a$, $b$, mentioned in the
+        statement—so we can use this here]; thus
+
+        $$
+        (f + g)(u) = (g + f)(u)
+        $$
+
+        for all $u \in \rr$, which implies
+
+        $$
+        f + g = g + f
+        $$
+
+        by definition of function equality.
+
+        For the second half we have, similarly,
+
+        $$
+        \begin{align}
+        (fg)(u) &= f(u) \cdot g(u) \\
+        &= g(u) \cdot f(u) \up{1.5}\\
+        &= (gf)(u) \up{1.5}
+        \end{align}
+        $$
+
+        for arbitrary $u\in \rr$, where the first and
+        last equality are by the definition of a
+        product of functions and where
+        the middle equality is by commutativity of real
+        number multiplication. [That would be the fact that
+
+        $$
+        ab = ba
+        $$
+
+        for all $a, b \in \rr$, as mentioned in the statement.] Hence
+
+        $$
+        fg
+        $$
+
+        and
+
+        $$
+        gf
+        $$
+
+        agree on an arbitrary input, hence $fg = gf$ by
+        definition of function equality.
+
+
+|> Exercise
+
+    A rat is running a fundraising race. The function
+
+    $$
+    \Large f : \rr \ra \rr
+    $$
+
+    gives the amount raised as a function of position;
+    specifically, ${f(x)}$ is the total number of
+    \$'s earned by virtue of running
+    $x$ meters from the start of the race;
+    a second function
+
+    $$
+    \Large g : \rr \ra \rr
+    $$
+
+    gives the position of the rat as a function of time;
+    specifically, ${g(t)}$ is the position from the start,
+    in meters, reached by the rat at $t$ seconds after the
+    start of the race.
+
+    In this case, what does $f \circ g$ compute?
+
+    |> Solution
+
+        It computes
+        the amount earned by the rat as a function of time. In
+        more detail, $(f \circ g)(t)$
+        is the number of \$'s earned by the rat at $t$
+        seconds after the start of the race.
+
+        |> Pause
+        _Note ::++NoteCounter._
+        In even more detail,
+        $$
+        g(t)
+        $$
+        is the position in meters of the rat $t$
+        seconds after start, by definition
+        of $g$, at which position the rat has
+        earned
+        $$
+        f(g(t))
+        $$
+        \$'s in total, by definition of $f$.
+        And
+        $$
+        f(g(t))
+        $$
+        is
+        $$
+        (f \circ g)(t)
+        $$
+        by definition of “$\circ$”.
+
+        |> Pause
+        _Note ::++NoteCounter._
+        If it helps,
+        here is a pictorialization of the
+        “units transformation pipeline” that
+        occurs inside $f \circ g$:
+
+        |> Image
+            src=images/svg_ch4_f_g_composition_units.svg
+
+        |> Pause
+
+        _Note TotalEarnings<<::++NoteCounter._
+        To emphasize, $f(x)$ is the
+
+        __~ total ~__
+
+        amount earned when position $x$ is reached.
+        In real life $f$'s
+        graph might therefore look something like this,
+        while inventing some numbers:
+
+        |> Image
+            src=images/svg_ch4_f_g_first_example_of_f.svg
+
+        In the above the rat earns $\te{\$}$3 for the
+        first 50m, after which the dollar-per-meter
+        rate is reduced.
+        Or $f$ could look like this, with discrete
+        “unlocks”:
+
+        |> Image
+            src=images/svg_ch4_f_g_second_example_of_f.svg
+
+        In our mathematicians' imaginations, however, $f$
+        might also look like this, nice and differentiable,
+        with periods of negative slope (corresponding to
+        parts of the course that momentarily lose you money):
+
+        |> Image
+            src=images/svg_ch4_f_g_third_example_of_f.svg
+
+        (Etc.)
+
+|> Exercise
+
+    What does $(f \circ g)'$ compute,
+    keeping the same setup as in Exercise 34?
+
+    |> Solution
+
+        It computes the dollars-per-second earnings rate
+        as a function of time. In full detail,
+
+        $$
+        (f \circ g)'(t)
+        $$
+
+        is the dollars-per-second rate which the rat is
+        fundraising at $t$ seconds after the start of the race.
+
+        _Note 1._
+        You don't need to know anything about “$f$”
+        or “$g$” to answer this question. You only need to
+        know what “$f \circ g$” is.
+
+|> Exercise
+
+    Continuing with the fundraising rat as in the
+    previous two exercises, assume that the functions
+    $f$ and $g$ have these graphs:
+
+    |> Image
+        src=images/svg_ch4_f_g_actual_exercise_f.svg
+
+    |> Image
+        src=images/svg_ch4_f_g_actual_exercise_g.svg
+
+    In this case what is $(f \circ g)'(2)$?
+
+    |> Solution
+
+        At $t = 2$s the rat is running at a velocity of
+
+        $$
+        {5\over 3\up{1}}[{\te{m/s}}]
+        $$
+
+        by the slope of this line segment on $y = g(t)$:
+
+        |> Image
+            src=images/svg_ch4_f_g_actual_exercise_g_with_slope.svg
+
+        Moreover at $t = 2$s the rat
+        has reached
+        $2 \cdot (5/3) = 10/3 = 3.\overline{33}$m,
+        where the dollars-per-meter earnings
+        rate is one-tenth of a dollar per meter, by
+        the slope of this segment on the graph $y = f(x)$:
+
+        |> Image
+            src=images/svg_ch4_f_g_actual_exercise_f_with_slope.svg
+
+        Multiplying the $5/3$ meters-per-second velocity
+        by the $1/10$ dollars-per-meter rate gives
+        us the dollars-per-second rate at $t = 2$s (our
+        final answer—recall that $(f \circ g)'(2)$ is
+        the dollars-per-second rate at $t = 2$s, by Exercise 35):
+
+        $$
+        \left({5\over 3\up{1}}\left[{\te{m} \over \te{s}}\right]\right) \times \left({1 \over 10\up{1}}\left[{\te{\$} \over \te{m}}\right]\right) = {5\over 30\up{1}}\left[{\te{\$} \over \te{s}}\right].
+        $$
+
+        |> ImageRight
+            src=images/svg_ch4_f_g_actual_exercise_cloud.svg
+
+        Or since
+        $$
+        {5 \over 3} = 1.6666...
+        $$
+        that would be
+        $$
+        {0.1666...}[\te{\$/s}]
+        $$
+        in decimal, i.e.,
+        |> span
+            style=font-family:Clicker Script;font-size:1.3em;
+
+            ~sixteen~
+        point $666...$ cents per second.
+
+        |> Pause
+        _Postscript._
+        It turns out that
+
+        $$
+        {5 \over 30} = {1 \over 6}
+        $$
+
+        as we weren't really paying attention to the
+        possibility of simplifying the fraction. In
+        particular,
+
+        $$
+        {1 \over 6} = 0.1666...
+        $$
+
+        as, indeed, $0.1666...$ is half of $0.333...$!
+
+|> Exercise
+
+    Conjecture a general formula for
+    $$
+    (f \circ g)'(t)
+    $$
+    for arbitrary (differentiable, say) functions
+    $f, g : \rr \ra \rr$. (If it helps, interpret $f$
+    and $g$ exactly as in the scenario of the fundraising
+    race, cf$.$ Exercises 34-37.)
+
+    |> Solution
+
+        The sought-for formula is
+
+        $$
+        g'(t)\cdot f'(g(t))
+        $$
+
+        because—to come back to the example of the
+        fundraising race—one must multiply the meters-per-second
+        velocity at time $t$ (that is, $g'(t)$) by the dollars-per-meter
+        earnings rate at position $g(t)$ (that is, $f'(g(t))$) to obtain
+        the final dollars-per-second earning rate at time $t$
+        (that is, $(f \circ g)'(t)$).
+
+        (For example, the solution to Exercise 36 can actually
+        be written
+
+        $$
+        g'(2) \cdot f'(g(2))
+        $$
+
+        since, indeed, $g(2) = 3.333...$. [Remember that we ended
+        up multiplying $g'(2) = {5\over 3}\te{m/s}$ by
+        $f'(3.333...) = {1\over 10}\te{\$/s}$—the “$3.333...$” is
+        $g(2)$.])
+
+        Nb: This result is known as the _chain rule_.
+
+        |> Pause
+        _Note 1._ Said _chain rule_
+        is more commonly written...
+        $$
+        (f \circ g)'(x) = f'(g(x))g'(x)
+        $$
+        ...with “$g'(x)$” last. (And “$x$” instead of “$t$”.)
+
+        |> Pause
+        _Note 2._ One can also write the chain rule very succinctly like so...
+
+        $$
+        (f \circ g)' = (f' \circ g)g'
+        $$
+
+        ...where the right-hand-side is the product of $g'$ and $f' \circ g$.
+
+
+
+|> Exercise
+
+    Sketch the velocity vector of a particle
+    going at three times unit speed (“speed $3$” in common
+    parlance) clockwise around a circle of radius $2$.
+    What path does the velocity vector describe
+    over time? (I.e., if you cut-paste the velocity
+    vector back to the origin, so that its “tail”
+    is at $(0, 0)$, what curve does the far end of the
+    vector describe?) Over how much time?
+
+    |> Solution
+
+        The velocity vector is an arrow of length $3$
+        tangent to a circle of radius $2$, brushed
+        clockwise:
+
+        |> Image
+            src=images/svg_velocity_vector_radius_2_speed_3_sketch_1.svg
+
+        If we bring the tail of the vector back to
+        $(0, 0)$ we find an arrow of length $3$
+        tracing a circle of radius $3$:
+
+        |> Image
+            src=images/svg_velocity_vector_radius_2_speed_3_centered.svg
+
+        Lastly, the velocity vector does a full revolution
+        of the red circle in the same amount of time that
+        the particle does a full revolution of the blue circle,
+        which is
+
+        $$
+        {2\cdot (\te{circumference of a unit circle}) \over \te{3}}
+        $$
+
+        because the circumference of the blue circle
+        is twice the circumference of a unit circle,
+        and the particle is going at speed $3$.
+
+        |> Pause
+        _Note 1._
+        In such diagrams we recycle the axes
+        to plot quantities of several different
+        dimensions: positions (in blue, in this
+        case) have dimensions of length ([L]) while
+        velocities (in red, in this case) have
+        dimensions of length over time ([L/T]).
+
+|> Exercise
+
+    What is the
+
+    __acceleration vector__
+
+    (velocity vector of the velocity vector)
+    of the particle from Exercise 39?
+
+    |> Solution
+
+        The velocity vector of Exercise 39 travels
+        in a circle of radius $3$ in the same amount
+        of time that the position vector
+        travels around a circle of radius $2$.
+        The speed of the velocity vector is therefore
+        $1.5$ times the speed of the position vector,
+        or $1.5 \times 3 = 4.5$.
+
+        As the derivative of the velocity vector,
+        the acceleration vector is therefore
+        a vector of length $4.5$ (= the speed of the
+        velocity vector) brushed clockwise along
+        the path of the velocity vector:
+
+        |> Image
+            src=images/svg_ch4_what_is_the_acceleration_vector_uncentered.svg
+
+        Or, if we translate the acceleration vector back
+        to the origin and trace out its path over time
+        (either way is fine):
+
+        |> Image
+            src=images/svg_ch4_what_is_the_acceleration_vector_centered.svg
+
+        |> Pause
+        _Note 1._
+        You truly have to think of the acceleration
+        vector as “the velocity of the velocity
+        vector”—if the velocity vector is changing, the
+        acceleration vector is nonzero!
+
+|> Exercise
+
+    Sketch the velocity vector, acceleration vector,
+    and jerk vector of a particle going around a circle
+    of radius $3$ at speed $2$. (Clockwise, say.)
+
+    |> Solution
+
+        The velocity vector has length $2$, because the
+        particle has speed $2$. So the velocity vector
+        looks like so, while attached to the particle path
+        (top) or brought back to the origin (bottom):
+
+        |> Image
+            src=images/svg_ch4_velocity_vector_radius_3_speed_2_uncentered.svg
+
+        |> Image
+            src=images/svg_ch4_velocity_vector_radius_3_speed_2_centered.svg
+
+        Moreover (!) the speed of the velocity vector is
+        $2/3$ the speed of the particle, because the
+        velocity vector goes around a circle of $2/3$ the
+        radius in the same amount of time. So the velocity
+        vector has speed
+
+        $$
+        \Large 2 \cdot {2\over 3} = {4\over 3}
+        $$
+
+        from which the acceleration vector—that can be
+        described as “the velocity vector of the velocity
+        vector”—has length ${4\over 3}$ (the speed of the
+        velocity vector), and looks like so (in either representation):
+
+        |> Image
+            src=images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_uncentered.svg
+
+        |> Image
+            src=images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_centered.svg
+
+        Lastly the acceleration vector has speed
+
+        $$
+        \Large {4\over 3}\cdot {2\over 3} = {8 \over 9}
+        $$
+
+        by virtue of circling a circle of radius $2/3$
+        that of the velocity vector, that has speed $4/3$,
+        in the same amount of time. Since the jerk is the
+        derivative of the acceleration, this becomes the
+        length of the jerk vector, that is exactly opposite
+        to the velocity vector, being twice $90^\circ$ away:
+
+        |> Image
+            src=images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_uncentered.svg
+
+        |> Image
+            src=images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_centered.svg
+
+        |> StarDivider
+
+        |> Pause
+        _Note CircleRadiiPattern<<NoteCounter._
+        If the particle's original path is centered at
+        $(0, 0)$ then that path constitutes a fourth
+        circle obeying the same pattern
+        of $2/3$-ratios between the successive radii:
+
+        |> Image
+            src=images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg
+
+|> Exercise
+
+    Sketch the velocity vector, acceleration vector,
+    and jerk vector of a particle going around a circle
+    of radius $r$ at speed $v$.
+    (You can assume say $v/r \approx 1.2$ for the sake
+    of your sketch.) Give algebraic expressions for the
+    lengths of the various vectors.
+
+    |> Solution
+
+        While the particle goes around a circle of
+        radius $r$, the velocity vector goes around a
+        circle of radius $v$. (Indeed $v$,
+        being the speed, is the length of the velocity
+        vector, and the length of the velocity vector
+        is the radius of the circle traced by the
+        velocity vector.) So the circle traced by the
+        velocity vector is
+        $$
+        \Large {v \over r}
+        $$
+        times as large as the circle traced by the
+        position vector. Therefore, the  velocity vector
+        goes
+        $$
+        \Large {v \over r}
+        $$
+        times as fast as the position vector! (The two
+        vectors trace their respective circles in the
+        same amount of time, so the only difference
+        in speed is caused by differences in the
+        radii—and this is the ratio of the radii.)
+        Therefore, the velocity vector has speed
+        $$
+        \Large v \cdot {v \over r} = {v^2 \over r}
+        $$
+        ...as obtained by multiplying the speed of the
+        position vector ($v$) by the ratio of the speeds
+        ($v/r$). This is also the length of the acceleration
+        vector. (Speed of velocity vector = length of
+        acceleration vector.)
+
+        Next, the ratio
+        $$
+        \Large {\te{speed}\over \te{radius}}
+        $$
+        is the same for the velocity vector as it is for
+        the position vector, because both “speed” and
+        “radius” are scaled up by a factor
+        $$
+        \Large {v \over r}
+        $$
+        compared to the position vector.
+        So
+        $$
+        \Large {\te{speed}\over \te{radius}} = {v \over r}
+        $$
+        for the velocity vector as well as for the position
+        vector. But we can also write this ratio as
+        $$
+        \Large {\te{length of acceleration vector}\over \te{radius}}
+        $$
+        since the speed of the velocity vector is the
+        length of the acceleration vector, or as
+        $$
+        \Large {\te{length of acceleration vector}\over \te{radius of velocity vector circle}}
+        $$
+        to be more exact, or as
+        $$
+        {\Large {\te{radius of acceleration vector circle}\over \te{radius of velocity vector circle}}}
+        $$
+        in yet another way! Therefore, the circle traced by
+        the acceleration vector is
+        $$
+        {\Large {v \over r}}
+        $$
+        times as large as the circle traced by the velocity
+        vector, and the same pattern starts all over again!
+
+        (In other words, each time we take a derivative we
+        find that the vector whose derivative we are taking
+        has speed
+        $$
+        {\Large {v \over r}}
+        $$
+        times the speed of the previous vector whose
+        derivative we took, resulting in a circle
+        $$
+        {\Large {v \over r}}
+        $$
+        times as large as the current circle, resulting in
+        a future speed $v/r$ times as large for the next
+        derivative, etc, etc.)
+
+        Concretely, the length of the jerk vector will be
+        $$
+        {\Large {v^2 \over r} \cdot {v \over r} = {v^3 \over r^2}}
+        $$
+        because the length of the acceleration is $v^2/r$,
+        and the length of the derivative of the jerk would
+        be
+        $$
+        {\Large {v^3 \over r^2} \cdot {v \over r} = {v^4 \over r^3}}
+        $$
+        because the length of the jerk is $v^3/r^2$, etc.
+        (Not that we needed to go beyond the jerk.)
+
+        Coming back to a sketch of all this, if
+        $$
+        {\Large {v \over r} \approx 1.2}
+        $$
+        the sketch will involve concentric circles
+        of successive ratio $\approx 1.2$ with the
+        successive vectors being off by $90^\circ$.
+        The position circle might not be centered at
+        $(0, 0)$, so we didn't include it in this sketch
+        (this sketch presumes clockwise motion, but
+        it's unimportant):
+
+        |> Image
+            src=images/svg_ch4_ex_general_circular_motion_uncentered.svg
+
+            But if the position circle is centered at $(0, 0)$,
+            it becomes the first circle in the sequence:
+
+        |> Image
+            src=images/svg_ch4_ex_general_circular_motion_centered.svg
+
+        |> StarDivider
+
+        |> SolutionNote
+            handle=AngularVelocity
+
+            The ratio
+            $$
+            {\Large {v \over r}}
+            $$
+            is known as the
+            __angular velocity__
+            of the particle. You can think of the angular velocity
+            as
+            $$
+            {\Large {\te{speed}\over \te{radius}}}
+            $$
+            directly per the expression above, or as
+            $$
+            {\Large {\te{distance per unit time}\over \te{radius}}}
+            $$
+            since that is just the definition of “speed”, but which also
+            means that you can think of the angular velocity as
+            $$
+            \Large {\te{number of radii per unit time}}
+            $$
+            or, say, just as
+            $$
+            \Large {\te{radii per unit time}}
+            $$
+            in other words.
+            (The “number or radii” covered by an arc is
+            also known as the _radian measure_ of the arc—an
+            alternate measure of angle—so this can also be
+            phrased _radians per unit time_, in that sense.)
+            What is noteworthy is that the angular velocity
+            of the position vector is the same as the
+            angular velocity of the velocity vector, of the
+            acceleration vector, etc, and it also constitutes
+            the ratio between the successive lengths of all
+            these vectors!
+
+        |> SolutionNote
+
+            A common notation for the angular velocity of a
+            particle is
+            $$
+            {\Large \omega}
+            $$
+            which means that the velocity vector, acceleration
+            vector, and jerk vector have lengths
+            have lengths
+            $$
+            {\Large \omega{}^1r}
+            $$
+            $$
+            {\Large \omega{}^2r}
+            $$
+            $$
+            {\Large \omega{}^3r}
+            $$
+            respectively, where $r$ is the radius of the circle,
+            as the angular velocity is the ratio of the lengths
+            of the successive vectors, as noted. (PS: As the
+            length of the velocity vector is also known as the
+            speed, $\omega^1r = \omega{}r$ is also the speed,
+            by another name.) (PPS: We couldn't resist writing
+            “$\omega^1r$” instead of “$\omega{}r$”, to keep things
+            extra symmetric _&_ typographically aligned.)
+
+
+|> Exercise
+
+    Four particles are moving at speed $3$
+    around a circle of radius $3$ centered at $(0, 0)$,
+    spaced out by $90^\circ$:
+
+    |> Image
+        src=images/svg_ch4_ex_four_particles_radius_3.svg
+
+    Sketch the position vector, velocity vector,
+    acceleration vector, and jerk vector of each
+    particle. What is the angular velocity of each
+    particle?
+
+    |> Solution
+
+        Starting with the second part of the
+        question, because the particles are going around
+        a circle of radius $3$ at speed $3$ the
+        angular velocity (cf. Exercise 37) is
+        $$
+        {\Large {3\over 3} = 1}
+        $$
+        which means that the ratio of the lengths of
+        all the vectors will be $1$, i.e., all vectors
+        (velocity, acceleration, jerk) will have the
+        same length as the radius, which is $3$.
+
+        Keeping in mind that the jerk is
+        $90^\circ$ ahead of the acceleration is $90^\circ$
+        ahead of the velocity, etc, in the direction of
+        rotation, the sixteen vectors—four for each
+        particle—are therefore as follows:
+
+        |> Image
+            src=images/svg_ch4_ex_four_particles_radius_3_four_minis.svg
+
+        (In particular, the purple particle's position
+        ends up being the velocity of the red particle,
+        and many other identities of the sort.)
+
+
+|> Exercise
+
+    What are the dimensions of angular velocity?
+    (For example, the dimensions of velocity are
+    “length over time”, ([L/T]).)
+
+    |> Solution
+
+        _Solution 1._
+        Angular velocity is
+        __speed over radius__
+        which has dimensions
+        $$
+        {\Large {\te{L/T} \over \te{L}}}
+        $$
+        because speed has dimensions of length over time,
+        L/T, while the radius has dimensions of length, L;
+        this simplifies...
+
+        |> Image
+            src=images/svg_ch4_ex_1_over_L_times_L_over_T_simplification.svg
+
+        ...down to dimensions of “one over time”.
+
+        |> Pause
+
+        _Solution 2._
+        Angular velocity is
+        __radians per unit time__
+        or
+        __number of radii per unit time__
+        (if you prefer),
+        which is a “one over time” quantity, because
+        radians are dimensionless.
+
+        Indeed, “radian” is
+        short for “number of radii that fit inside the
+        arc length”, which is one length
+        divided by another length,
+        which is, therefore,
+        dimensionless.
+
+
+|> Exercise
+
+    Imagine a single particle in a one-dimensional
+    world, whose velocity equals its position; at $t = 0$,
+    the particle is sitting at $x = 1$:
+
+    |> Image
+        src=images/svg_ch4_ex_one_particle_at_1.svg
+
+    If we play time backward, will the particle
+    ever reach $x = 0$?
+
+    |> Solution
+
+        Going back in time,
+        examine how long it would take
+        the particle to cross each of the intervals defined by
+        the following geometric progression* (*see Note >>GeometricProgression):
+
+        |> Image
+            src=images/svg_ch4_ex_one_particle_interval_subdivision.svg
+
+        The interval from $0.5$ to $1$
+        takes _at least_
+
+        $$
+        {0.5 \over 1} = 0.5
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
+            offset_x= 6em
+
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $1$.
+        Similarly, the interval from
+
+        $$
+        x = 0.25
+        $$
+
+        to
+
+        $$
+        x = 0.5
+        $$
+
+        takes _at least_
+
+        $$
+        {0.25 \over 0.5} = 0.5
+        $$
+
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $0.5$!
+        And, again, the interval from
+
+        $$
+        x = 0.125
+        $$
+
+        to
+
+        $$
+        x = 0.25
+        $$
+
+        takes at least
+
+        $$
+        {0.125 \over 0.25} = 0.5
+        $$
+
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $0.25$. Etc—each interval
+        takes _at least_
+
+        $$
+        0.5
+        $$
+
+        units of time to cross, because the length of each
+        interval is half of the maximum speed within the interval!
+        But there are infinitely many intervals, and, therefore,
+        it takes
+
+        __at least__
+
+        infinitely much time to make it to $x = 0$, where the
+        “infinitely” comes from adding infinitely many $0.5$'s
+        together! (In other words, the particle never makes it to
+        $x = 0$, no matter how far back in time you look.)
+
+        |> SolutionNote
+            handle=GeometricProgression
+
+            A so-called
+
+            __geometric progression__
+
+            is a sequence of numbers in which each number
+            is a fixed multiple of the previous number.
+            For example,
+
+            $$
+            100,\, 300,\, 900,\, 2700
+            $$
+
+            is a (finite) geometric progression, because each number
+            is the previous number multiplied by $3$,
+            and
+
+            $$
+            1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
+            $$
+
+            is an (infinite) geometric progression, because each number
+            is the previous multiplied by $0.5$.
+
+
+|> Exercise
+
+    Take a system of two particles on the real
+    line; at time $t = 0$, the first particle (yellow)
+    is at $x = -1$, while the second one (blue)
+    is at $x = 1$:
+
+    |> Image
+        src=images/svg_ch4_three_one_dimensional_particles.svg
+
+    If the velocity of the yellow particle is set to track
+    the position of the blue particle and vice-versa,
+    give a qualitative sketch of the
+    position-as-a-function-of-time (time on the $x$
+    axis, position on the $y$ axis) of the two
+    particles. If we add also the graph of the position
+    of the red particle from Exercise 41 to this set of
+    graphs, what symmetries
+    exist altogether between the three graphs?
+
+    |> Solution
+
+        For $t > 0$ the yellow and blue particles
+        approach $0$ in a kind of “radioactive decay”
+        pattern; for $t < 0$,
+        they spin
+        off to $-\infty$ and $\infty$ respectively at an
+        accelerating rate:
+
+        |> Image
+            src=images/svg_ch4_three_one_dimensional_particles_blue_yellow.svg
+
+        If we add the graph of the red particle to the
+        mix, it is simply the mirror image of the
+        blue particle's position through the $y$ axis
+        ($y$ axis that is ironically labeled “$x$”):
+
+        |> Image
+            src=images/svg_ch4_three_one_dimensional_particles_blue_yellow_red.svg
+
+        Indeed, for the red graph,
+
+        __the slope equals the $y$-value__
+
+        (velocity = position), while
+
+        __the slope equals minus the $y$-value__
+
+        for the blue graph (velocity = position
+        of yellow = minus own position).
+        (We forgot to mention that the blue and
+        yellow graphs are mirror images of one another
+        through the horizontal axis—this is one of the
+        “symmetries” that the problem statement asks about, though.)
+        As taking a mirror image through the $y$ axis
+        negates slopes without affecting $y$-coordinates,
+        while both the blue and red graphs have the same
+        value at $t = 0$, this explains why the mirror
+        image of one graph fits the constraints of the other
+        and vice-versa:
+
+        |> Image
+            src=images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg
+
+        Also note that all graphs have slopes of
+        $
+        \pm 1
+        $
+        at $t = 0$, as we tried to reflect in the sketches,
+        because each corresponding particle position
+        is either $1$ or $-1$.
+
+|> Exercise
+    type=hello_world
+
+    Four particles are placed
+    at intervals of $90^\circ$
+    around a circle of radius $1$
+    centered at $(2, 4)$ in the plane:
+
+    |> Image
+        src=images/svg_ch4_circle_at_2_4.svg
+
+    The velocity of each particle is set to
+    the position of the next particle clockwise
+    around the circle, with this relationship
+    maintained at all points in time.
+    If the configuration above shows time
+    $t = 0$, how will the positions of the
+    particles evolve? Discuss both positive and
+    negative values of $t$.
+
+    |> Solution
+
+        At $t = 0$ the particles have position
+        vectors that are up and the right,
+        so the velocity vectors will be
+        up and to the right, so the particles
+        will move more up and to the right,
+        and the velocity vectors will become
+        more “up and to the right”, and so
+        on—broadly speaking, for $t > 0$ there
+        will ensue a kind of  four-particle
+        explosion that goes up and to the right,
+        off to $(+\infty, +\infty)$.
+
+        |> ImageRight
+            src=images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg
+            offset_y=150px
+            offset_x= -0.5em
+
+        For $t < 0$ motion will be
+        down and to the left, at least initially—it
+        is hard to forecast off the top of one's
+        head (unless you have a sudden flash of insight)
+        what will happen for larger negative
+        values of $t$.
+
+        HOWEVER.
+
+        It is possible to say much more.
+
+        To go deeper, we introduce eight new
+        particles, comprising the original colors but
+        in white and black flavors:
+
+        |> CentralDisplay
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            ,
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            ,
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            ,
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            ,
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            ,
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            ,
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            ,
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+
+        At $t = 0$ the white particles are just a
+        translate of the original particles, such
+        that the circle on which they lie is
+        centered at $(0, 0)$:
+
+        |> Image
+            src=images/svg_ch4_circle_at_2_4_white_version.svg
+
+        The black particles, for their part, are
+        piled on top of one another at $(x, y) = (2, 4)$ at $t = 0$,
+        that we draw as four quarter-pies
+        of different colors, like a UNO card:
+
+        |> Image
+            src=images/svg_ch4_circle_at_2_4_black_version.svg
+
+        Within each group we set the velocity of
+        the purple particle to the position of the
+        yellow particle,
+        the velocity of the yellow particle to the
+        position of the green particle, etc.
+        !! (Like for the original set of particles.)
+
+        In this case the white particles will
+        rotate at unit speed around their circle of
+        radius $1$ centered at the origin, just like
+        the particles discussed in the solution to
+        Exercise 12, that obey a similar set of
+        constraints
+        (albeit with a different set of colors).
+
+        The black particles, for their part,
+        behave as a single fused-together particle
+        whose velocity is equal to its position,
+        and will
+        see their motion confined to an infinite
+        half-line through
+        $(0, 0)$ and $(2, 4)$, as their velocity—being
+        equal to their position—stays parallel to the
+        line between them and the origin, meaning
+        they are “stuck” to that line.
+
+        Also note that the
+
+        __speed__
+
+        of the black particles, being equal to the
+
+        __length of the velocity vector__
+
+        of said particles, is equal to the
+
+        __length of the position vector__
+
+        |> ImageRight
+            src=images/svg_ch4_ex_circle_at_2_4_position_equals_velocity_cloud.svg
+            offset_x=-4em
+
+        of said particles, is equal to the
+
+        __distance to the origin__
+
+        of said particles,
+        since the length of the position vector is
+        the distance to the origin.
+
+        This means that if we introduce gradations
+        to the afore-mentioned half-line through $(0, 0)$
+        and $(2, 4)$...
+
+        |> Image
+            src=images/svg_ch4_circle_at_2_4_UNO_with_gradated_line.svg
+
+        ...indicating the distance to the origin,
+        the black particles behave like a
+        one-dimensional system comprising a single
+        particle on a half-line (or entire line,
+        it doesn't hurt) whose velocity is equal to
+        its position on this line:
+
+        |> Image
+            src=images/svg_ch4_circle_at_2_4_UNO_flat_half_line.svg
+
+        The behavior of such a particle is
+        identical to the behavior of the red
+        particle from Exercise 41,
+        except that the current
+        “UNO particle” has a slight head-start over the
+        red particle from Exercise 41, being
+        at position $x = 2\sqrt{5}$
+        instead of at position $x = 1$ at $t = 0$.
+        (!!)
+
+        |> ImageLeft
+            src=images/svg_ch4_ex_circle_at_2_4_sqrt_20_cloud.svg
+            line=-1
+
+        This describes an “understandable”
+        behavior of the black and white particles.
+
+        Next we write
+
+        |> CentralDisplay
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x$
+
+        for the function that gives
+        the $x$-coordinate of the purple-white particle
+        as a function of time (in more detail,
+
+        |> CentralDisplay
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x : \rr \ra \rr$
+
+        to emphasize that WE ARE TALKING ABOUT A FUNCTION, e.g.,
+
+        |> CentralDisplay
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x(2)$
+
+        is the $x$-coordinate of
+        the purple-white particle at
+        $t = 2$, etc), and write
+
+        |> CentralDisplay
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_y$
+
+        for the function that gives
+        the $y$-coordinate of the purple-white
+        particle as a function of time, and so on
+        for all the other particles.
+
+        For example,
+
+        |> CentralDisplay
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x$
+
+        because the rate of change of the
+        $x$-coordinate of the purple-white particle
+        is the value of the $x$-coordinate
+        of the yellow-white particle; we also have
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x\,\!\!\!' \,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_x\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x +$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_x$
+
+        by adding two such equations together; this can also be
+        written
+
+        |> CentralDisplay
+
+            $($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x \,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_x)' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x + $
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_x$
+
+        by the sum rule; but this gives us an idea!; we can
+        try to _define_ the original particles
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+        \ by setting...
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_y$
+
+        ...and see if these definitions satisfy the constraints
+        of the problem! (We momentarily have two different
+        purple particles: the one from the problem statement,
+        and the one that we have just defined; but that's ok,
+        as long as we are aware of this small semantic
+        transgression, it is not such a big deal,
+        and we shall soon prove that these two
+        particles are one and the same.)
+        For starters...
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_x\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_x\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_y\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_y\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_x\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_x\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_y\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_y\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_x\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_x\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_y\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_y\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_x\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_x\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_x =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_y\,\!\!\!' = ($
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_y\!\rt{0.05})' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_y \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_y =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_y$
+
+        ...or...
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_x\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_y\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_x\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_y\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_x\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_y\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_y$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_x\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_x$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_y\,\!\!\!' =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_y$
+
+        ...cutting out the middle computation, so the constraints
+        relating particle velocities to particle positions are
+        satisfied (e.g., the velocity vector of the purple particle
+        is the position vector of the yellow particle);
+        for seconders, evaluating these definitions at $t = 0$ gives...
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_x(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_y(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_y(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_y(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_x(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_y(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_y(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_y(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_x(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_x(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_y(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_y(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_y(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_x(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_x(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_y(0) =$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_y(0) \,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_y(0)$
+
+        ...or...
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
+            $_y(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
+            $_y(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
+            $_y(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_x(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_x(0)$
+
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+            $_y(0) = 2\,\,+$
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
+            $_y(0)$
+
+        ...cutting out the middle computation, which is to
+        say that the positions at time $t = 0$ of our
+        newly-defined particles
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+        \ and
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+        \ are the translate of the white particle
+        positions at $t = 0$ back up and to the right
+        by the vector $(2, 4)$, which brings those
+        positions back to the original positions of
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+        \ and
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+        \ as they appear in the problem statement! I.e.,
+        our newly-defined
+        particles
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+        \ and
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+        \ are in the desired place at $t = 0$!
+
+        In other words, the proposed definitions of
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+        ,
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+        \ and
+        |> InlineImage
+            class=ch4_inline_blackwhite_particles
+            src=images/svg_ch4_circle_at_2_4_p4_inline.svg
+        \ “work” in the sense of satisfying all the conditions
+        of the problem statement, and are, indeed, the
+        solution we seek.
+
+        Qualitatively, this implies that the particles
+        can be understood as four particles rotating at
+        unit speed around a circle of radius $1$ (the
+        white particles) where the center of circle (the
+        UNO particle) is moving at exponential rate along
+        a half-line. In particular, the particles remain
+        at constant distance from one another for all $t$,
+        whether that seems intuitive or not.
+
+        Concretely,
+        the particle trajectories
+        end up like so, locally around $t = 0$:
+
+        |> Image
+            src=images/svg_ch4_circle_at_2_4_solution_curves.svg
+
+        The above plot goes from $t = -5$ to
+        $t \approx 1$—winding further back in time would produce
+        near-perfect counterclockwise circular motion,
+        as the black particles rush up to $(0, 0)$
+        and come to a near-halt rather fast,
+        leaving only the residual motion of the white
+        particles!
+
+        _Note 1._
+        When we said that, for $t > 0$, there ensues
+
+        _|“a [kind of] four-particle explosion”|_
+
+        in the first paragraph of the solution, the word
+        “explosion” might be misleading, implying increased
+        distances between the particles over time. This is
+        not the case! (But we didn't know any better, back
+        then.)
+
+        |> Pause
+        _Note 2._
+        As you might already have caught on, but is
+        maybe worth emphasizing,
+
+        __speed__
+
+        is not the same thing as
+
+        __velocity__
+
+        because, specifically, speed is
+
+        __distance per unit time__
+
+        —a nonnegative number—whereas velocity is
+
+        __displacement per unit time__
+
+        —a vector-valued quantity, or $\pm$-valued quantity,
+        in 1 dimension!
+
+|> Exercise
+
+    Find a nonzero function $f$ and a nonzero
+    constant $a \in \rr$ such that
+
+    $$
+    f'(x) = f(x + a)
+    $$
+
+    for all $x$.
+
+    |> Solution
+
+        Recall the curves from Exercise 12:
+
+        |> Image
+            src=images/svg_ch4_ex_cosine_recall.svg
+
+        The blue curve is the derivative of the red curve
+        but is also the horizontal translate of the red curve by
+        $a$ units to the left, where
+
+        $$
+        a
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch4_ex_cosine_recall_cloud.svg
+            offset_x= 200px
+
+        is the distance between adjacent bumps. Thus if
+
+        $$
+        f
+        $$
+
+        is the function that generates the red curve, then
+
+        $$
+        f'(x) = f(x + a)
+        $$
+
+        using the fact that
+
+        $$
+        y = f(x + a)
+        $$
+
+        is the horizontal translate of $y = f(x)$ by $a$
+        units to the left, in general for any function
+        $f$ and constant $a \in \rr$, as discussed
+        in Exercise 14 of Chapter 3. (Well, this shows
+        one solution, at least.)
+
+
+|> Exercise
+
+    Express the...
+
+    |> TextParent
+        |> ul
+            style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
+            |> li
+
+                associativity of function composition
+            |> li
+
+                associativity of function multiplication
+            |> li
+
+                associativity of function addition
+            |> li
+
+                commutativity of function multiplication
+            |> li
+
+                commutativity of function addition
+
+        ...as well as the...
+
+    |> TextParent
+        |> ul
+            style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
+            |> li
+
+                associativity of real number multiplication
+            |> li
+
+                associativity of real number addition
+            |> li
+
+                commutativity of real number multiplication
+            |> li
+
+                commutativity of real number addition
+
+    ...in the form of self-contained, formal statements.
+
+    |> Solution
+
+        For the functions:
+
+        |> TextParent
+            |> ul
+                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
+                |> li
+                    style=position:relative;
+
+                    _the associativity of function multiplication is
+                    the fact that $(f \circ g) \circ h = f \circ (g \circ h)$
+                    for all functions $f$, $g$, $h$ such that
+                    $h : D \ra C$, $g : C \ra B$, $f : B \ra A$
+                    [for arbitrary sets $A$, $B$, $C$, $D$]_
+
+                    |> ImageLeft
+                        src=images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg
+                        offset_x= 4em
+
+                |> li
+
+                    _the associativity of function multiplication is
+                    the fact that $f(gh) = (fg)h$ for all $f, g, h : \rr \ra \rr$_
+                |> li
+
+                    _the associativity of function addition is
+                    the fact that $f + (g + h) = (f + g) + h$ for all $f, g, h : \rr \ra \rr$_
+                |> li
+
+                    _the commutativity of function multiplication is
+                    the fact that $fg = gf$ for all $f, g : \rr \ra \rr$_
+                |> li
+
+                    _the commutativity of function addition is
+                    the fact that $f + g = g + f$ for all $f, g : \rr \ra \rr$_
+
+        For the real numbers:
+
+        |> TextParent
+            |> ul
+                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
+
+                |> li
+
+                    _the associativity of [real number] multiplication is
+                    the fact that $a(bc) = (ab)c$ for all $a, b, c \in \rr$_
+
+                |> li
+
+                    _the associativity of [real number] addition is
+                    the fact that $a + (b + c) = (a + b) + c$ for all $a, b, c \in \rr$_
+
+                |> li
+
+                    _the commutativity of [real number] multiplication is
+                    the fact that $ab = ba$ for all $a, b \in \rr$_
+
+                |> li
+
+                    _the commutativity of [real number] addition is
+                    the fact that $a + b = b + a$ for all $a, b \in \rr$_
+
+        |> Pause
+        _Note 1._
+        We never took the time to prove the associativity
+        of function addition, but it is easy to prove!
+        (For other proofs see Exercise 32, Exercise 33, as
+        well as Exercise 9, Chapter 3.)
