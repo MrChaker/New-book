@@ -37,21 +37,6 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         </HamburgerPanelItem>
       </ul>
     </div>
-    <div id="bootcamp">
-      <HamburgerPanelTitle label="Bootcamps" />
-      <ul>
-        <HamburgerPanelItem
-          article_type={1}
-          href="bootcamp1">
-          Sets
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={2}
-          href="bootcamp2">
-          Powers of 10
-        </HamburgerPanelItem>
-      </ul>
-    </div>
   </>;
 };
 

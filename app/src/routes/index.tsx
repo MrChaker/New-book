@@ -1,4 +1,3 @@
-import { Spacer }  from "~/components/Spacer";
 import TOC  from "~/components/TOC";
 import TOCItem  from "~/components/TOCItem";
 import TOCTitle  from "~/components/TOCTitle";
@@ -6,7 +5,7 @@ import TOCTitle  from "~/components/TOCTitle";
 export default function __Home__() {
   return (
     <TOC
-      prevPage="/article/bootcamp1"
+      prevPage=""
       nextPage="/article/chapter1">
       <div id="chapter">
         <TOCTitle label="Chapters" />
@@ -39,22 +38,6 @@ export default function __Home__() {
             article_type={5}
             href="chapter5">
             The Trigonometric Functions
-          </TOCItem>
-        </ul>
-      </div>
-      <Spacer />
-      <div id="bootcamp">
-        <TOCTitle label="Bootcamps" />
-        <ul>
-          <TOCItem
-            article_type={1}
-            href="bootcamp1">
-            Sets
-          </TOCItem>
-          <TOCItem
-            article_type={2}
-            href="bootcamp2">
-            Powers of 10
           </TOCItem>
         </ul>
       </div>
